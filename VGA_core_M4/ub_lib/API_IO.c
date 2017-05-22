@@ -4,8 +4,8 @@
 
 void UB_VGA_Line(uint16_t x1, uint16_t y1,uint16_t x2,uint16_t y2,uint16_t width, uint8_t color)
 {
-	float xd = 1+abs(x2-x1);
-	float yd = 1+abs(y2-y1);
+	float xd = abs(x2-x1);
+	float yd = abs(y2-y1);
 	float rx  = xd/yd;
 	float ry = yd/xd;
 	int i;
