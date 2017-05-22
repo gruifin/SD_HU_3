@@ -10,6 +10,7 @@ void UB_VGA_Line(uint16_t x1, uint16_t y1,uint16_t x2,uint16_t y2,uint16_t width
 	float ry = yd/xd;
 	int i;
 	int j;
+	int k;
 	int d;
 	if(yd>xd){
 		d = yd;
@@ -24,12 +25,11 @@ void UB_VGA_Line(uint16_t x1, uint16_t y1,uint16_t x2,uint16_t y2,uint16_t width
 	if(y2 < y1){
 	ry = -1*ry;
 	}
-
-		//int xw = x1 + width;
 		for(j = 0; j < d; j++){
-			for (i=(-1*width); i < width; i++)
-			{
-				UB_VGA_SetPixel(x1+ry*i+(j*rx),y1+rx*i+(j*ry),color);
+			for (i=(-1*width); i < width; i++){
+				for (k=(-1*width); k < width; k++){
+				UB_VGA_SetPixel(x1+k*rx+(j*rx),y1+i*ry+(j*ry),color);
+				}
 			}
 		}
 }
