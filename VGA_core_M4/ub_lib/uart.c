@@ -29,7 +29,7 @@ In the interrupt routine the char is send back to the terminal
 */
 
 /* Includes ------------------------------------------------------------------*/
-#include "includes.h"
+#include "main.h"
 
 char string[100];
 int charcounter = 0;
@@ -150,29 +150,6 @@ void USART2_IRQHandler(void)
 	}
 }
 
-signed int UART_printf(size_t length, const char *pFormat, ...)
-{
-    va_list    ap;
-    signed int rc;
-    char c[length];
-    char *pString = c;
-
-    va_start(ap, pFormat);
-    rc = vsnprintf(pString, length, pFormat, ap);
-    va_end(ap);
-
-    __asm( "CPSID   I");
-    volatile unsigned char i;
-	for (i=0; pString[i]; i++)
-	{
-		while(USART_GetFlagStatus(USART2, USART_FLAG_TXE) == RESET); // Wait for Empty
-		USART_SendData(USART2, pString[i]);
-	}
-	__asm( "CPSIE   I");
-
-    return rc;
-}
-// Stuurt meegegeven getal uit op de UART
 
 void UART_putint(unsigned int num)
 {
@@ -238,7 +215,7 @@ char UART_get(void)
 //         LF is cleared if set in terminal-program
 void UART_gets(char *s, int echo)
 {
-	while (TRUE)
+	while (1)
 	{
 	 	*s = UART_get();
 

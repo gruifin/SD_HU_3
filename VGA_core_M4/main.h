@@ -11,8 +11,9 @@
 // Includes
 //--------------------------------------------------------------
 #include "stm32f4xx.h"
-
-
-
+#include "stm32_ub_vga_screen.h"
+#include <math.h>
+#include "uart.h"
+#include <stm32f4xx_usart.h>
 //--------------------------------------------------------------
 #endif // __STM32F4_UB_MAIN_H

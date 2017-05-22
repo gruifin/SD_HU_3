@@ -11,8 +11,7 @@
 //--------------------------------------------------------------
 
 #include "main.h"
-#include "stm32_ub_vga_screen.h"
-#include <math.h>
+
 
 int main(void)
 {
@@ -23,8 +22,11 @@ int main(void)
 
 	UB_VGA_Screen_Init(); // Init VGA-Screen
 
-  UB_VGA_FillScreen(VGA_COL_BLACK);
-  UB_VGA_SetPixel(10,10,10);
+  UB_VGA_FillScreen(VGA_COL_RED);
+  UB_VGA_Line(100,100,201,200,5,VGA_COL_BLACK);
+  UB_VGA_Line(100,200,201,100,5,VGA_COL_BLACK);
+
+  //UB_VGA_SetPixel(10,10,10);
 
 
 
