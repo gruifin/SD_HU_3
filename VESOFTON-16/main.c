@@ -11,27 +11,25 @@
 //--------------------------------------------------------------
 
 #include "main.h"
-#include "stm32_ub_vga_screen.h"
-#include <math.h>
 
 int main(void)
 {
-
-	//  uint32_t n;
-
+	char string[100];
 	SystemInit(); // System speed to 168MHz
-
-	UB_VGA_Screen_Init(); // Init VGA-Screen
-
-  UB_VGA_FillScreen(VGA_COL_BLACK);
-  UB_VGA_SetPixel(10,10,10);
-
-
-
-
+	UART_init();
+	TM_Delay_Init();
   while(1)
   {
-	  // put the code here
+	 UART_gets(string,1);
+	 TM_DelayMillis(100);
+	 while (USART_GetFlagStatus(USART2, USART_FLAG_TC) == RESET);
+	 char command[20];
+	 int i = 0;
+	 while(string[i] != '.'){
+		 command[i]=string[i];
+		 i++;
+	 }
+	 UART_puts(command);
   }
 }
 
