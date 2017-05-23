@@ -22,7 +22,7 @@ int main(void)
   {
 	 char string[100];
 	 UART_gets(string,0);
-	 TM_DelayMicros(100);
+	 //TM_DelayMicros(100);
 	 char command[20];
 	 int i = 0;
 	 for (i = 0; i < 100; ++i){
@@ -46,27 +46,51 @@ int main(void)
 		uint16_t x2;
 		uint16_t y2;
 		uint8_t width;
-		uint8_t color;
+		char color[10];
 		for(j=0;j < 100; j++){
-
-			 switch (c) {
-				case 1:
-					buff[k] = string[j];
-					k++;
-					break;
-				case 2:
-					x1 =atoi(buff);
-					UART_putint(x1);
-				default:
-					break;
-			 }
-			//UART_putint(c);
 			if (string[j] == ',')
 			{
-			 k = 0;
-			 c++;
+				c++;
+				switch (c) {
+					case 2:
+						x1 =atoi(buff);
+					case 3:
+						y1 =atoi(buff);
+					case 4:
+						x2 =atoi(buff);
+					case 5:
+						y2 =atoi(buff);
+					case 6:
+						width =atoi(buff);
+
+
+					default:
+						break;
+			 }
+				k = 0;
+				memset(buff,0,10);
+			}
+			else if (string[j] == NULL && c == 6) {
+				strcpy(color,buff);
+				UART_putint(x1);
+				UART_puts("\r\n");
+				UART_putint(y1);
+				UART_puts("\r\n");
+				UART_putint(x2);
+				UART_puts("\r\n");
+				UART_putint(y2);
+				UART_puts("\r\n");
+				UART_putint(width);
+				UART_puts("\r\n");
+				UART_puts(color);
+				UART_puts("\r\n");
 			}
 
+			else{
+			buff[k] = string[j];
+			k++;
+
+		}
 		}
 	}
   }
