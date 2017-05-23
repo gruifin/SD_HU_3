@@ -14,22 +14,61 @@
 
 int main(void)
 {
-	char string[100];
+
 	SystemInit(); // System speed to 168MHz
 	UART_init();
 	TM_Delay_Init();
   while(1)
   {
-	 UART_gets(string,1);
-	 TM_DelayMillis(100);
-	 while (USART_GetFlagStatus(USART2, USART_FLAG_TC) == RESET);
+	 char string[100];
+	 UART_gets(string,0);
+	 TM_DelayMicros(100);
 	 char command[20];
 	 int i = 0;
-	 while(string[i] != '.'){
-		 command[i]=string[i];
-		 i++;
+	 for (i = 0; i < 100; ++i){
+		 if (string[i] == ',') {
+			strncpy(command,string,i);
+			command[i] = NULL;
+			break;
+		}
+
 	 }
-	 UART_puts(command);
+	// UART_puts(command);
+	 //UART_putint(strcmp(command,"lijn"));
+	 if (strcmp(command,"lijn")== 0) {
+		int j;
+		int k;
+		int newpos;
+		int c = 0;
+		char buff[10];
+		uint16_t x1;
+		uint16_t y1;
+		uint16_t x2;
+		uint16_t y2;
+		uint8_t width;
+		uint8_t color;
+		for(j=0;j < 100; j++){
+
+			 switch (c) {
+				case 1:
+					buff[k] = string[j];
+					k++;
+					break;
+				case 2:
+					x1 =atoi(buff);
+					UART_putint(x1);
+				default:
+					break;
+			 }
+			//UART_putint(c);
+			if (string[j] == ',')
+			{
+			 k = 0;
+			 c++;
+			}
+
+		}
+	}
   }
 }
 
