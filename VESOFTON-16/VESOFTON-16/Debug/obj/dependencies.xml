@@ -57,7 +57,8 @@
          <include file="..\..\..\cmsis_boot\system_stm32f4xx.h"/>
          <include file="..\..\..\cmsis_boot\stm32f4xx_conf.h"/>
       </source>
-      <source file="..\..\..\Logic_Layer.c" lastModified="15c30245efe">
+      <source file="..\..\..\Logic_Layer.c" lastModified="15c3577eb56">
+         <include file="..\..\..\main.h"/>
       </source>
       <source file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h" lastModified="15c30245f00">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
