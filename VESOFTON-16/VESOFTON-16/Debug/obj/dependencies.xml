@@ -9,12 +9,12 @@
          <include file="..\..\..\cmsis_lib\include\misc.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_dma.h"/>
       </source>
-      <source file="..\..\..\cmsis\core_cmInstr.h" lastModified="15c302462d8">
-      </source>
       <source file="..\..\..\cmsis\core_cm4.h" lastModified="15c302462d6">
          <include file="..\..\..\cmsis\core_cmInstr.h"/>
          <include file="..\..\..\cmsis\core_cmFunc.h"/>
          <include file="..\..\..\cmsis\core_cm4_simd.h"/>
+      </source>
+      <source file="..\..\..\cmsis\core_cmInstr.h" lastModified="15c302462d8">
       </source>
       <source file="..\..\..\ub_lib\stm32_ub_vga_screen.c" lastModified="15c30245f07">
          <include file="..\..\..\ub_lib\stm32_ub_vga_screen.h"/>
@@ -25,12 +25,12 @@
       </source>
       <source file="..\..\..\cmsis_boot\system_stm32f4xx.h" lastModified="15c30245ef2">
       </source>
-      <source file="..\..\..\cmsis_boot\system_stm32f4xx.c" lastModified="15c30245ef2">
-         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
-      </source>
       <source file="..\..\..\cmsis_lib\source\stm32f4xx_tim.c" lastModified="15c30245f04">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f4xx.c" lastModified="15c30245ef2">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
       </source>
       <source file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h" lastModified="15c30245ef7">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
@@ -44,6 +44,14 @@
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_dma.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
       </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h" lastModified="15c30245f00">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\stm32f4xx.h" lastModified="15c302462d8">
+         <include file="..\..\..\cmsis\core_cm4.h"/>
+         <include file="..\..\..\cmsis_boot\system_stm32f4xx.h"/>
+         <include file="..\..\..\cmsis_boot\stm32f4xx_conf.h"/>
+      </source>
       <source file="..\..\..\cmsis_boot\stm32f4xx_conf.h" lastModified="15c3024a92a">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_dma.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h"/>
@@ -52,25 +60,17 @@
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_usart.h"/>
          <include file="..\..\..\cmsis_lib\include\misc.h"/>
       </source>
-      <source file="..\..\..\cmsis_boot\stm32f4xx.h" lastModified="15c302462d8">
-         <include file="..\..\..\cmsis\core_cm4.h"/>
-         <include file="..\..\..\cmsis_boot\system_stm32f4xx.h"/>
-         <include file="..\..\..\cmsis_boot\stm32f4xx_conf.h"/>
-      </source>
       <source file="..\..\..\Logic_Layer.c" lastModified="15c3577eb56">
          <include file="..\..\..\main.h"/>
-      </source>
-      <source file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h" lastModified="15c30245f00">
-         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
       </source>
       <source file="..\..\..\cmsis_lib\include\stm32f4xx_usart.h" lastModified="15c3072e0b7">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
       </source>
-      <source file="..\..\..\API\API_Draw.h" lastModified="15c30c60636">
-         <include file="..\..\..\main.h"/>
-      </source>
       <source file="..\..\..\cmsis_lib\source\misc.c" lastModified="15c30245efa">
          <include file="..\..\..\cmsis_lib\include\misc.h"/>
+      </source>
+      <source file="..\..\..\API\API_Draw.h" lastModified="15c36253714">
+         <include file="..\..\..\main.h"/>
       </source>
       <source file="..\..\..\main.h" lastModified="15c35404c2e">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
@@ -88,8 +88,11 @@
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_usart.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
       </source>
-      <source file="..\..\..\API\API_Draw.c" lastModified="15c34671e25">
+      <source file="..\..\..\API\API_Draw.c" lastModified="15c362445e4">
          <include file="..\..\..\API\API_Draw.h"/>
+      </source>
+      <source file="..\..\..\main.c" lastModified="15c3623e4d5">
+         <include file="..\..\..\main.h"/>
       </source>
       <source file="..\..\..\cmsis\core_cmFunc.h" lastModified="15c302462de">
       </source>

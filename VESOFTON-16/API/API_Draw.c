@@ -233,3 +233,18 @@ void UART_gets(char *s, int echo)
 		s++;
 	}
 }
+void UB_VGA_DrawEllipse(uint16_t xc, uint16_t yc, uint16_t width,uint16_t height,uint8_t color, uint8_t fill){
+	for(int y=-height; y<=height; y++) {
+		for(int x=-width; x<=width; x++) {
+			int r= x*x*height*height+y*y*width*width;
+			int fillcalc = height*width*(height*width-height*2-width*2);
+
+			if(r <= height*height*width*width && r >= fillcalc && fill > 0){
+				UB_VGA_SetPixel(xc+x, yc+y,color);
+			}
+			else if(r <= height*height*width*width && fill == 0){
+				UB_VGA_SetPixel(xc+x, yc+y,color);
+			}
+	}
+  }
+}
