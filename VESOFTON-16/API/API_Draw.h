@@ -13,4 +13,5 @@ void UART_putnum(unsigned int num, unsigned char deel);
 void UART_putint(unsigned int num);
 char UART_get(void);
 void UART_gets(char *s, int echo);
-void UB_VGA_DrawEllipse(uint16_t xc, uint16_t yc, uint16_t width,uint16_t height,uint8_t color, uint8_t fill);
+void API_Draw_Line(uint16_t x1, uint16_t y1,uint16_t x2,uint16_t y2,uint16_t width, uint8_t color);
+void UB_VGA_DrawEllipse(uint16_t xc, uint16_t yc, uint16_t width,uint16_t height,uint8_t fill, uint8_t color);
