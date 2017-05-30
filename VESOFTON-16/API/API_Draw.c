@@ -239,46 +239,46 @@ int API_DRAW_color_to_int(char *s){
 	if(strcmp(s,"blauw")==0){
 		color = VGA_COL_BLUE;
 	}
-	else if(strcmp(s,"rood")){
+	else if(strcmp(s,"rood")==0){
 		color = VGA_COL_RED;
 	}
-	else if(strcmp(s,"geel")){
+	else if(strcmp(s,"geel")==0){
 		color =  VGA_COL_YELLOW;
 	}
-	else if(strcmp(s,"groen")){
+	else if(strcmp(s,"groen")==0){
 		color = VGA_COL_GREEN;
 	}
-	else if(strcmp(s,"lichtrood")){
-
+	else if(strcmp(s,"lichtrood")==0){
+		color = VGA_COL_LIGHT_RED;
 	}
-	else if(strcmp(s,"magenta")){
+	else if(strcmp(s,"magenta")==0){
 		color = VGA_COL_MAGENTA;
 	}
-	else if(strcmp(s,"lichtmagenta")){
-
+	else if(strcmp(s,"lichtmagenta")==0){
+		color = VGA_COL_LIGHT_MAGENTA;
 	}
-	else if(strcmp(s,"lichtgroen")){
-
+	else if(strcmp(s,"lichtgroen")==0){
+		color = VGA_COL_LIGHT_GREEN;
 	}
-	else if(strcmp(s,"lichtblauw")){
-
+	else if(strcmp(s,"lichtblauw")==0){
+		color = VGA_COL_LIGHT_BLUE;
 	}
-	else if(strcmp(s,"cyaan")){
+	else if(strcmp(s,"cyaan")==0){
 		color = VGA_COL_CYAN;
 	}
-	else if(strcmp(s,"lichtcyaan")){
-
+	else if(strcmp(s,"lichtcyaan")==0){
+		color = VGA_COL_LIGHT_CYAN;
 	}
-	else if(strcmp(s,"bruin")){
-
+	else if(strcmp(s,"bruin")==0){
+		color = VGA_COL_BROWN;
 	}
-	else if(strcmp(s,"grijs")){
-
+	else if(strcmp(s,"grijs")==0){
+		color = VGA_COL_GRAY;
 	}
-	else if(strcmp(s,"wit")){
+	else if(strcmp(s,"wit")==0){
 		color = VGA_COL_WHITE;
 	}
-	else if(strcmp(s,"zwart")){
+	else if(strcmp(s,"zwart")==0){
 		color= VGA_COL_BLACK;
 	}
 	return color;
@@ -308,14 +308,16 @@ void API_Draw_Line(uint16_t x1, uint16_t y1,uint16_t x2,uint16_t y2,uint16_t wid
 	ry = -1*ry;
 	}
 		for(j = 0; j < d; j++){
+
 			for (i=(-1*width); i < width; i++){
 				for (k=(-1*width); k < width; k++){
 				UB_VGA_SetPixel(x1+k*rx+(j*rx),y1+i*ry+(j*ry),color);
 				}
 			}
+
 		}
 }
-void UB_VGA_DrawEllipse(uint16_t xc, uint16_t yc, uint16_t width,uint16_t height, uint8_t fill,uint8_t color){
+void API_Draw_Ellipse(uint16_t xc, uint16_t yc, uint16_t width,uint16_t height, uint8_t fill,uint8_t color){
 	for(int y=-height; y<=height; y++) {
 		for(int x=-width; x<=width; x++) {
 			int r= x*x*height*height+y*y*width*width;
@@ -329,4 +331,71 @@ void UB_VGA_DrawEllipse(uint16_t xc, uint16_t yc, uint16_t width,uint16_t height
 			}
 	}
   }
+}
+
+void API_Draw_Rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t fill_empty, uint16_t width, uint8_t color)
+{
+	int i;
+	int j;
+	int rx = 1;
+	int ry = 1;
+
+	int lrd = abs(x2 - x1);
+	int tbd = abs(y2 - y1);
+
+	if(x2 < x1)
+	{
+		rx = -1;
+	}
+
+	if(y2 < y1)
+	{
+		ry = -1;
+	}
+
+	API_Draw_Line(x1,y1,x2,y1, width, color);
+	API_Draw_Line(x1,y1,x1,y2, width, color);
+	API_Draw_Line(x2,y1,x2,y2, width, color);
+	API_Draw_Line(x1,y2,x2+1,y2, width, color);
+
+	if (fill_empty == 1)
+	{
+		for(i = 0; i < lrd; i++)
+		{
+			for(j = 0; j < tbd; j++)
+			{
+				UB_VGA_SetPixel(x1 + (i*rx), y1 + (j*ry), color);
+			}
+		}
+	}
+}
+
+void API_Draw_Triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t x3, uint16_t y3,uint8_t fill, uint8_t color)
+{
+	int i;
+	int j;
+
+
+	int lrd = abs(x2 - x1); //left right delta
+	int tbd = abs(y3 - y1); //top bottom delta
+
+	API_Draw_Line(x1,y1,x2,y2, 1, color);
+	API_Draw_Line(x2,y2,x3,y3, 1, color);
+	API_Draw_Line(x3,y3,x1,y1, 1, color);
+
+	//if(fill == 1){
+
+	for(i = 0; i < lrd; i++)
+	{
+		for(j = 0; j < tbd; j++)
+		{
+			API_Draw_Line(x3,y3,x1+i,y1, 0, color);
+		}
+	}
+
+}
+
+void API_Draw_Clearscreen(uint8_t color)
+{
+	UB_VGA_FillScreen(color);
 }
