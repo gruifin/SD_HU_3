@@ -2,15 +2,15 @@ clearscherm,zwart
 lijn,1,1,100,100,4,rood
 lijn,100,1,100,1,4,groen
 ellips,200,200,30,40,1,blauw
-ellips,100,100,40,30,0,lichtrood
+ellips,100,100,40,300,0,lichtrood
 clearscherm,wit
 rechthoek,10,10,300,200,1,zwart
 rechthoek,10,10,30,20,1,lichtblauw
-rechthoek,100,100,130,120,1,geel
+rechthoek,100,100,330,120,1,geel
 clearscherm,zwart
 driehoek,10,10,130,120,240,200,1,lichtmagenta
-driehoek,100,100,30,20,250,250,0,cyaan
-driehoek,130,130,17,12,333,233,0,lichtgroen
+driehoek,100,100,30,20,250,240,1,cyaan
+driehoek,130,130,17,12,330,233,1,lichtgroen
 clearscherm,zwart
 tekst,10,10,the quick brown fox jumps over the lazy dog,wit,norm
 tekst,10,100,the quick brown fox jumps over the lazy dog,magenta,vet

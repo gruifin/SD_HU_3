@@ -4,7 +4,7 @@ char string[100];
 int charcounter = 0;
 uint32_t multiplier;
 
-void TM_Delay_Init(void) {
+void API_IO_Delay_Init(void) {
     RCC_ClocksTypeDef RCC_Clocks;
 
     /* Get system clocks */
@@ -15,7 +15,7 @@ void TM_Delay_Init(void) {
     multiplier = RCC_Clocks.HCLK_Frequency / 4000000;
 }
 
-void TM_DelayMicros(uint32_t micros) {
+void API_IO_DelayMicros(uint32_t micros) {
     /* Multiply micros with multipler */
     /* Substract 10 */
     micros = micros * multiplier - 10;
@@ -23,7 +23,7 @@ void TM_DelayMicros(uint32_t micros) {
     while (micros--);
 }
 
-void TM_DelayMillis(uint32_t millis) {
+void API_IO_DelayMillis(uint32_t millis) {
     /* Multiply millis with multipler */
     /* Substract 10 */
     millis = 1000 * millis * multiplier - 10;
@@ -281,10 +281,11 @@ int API_DRAW_color_to_int(char *s){
 	else if(strcmp(s,"zwart")==0){
 		color= VGA_COL_BLACK;
 	}
+
 	return color;
 }
 
-void API_Draw_Line(uint16_t x1, uint16_t y1,uint16_t x2,uint16_t y2,uint16_t width, uint8_t color)
+int API_Draw_Line(uint16_t x1, uint16_t y1,uint16_t x2,uint16_t y2,uint16_t width, uint8_t color)
 {
 	float xd = abs(x2-x1);
 	float yd = abs(y2-y1);
@@ -294,6 +295,14 @@ void API_Draw_Line(uint16_t x1, uint16_t y1,uint16_t x2,uint16_t y2,uint16_t wid
 	int j;
 	int k;
 	int d;
+	int error = 0;
+	if(x1 > 320 || x2 > 320 || y1 > 240 || y2 > 240)
+	{
+		error = 2;
+		return error;
+	}
+	else
+	{
 	if(yd>xd){
 		d = yd;
 		ry = 1;
@@ -316,8 +325,18 @@ void API_Draw_Line(uint16_t x1, uint16_t y1,uint16_t x2,uint16_t y2,uint16_t wid
 			}
 
 		}
+		return error;
+	}
 }
-void API_Draw_Ellipse(uint16_t xc, uint16_t yc, uint16_t width,uint16_t height, uint8_t fill,uint8_t color){
+int API_Draw_Ellipse(uint16_t xc, uint16_t yc, uint16_t width,uint16_t height, uint8_t fill,uint8_t color){
+	int error = 0;
+	if(xc+width > 320 || yc+height > 240)
+	{
+		error = 2;
+		return error;
+	}
+	else
+	{
 	for(int y=-height; y<=height; y++) {
 		for(int x=-width; x<=width; x++) {
 			int r= x*x*height*height+y*y*width*width;
@@ -331,15 +350,24 @@ void API_Draw_Ellipse(uint16_t xc, uint16_t yc, uint16_t width,uint16_t height, 
 			}
 	}
   }
+	return error;
+	}
 }
 
-void API_Draw_Rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t fill_empty, uint16_t width, uint8_t color)
+int API_Draw_Rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t fill_empty, uint16_t width, uint8_t color)
 {
 	int i;
 	int j;
 	int rx = 1;
 	int ry = 1;
-
+	int error = 0;
+	if(x1 > 320 || x2 > 320 || y1 > 240 || y2 > 240)
+	{
+		error = 2;
+		return error;
+	}
+	else
+	{
 	int lrd = abs(x2 - x1);
 	int tbd = abs(y2 - y1);
 
@@ -368,34 +396,89 @@ void API_Draw_Rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint
 			}
 		}
 	}
+ return error;}
 }
-
-void API_Draw_Triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t x3, uint16_t y3,uint8_t fill, uint8_t color)
+int API_Draw_Triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t x3, uint16_t y3,uint8_t fill, uint8_t color)
 {
-	int i;
-	int j;
-
-
-	int lrd = abs(x2 - x1); //left right delta
-	int tbd = abs(y3 - y1); //top bottom delta
-
+	int error = 0;
+	if(x1 > 320 || x2 > 320 || x3 > 320 || y1 > 240 || y2 > 240 || y3 > 240)
+	{
+		error = 2;
+		return error;
+	}
+	else
+	{
 	API_Draw_Line(x1,y1,x2,y2, 1, color);
 	API_Draw_Line(x2,y2,x3,y3, 1, color);
 	API_Draw_Line(x3,y3,x1,y1, 1, color);
 
-	//if(fill == 1){
-
-	for(i = 0; i < lrd; i++)
-	{
-		for(j = 0; j < tbd; j++)
-		{
-			API_Draw_Line(x3,y3,x1+i,y1, 0, color);
-		}
+	if(fill == 1){
+	float xd1 = abs(x3-x1);
+	float yd1 = abs(y3-y1);
+	float xd2 = abs(x3-x2);
+	float yd2 = abs(y3-y2);
+	float rx1  = xd1/yd1;
+	float rx2  = xd2/yd2;
+	float ry1 = yd1/xd1;
+	float ry2 = yd2/xd2;
+	float j;
+	int d;
+	int d1;
+	int d2;
+	if(yd1>xd1){
+		d1 = yd1;
+		ry1 = 1;
+	}else{
+		d1 = xd1;
+		rx1 = 1;
 	}
+	if(yd2>xd2){
+		d2 = yd2;
+		ry2 = 1;
+	}else{
+		d2 = xd2;
+		rx2 = 1;
+	}
+	if(x3 < x1){
+	rx1 = -1*rx1;
+	}
+	if(y3 < y1){
+	ry1 = -1*ry1;
+	}
+	if(x3 < x2){
+	rx2 = -1*rx2;
+	}
+	if(y3 < y2){
+	ry2 = -1*ry2;
+
+	}
+	d = d2;
+	if(d2>d1)
+		d = d1;
+
+		for(j = 0; j < d; j++){
+
+
+				API_Draw_Line(x1+(j*rx1),y1+(j*ry1),x2+(j*rx2),y2+(j*ry2),1,color);
+
+
+
+		}
+
+	}
+
+
+return error;}
 
 }
 
-void API_Draw_Clearscreen(uint8_t color)
+int API_Draw_Clearscreen(uint8_t color)
 {
 	UB_VGA_FillScreen(color);
+	return color;
+}
+
+int API_Draw_Wait(int time){
+	API_IO_DelayMillis(time);
+	return time;
 }
