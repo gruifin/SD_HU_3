@@ -1,4 +1,5 @@
 #include "main.h"
+const uint8_t font1[16] = {0x00, 0x00, 0x00, 0x10, 0x38, 0x6C, 0xC6, 0xC6, 0xFE, 0xC6, 0xC6, 0xC6, 0xC6, 0x00, 0x00, 0x00};
 
 int main(void){
 	SystemInit();
@@ -6,6 +7,21 @@ int main(void){
 	UB_VGA_FillScreen(VGA_COL_GREEN);
 	API_IO_Delay_Init();
 	UART_init();
+	//uint8_t inputint = 200;
+	int bytearray[8];
+	int x = 50;
+	int y = 50;
+	for(int j = 0 ; j < 16; j++){
+	for(int i = 0 ; i < 8 ; i++)
+	{
+	    bytearray[i] = (font1[j] & (int)pow(2,7-i));
+	    bytearray[i] /= bytearray[i];
+	    if(bytearray[i] >= 1){
+	    	UB_VGA_SetPixel(x+i,y+j,VGA_COL_RED);
+	    }
+
+	}}
+
 	//API_Draw_Triangle(10,10,130,120,250,200,1,VGA_COL_BLUE);
 	//API_Draw_Line(130,120,250,10,1,VGA_COL_BLUE);
 	//API_Draw_Rectangle(10,10,300,200,1,0,VGA_COL_BLACK);
@@ -258,6 +274,50 @@ int main(void){
 
 		 			}
 		 		}
+		 else if (strcmp(command,"bitmap")== 0) {
+		 		 			int j;
+		 		 			int k = 0;
+		 		 			int c = 0;
+		 		 			char buff[20];
+		 		 			uint16_t x;
+		 		 			uint16_t y;
+		 		 			uint16_t bitmap;
+		 		 			for(j=0;j < 100; j++){
+
+		 		 				if (string[j] == ',')
+		 		 				{
+		 		 					c++;
+		 		 					switch (c) {
+
+		 		 						case 2:
+		 		 							bitmap =atoi(buff);
+		 		 							break;
+		 		 						case 3:
+		 		 							x =atoi(buff);
+		 		 							break;
+		 		 						default:
+		 		 							break;
+
+		 		 				 }
+
+		 		 					k = 0;
+		 		 					memset(buff,0,20);
+		 		 				}
+		 		 				else if (string[j] == 0 && c == 3) {
+		 		 					y = atoi(buff);
+		 		 					error = API_Draw_Bitmap(x,y,bitmap);
+		 			 				memset(buff,0,20);
+		 		 					break;
+		 		 				}
+
+		 		 				else if(c >= 1){
+		 		 				buff[k] = string[j];
+		 		 				k++;
+		 		 				}
+
+
+		 		 			}
+		 		 		}
 		 else if (strcmp(command,"clearscherm")== 0) {
 				 			int j;
 				 			int k =0;
@@ -312,6 +372,7 @@ int main(void){
 					 			}
 					 			}
 					 		}
+
 		 else{
 			error = 1;
 		 }
