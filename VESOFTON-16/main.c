@@ -1,5 +1,5 @@
 #include "main.h"
-const uint8_t font1[16] = {0x00, 0x00, 0x00, 0x10, 0x38, 0x6C, 0xC6, 0xC6, 0xFE, 0xC6, 0xC6, 0xC6, 0xC6, 0x00, 0x00, 0x00};
+
 
 int main(void){
 	SystemInit();
@@ -7,21 +7,8 @@ int main(void){
 	UB_VGA_FillScreen(VGA_COL_GREEN);
 	API_IO_Delay_Init();
 	UART_init();
+	//API_Draw_Font(50,50,"LUDO IS EEN HOMO","font",VGA_COL_BLACK,"NI");
 	//uint8_t inputint = 200;
-	int bytearray[8];
-	int x = 50;
-	int y = 50;
-	for(int j = 0 ; j < 16; j++){
-	for(int i = 0 ; i < 8 ; i++)
-	{
-	    bytearray[i] = (font1[j] & (int)pow(2,7-i));
-	    bytearray[i] /= bytearray[i];
-	    if(bytearray[i] >= 1){
-	    	UB_VGA_SetPixel(x+i,y+j,VGA_COL_RED);
-	    }
-
-	}}
-
 	//API_Draw_Triangle(10,10,130,120,250,200,1,VGA_COL_BLUE);
 	//API_Draw_Line(130,120,250,10,1,VGA_COL_BLUE);
 	//API_Draw_Rectangle(10,10,300,200,1,0,VGA_COL_BLACK);
@@ -318,6 +305,63 @@ int main(void){
 
 		 		 			}
 		 		 		}
+		 else if (strcmp(command,"tekst")== 0) {
+		 		 		 			int j;
+		 		 		 			int k = 0;
+		 		 		 			int c = 0;
+		 		 		 			char buff[200];
+		 		 		 			uint16_t x;
+		 		 		 			uint16_t y;
+		 		 		 			char text[200];
+		 		 		 			char font[20];
+		 		 		 			char style[20];
+						 			char color[20];
+						 			int colint;
+		 		 		 			for(j=0;j < 100; j++){
+
+		 		 		 				if (string[j] == ',')
+		 		 		 				{
+		 		 		 					c++;
+		 		 		 					switch (c) {
+
+		 		 		 						case 2:
+		 		 		 							x =atoi(buff);
+		 		 		 							break;
+		 		 		 						case 3:
+		 		 		 							y =atoi(buff);
+		 		 		 							break;
+		 		 		 						case 4:
+		 		 		 							strcpy(text,buff);
+		 		 		 							break;
+		 		 		 						case 5:
+				 				 					strcpy(color,buff);
+				 				 					colint = API_DRAW_color_to_int(color);
+		 		 		 							break;
+		 		 		 						case 6:
+		 		 		 							strcpy(font,buff);
+		 		 		 						default:
+		 		 		 							break;
+
+		 		 		 				 }
+
+		 		 		 					k = 0;
+		 		 		 					memset(buff,0,200);
+		 		 		 				}
+		 		 		 				else if (string[j] == 0 && c == 6) {
+		 		 		 					strcpy(style,buff);
+		 		 		 					API_Draw_Font(x,y,text,font,colint,style);
+		 		 			 				memset(buff,0,200);
+		 		 		 					break;
+		 		 		 				}
+
+		 		 		 				else if(c >= 1){
+		 		 		 				buff[k] = string[j];
+		 		 		 				k++;
+		 		 		 				}
+
+
+		 		 		 			}
+		 		 		 		}
 		 else if (strcmp(command,"clearscherm")== 0) {
 				 			int j;
 				 			int k =0;

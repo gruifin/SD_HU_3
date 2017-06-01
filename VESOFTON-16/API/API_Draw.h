@@ -22,5 +22,6 @@ int API_Draw_Ellipse(uint16_t xc, uint16_t yc, uint16_t width,uint16_t height,ui
 int API_Draw_Rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t fill_empty, uint16_t width, uint8_t color);
 int API_Draw_Triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t x3, uint16_t y3,uint8_t fill, uint8_t color);
 int API_Draw_Bitmap(uint16_t x_lo, uint16_t y_lo, uint16_t bitmap_id);
+void API_Draw_Font( uint16_t x, uint16_t y, char *text, char* font_id, uint8_t color, char* style);
 int API_Draw_Clearscreen(uint8_t color);
 int API_Draw_Wait(int time);
