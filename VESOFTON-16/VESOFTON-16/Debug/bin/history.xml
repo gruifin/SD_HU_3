@@ -1,22 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
    <processor signature="arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -g -nostartfiles -Map=VESOFTON-16.map -O0 --gc-sections -LC:\CooCox\CoIDE\configuration\ProgramData\VESOFTON-16 -TC:\CooCox\CoIDE\configuration\ProgramData\VESOFTON-16/arm-gcc-link.ld -g -L..\..\.. -lm">
-      <target file="VESOFTON-16.elf" lastModified="15c630fc5c9">
-         <source file="..\obj\User_Interface.o" lastModified="15c62d3ea5a"/>
-         <source file="..\obj\Logic_Layer.o" lastModified="15c62d3ea98"/>
-         <source file="..\obj\Input_Output.o" lastModified="15c62d3eace"/>
-         <source file="..\obj\stm32f4xx_usart.o" lastModified="15c62d3eb22"/>
-         <source file="..\obj\API_Draw.o" lastModified="15c630fc3f3"/>
-         <source file="..\obj\startup_stm32f4xx.o" lastModified="15c62d3ebeb"/>
-         <source file="..\obj\main.o" lastModified="15c630465a4"/>
-         <source file="..\obj\stm32f4xx_rcc.o" lastModified="15c62d3ecb3"/>
-         <source file="..\obj\stm32f4xx_gpio.o" lastModified="15c62d3ed02"/>
-         <source file="..\obj\system_stm32f4xx.o" lastModified="15c62d3ed56"/>
-         <source file="..\obj\stm32f4xx_dma.o" lastModified="15c62d3edca"/>
-         <source file="..\obj\API_IO.o" lastModified="15c62d3edff"/>
-         <source file="..\obj\stm32_ub_vga_screen.o" lastModified="15c62d3ee53"/>
-         <source file="..\obj\misc.o" lastModified="15c62d3ee92"/>
-         <source file="..\obj\stm32f4xx_tim.o" lastModified="15c62d3ef3b"/>
+      <target file="VESOFTON-16.elf" lastModified="15c81a37704">
+         <source file="..\obj\User_Interface.o" lastModified="15c819275ab"/>
+         <source file="..\obj\Logic_Layer.o" lastModified="15c81a372fe"/>
+         <source file="..\obj\Input_Output.o" lastModified="15c8192765e"/>
+         <source file="..\obj\stm32f4xx_usart.o" lastModified="15c819276fb"/>
+         <source file="..\obj\API_Draw.o" lastModified="15c81a373b3"/>
+         <source file="..\obj\startup_stm32f4xx.o" lastModified="15c81927805"/>
+         <source file="..\obj\main.o" lastModified="15c81a37441"/>
+         <source file="..\obj\stm32f4xx_rcc.o" lastModified="15c81927927"/>
+         <source file="..\obj\stm32f4xx_gpio.o" lastModified="15c8192799b"/>
+         <source file="..\obj\system_stm32f4xx.o" lastModified="15c819279fa"/>
+         <source file="..\obj\stm32f4xx_dma.o" lastModified="15c81927a76"/>
+         <source file="..\obj\API_IO.o" lastModified="15c81a374dd"/>
+         <source file="..\obj\misc.o" lastModified="15c81927b76"/>
+         <source file="..\obj\stm32f4xx_tim.o" lastModified="15c81927c5c"/>
       </target>
    </processor>
 </history>

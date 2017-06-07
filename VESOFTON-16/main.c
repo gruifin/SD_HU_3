@@ -3,8 +3,8 @@
 
 int main(void){
 	SystemInit();
-	UB_VGA_Screen_Init();
-	UB_VGA_FillScreen(VGA_COL_GREEN);
+	API_IO_Screen_Init();
+	API_IO_FillScreen(VGA_COL_GREEN);
 	API_IO_Delay_Init();
 	UART_init();
 	//API_Draw_Font(50,50,"LUDO IS EEN HOMO","font",VGA_COL_BLACK,"NI");
@@ -72,7 +72,7 @@ int main(void){
 				}
 				else if (string[j] == 0 && c == 6) {
 					strcpy(color,buff);
-					colint = API_DRAW_color_to_int(color);
+					colint = API_Draw_Color_To_Int(color);
 					error = API_Draw_Line(x1,y1,x2,y2,width,colint);
 	 				memset(buff,0,20);
 					break;
@@ -126,7 +126,7 @@ int main(void){
 		 			}
 		 			else if (string[j] == 0 && c == 6) {
 		 				strcpy(color,buff);
-		 				colint = API_DRAW_color_to_int(color);
+		 				colint = API_Draw_Color_To_Int(color);
 		 				error= API_Draw_Ellipse(xp,yp,width,height,fill,colint);
 		 				memset(buff,0,20);
 		 				break;
@@ -188,7 +188,7 @@ int main(void){
 		 				}
 		 				else if (string[j] == 0 && c == 8) {
 		 					strcpy(color,buff);
-		 					colint = API_DRAW_color_to_int(color);
+		 					colint = API_Draw_Color_To_Int(color);
 		 					error=API_Draw_Triangle(x1,y1,x2,y2,x3,y3,fill,colint);
 			 				memset(buff,0,20);
 		 					break;
@@ -247,7 +247,7 @@ int main(void){
 		 				else if (string[j] == 0 && c == 6) {
 
 		 					strcpy(color,buff);
-		 					colint = API_DRAW_color_to_int(color);
+		 					colint = API_Draw_Color_To_Int(color);
 		 					error = API_Draw_Rectangle(x1,y1,x2,y2,fill,1,colint);
 			 				memset(buff,0,20);
 		 					break;
@@ -335,7 +335,7 @@ int main(void){
 		 		 		 							break;
 		 		 		 						case 5:
 				 				 					strcpy(color,buff);
-				 				 					colint = API_DRAW_color_to_int(color);
+				 				 					colint = API_Draw_Color_To_Int(color);
 		 		 		 							break;
 		 		 		 						case 6:
 		 		 		 							strcpy(font,buff);
@@ -377,7 +377,7 @@ int main(void){
 				 				}
 				 				else if (string[j] == 0 && c == 1) {
 				 					strcpy(color,buff);
-				 					colint = API_DRAW_color_to_int(color);
+				 					colint = API_Draw_Color_To_Int(color);
 				 					API_Draw_Clearscreen(colint);
 					 				memset(buff,0,20);
 				 					break;
