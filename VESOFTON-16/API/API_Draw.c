@@ -347,7 +347,7 @@ uint8_t Arrow_Up[32][32] =
 	{0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x6d,0x92,0x92,0x92,0x92,0x92,0x92,0x92,0x92,0x92,0x92,0x92,0x92,0x92,0x92,0x6d,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00},
 };
 
-/**
+/*
   Function:	API_Draw_Color_To_Int
   ----------------------------------
   Converts incoming string into a integer
@@ -409,7 +409,7 @@ int API_Draw_Color_To_Int(char *s)
   returns: error code (1. succesfull 2. out of bounds)
   */
 
-int API_Draw_Line(uint16_t x1, uint16_t y1,uint16_t x2,uint16_t y2,uint16_t width, uint8_t color)
+int API_Draw_Line(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t weight, uint8_t color)
 {
 	float xd = abs(x2-x1);
 	float yd = abs(y2-y1);
@@ -444,9 +444,9 @@ int API_Draw_Line(uint16_t x1, uint16_t y1,uint16_t x2,uint16_t y2,uint16_t widt
 
 		for(j = 0; j < d; j++)
 		{
-			for (i=(-1*width); i < width; i++)
+			for (i=(-1*weight); i < weight; i++)
 			{
-				for (k=(-1*width); k < width; k++)
+				for (k=(-1*weight); k < weight; k++)
 					API_IO_SetPixel(x1+k*rx+(j*rx),y1+i*ry+(j*ry),color);
 			}
 		}
@@ -454,7 +454,7 @@ int API_Draw_Line(uint16_t x1, uint16_t y1,uint16_t x2,uint16_t y2,uint16_t widt
 	}
 }
 
-/**
+/*
   Function:	API_Draw_Ellipse
   ----------------------------------
   Draws an ellipse on the screen
@@ -497,7 +497,7 @@ int API_Draw_Ellipse(uint16_t xc, uint16_t yc, uint16_t width, uint16_t height, 
 	}
 }
 
-/**
+/*
   Function:	API_Draw_Rectangle
   ----------------------------------
   Draws an rectangle on the screen
@@ -512,8 +512,7 @@ int API_Draw_Ellipse(uint16_t xc, uint16_t yc, uint16_t width, uint16_t height, 
 
   returns: error code (1. succesfull 2. out of bounds)
  */
-
-int API_Draw_Rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t fill_empty, uint16_t width, uint8_t color)
+int API_Draw_Rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t fill_empty, uint16_t weight, uint8_t color)
 {
 	int i;
 	int j;
@@ -538,10 +537,10 @@ int API_Draw_Rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint1
 		if(y2 < y1)
 			ry = -1;
 
-		API_Draw_Line(x1,y1,x2,y1, width, color);
-		API_Draw_Line(x1,y1,x1,y2, width, color);
-		API_Draw_Line(x2,y1,x2,y2, width, color);
-		API_Draw_Line(x1,y2,x2+1,y2, width, color);
+		API_Draw_Line(x1,y1,x2,y1, weight, color);
+		API_Draw_Line(x1,y1,x1,y2, weight, color);
+		API_Draw_Line(x2,y1,x2,y2, weight, color);
+		API_Draw_Line(x1,y2,x2+1,y2, weight, color);
 
 		if (fill_empty == 1)
 		{
@@ -555,7 +554,7 @@ int API_Draw_Rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint1
 	}
 }
 
-/**
+/*
   Function:	API_Draw_Triangle
   ----------------------------------
   Draws an triangle on the screen
@@ -646,7 +645,7 @@ int API_Draw_Triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16
 	}
 }
 
-/**
+/*
   Function:	API_Draw_Bitmap
   ----------------------------------
   Draws an triangle on the screen
@@ -712,7 +711,7 @@ int API_Draw_Bitmap(uint16_t x_lo, uint16_t y_lo, uint16_t bitmap_id)
 	}
 }
 
-/**
+/*
   Function:	API_Draw_Font
   ----------------------------------
   Draws an triangle on the screen

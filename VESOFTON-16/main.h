@@ -11,7 +11,6 @@
 // Includes
 //--------------------------------------------------------------
 #include "stm32f4xx.h"
-//#include "stm32_ub_vga_screen.h"
 #include <math.h>
 #include "stm32f4xx_usart.h"
 #include "stm32f4xx_rcc.h"

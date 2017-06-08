@@ -149,19 +149,49 @@ uint8_t VGA_RAM1[(VGA_DISPLAY_X+1)*VGA_DISPLAY_Y];
 //--------------------------------------------------------------
 // Global Function call
 //--------------------------------------------------------------
+
+/**
+ * @brief Initialize VGA-Module
+ */
 void API_IO_Screen_Init(void);
+
+/**
+ * @brief Fill the DMA RAM buffer with one color
+ * @param[in]	color		color in integer format
+ */
 void API_IO_FillScreen(uint8_t color);
+
+/**
+ * @brief Sets pixels on the screen with the chosen color
+ * @param[in]	xp			horizontal position of the pixel
+ * @param[in]	yp			vertical position of the pixel
+ * @param[in]	color		color in integer format
+ */
 void API_IO_SetPixel(uint16_t xp, uint16_t yp, uint8_t color);
+
+/**
+ * @brief Initialize Delay
+ */
 void API_IO_Delay_Init(void);
+
 void API_IO_DelayMicros(uint32_t micros);
+
 void API_IO_DelayMillis(uint32_t millis);
+
 void API_IO_UART_init(void);
+
 void API_IO_UART_INT_init(void);
+
 void API_IO_UART_putchar(char c);
+
 void API_IO_UART_puts(char *s);
+
 void API_IO_UART_putnum(unsigned int num, unsigned char deel);
+
 void API_IO_UART_putint(unsigned int num);
+
 char API_IO_UART_get(void);
+
 void API_IO_UART_gets(char *s, int echo);
 
 //--------------------------------------------------------------

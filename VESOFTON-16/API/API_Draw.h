@@ -22,7 +22,14 @@
 //--------------------------------------------------------------
 // Defines
 //--------------------------------------------------------------
+/**
+ * X size of the bitmap array
+ */
 #define ARRAY_X		32
+
+/**
+ * Y size of the bitmap array
+ */
 #define ARRAY_Y		32
 
 /**
@@ -42,7 +49,7 @@ int API_Draw_Color_To_Int(char *s);
  * @param[in]	color		color of the line
  * @retval		error
  */
-int API_Draw_Line(uint16_t x1, uint16_t y1,uint16_t x2,uint16_t y2,uint16_t width, uint8_t color);
+int API_Draw_Line(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t weight, uint8_t color);
 
 /**
  * @brief Draws an Ellipse on the screen
@@ -67,17 +74,17 @@ int API_Draw_Ellipse(uint16_t xc, uint16_t yc, uint16_t width, uint16_t height, 
  * @param[in]	color		color given in string format
  * @retval		error
  */
-int API_Draw_Rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t fill_empty, uint16_t width, uint8_t color);
+int API_Draw_Rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t fill_empty, uint16_t weight, uint8_t color);
 
 /**
  * @brief Draws a triangle on the screen
- * @param[in]	x1			color given in string format
- * @param[in]	y1			color given in string format
- * @param[in]	x2			color given in string format
- * @param[in]	y2			color given in string format
- * @param[in]	x3			color given in string format
- * @param[in]	y3			color given in string format
- * @param[in]	fill_empty	color given in string format
+ * @param[in]	x1			horizontal begin position of the triangle
+ * @param[in]	y1			vertical begin position of the triangle
+ * @param[in]	x2			horizontal middle position of the triangle
+ * @param[in]	y2			vertical middle position of the triangle
+ * @param[in]	x3			horizontal end position of the triangle
+ * @param[in]	y3			vertical end position of the triangle
+ * @param[in]	fill_empty	fill triangle if argument is true
  * @param[in]	color		color given in string format
  * @retval		error
  */
@@ -85,41 +92,38 @@ int API_Draw_Triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16
 
 /**
  * @brief Draws a bitmap on the screen
- * @param[in]	x_lo		color given in string format
- * @param[in]	y_lo		color given in string format
- * @param[in]	bitmap_id	color given in string format (table toevoegen van welke id welke bitmap is)
+ * @param[in]	x_lo	 	horizontal begin position of the bitmap
+ * @param[in]	y_lo		vertical begin position of the bitmap
+ * @param[in]	bitmap_id	id of the bitmap (1. angry_emoticon 2. happy_emoticon 3. arrow_down 4. arrow_left 5. arrow_up 6. arrow_right) (table toevoegen van welke id welke bitmap is)
  * @retval		error
  */
 int API_Draw_Bitmap(uint16_t x_lo, uint16_t y_lo, uint16_t bitmap_id);
 
 /**
  * @brief Draws a Font on the screen
- * @param[in]	x			color given in string format
- * @param[in]	y			color given in string format
- * @param[in]	text		color given in string format
- * @param[in]	font_id		color given in string format
- * @param[in]	style		color given in string format
+ * @param[in]	x			horizontal begin position of the bitmap
+ * @param[in]	y			vertical begin position of the bitmap
+ * @param[in]	text		text that get puts on the screen
+ * @param[in]	font_id		id of the font (1. ..... 2. .....)
+ * @param[in]	style		style of the font (1. normal 2. bold 3. italic)
  * @param[in]	color		color given in string format
  * @retval		error
  */
+
 void API_Draw_Font( uint16_t x, uint16_t y, char *text, char* font_id, uint8_t color, char* style);
 
 /**
  * @brief Clears the screen with any given color
- * @param[in]	color		color given in string format
- * @retval		error
+ * @param[in]	color		color of the screen
+ * @retval		color		color of the screen
  */
+
 int API_Draw_Clearscreen(uint8_t color);
 
 /**
- * @brief Draws an line on the screen
- * @param[in]	x1			color given in string format
- * @param[in]	y1			color given in string format
- * @param[in]	x2			color given in string format
- * @param[in]	y2			color given in string format
- * @param[in]	weight		color given in string format
- * @param[in]	color		color given in string format
- * @retval		error
+ * @brief Waits for a certain time defined by the user
+ * @param[in]	time		the amount of time that the function has to wait
+ * @retval		time		the amount of time that the function has to wait
  */
 int API_Draw_Wait(int time);
 
