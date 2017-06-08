@@ -1,0 +1,8 @@
+<map id="STM32F4xx_StdPeriph_Driver" name="STM32F4xx_StdPeriph_Driver">
+<area shape="rect" id="node2" href="$group___m_i_s_c.html" title="MISC driver modules. " alt="" coords="215,5,269,32"/>
+<area shape="rect" id="node3" href="$group___d_m_a.html" title="DMA driver modules. " alt="" coords="217,56,267,83"/>
+<area shape="rect" id="node4" href="$group___t_i_m.html" title="TIM driver modules. " alt="" coords="221,107,263,133"/>
+<area shape="rect" id="node5" href="$group___u_s_a_r_t.html" title="USART driver modules. " alt="" coords="209,157,275,184"/>
+<area shape="rect" id="node6" href="$group___g_p_i_o.html" title="GPIO driver modules. " alt="" coords="215,208,269,235"/>
+<area shape="rect" id="node7" href="$group___r_c_c.html" title="RCC driver modules. " alt="" coords="217,259,267,285"/>
+</map>
