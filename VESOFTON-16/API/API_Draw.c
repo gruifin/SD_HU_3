@@ -409,18 +409,15 @@ int API_Draw_Color_To_Int(char *s)
   returns: error code (1. succesfull 2. out of bounds)
   */
 
-int API_Draw_Line(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t weight, uint8_t color)
+int API_Draw_Line(LINE line)
 {
-	float xd = abs(x2-x1);
-	float yd = abs(y2-y1);
+	float xd = abs(line.x2-line.x1);
+	float yd = abs(line.y2-line.y1);
 	float rx  = xd/yd;
 	float ry = yd/xd;
-	int i;
-	int j;
-	int k;
 	int d;
 	int error = 0;
-	if(x1 > 320 || x2 > 320 || y1 > 240 || y2 > 240)
+	if(line.x1 > 320 || line.x2 > 320 || line.y1 > 240 || line.y2 > 240)
 	{
 		error = 2;
 		return error;
@@ -437,17 +434,17 @@ int API_Draw_Line(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t w
 			d = xd;
 			rx = 1;
 		}
-		if(x2 < x1)
+		if(line.x2 < line.x1)
 			rx = -1*rx;
-		if(y2 < y1)
+		if(line.y2 < line.y1)
 			ry = -1*ry;
 
-		for(j = 0; j < d; j++)
+		for(int j = 0; j < d; j++)
 		{
-			for (i=(-1*weight); i < weight; i++)
+			for (int i=(-1*line.width); i < line.width; i++)
 			{
-				for (k=(-1*weight); k < weight; k++)
-					API_IO_SetPixel(x1+k*rx+(j*rx),y1+i*ry+(j*ry),color);
+				for (int k=(-1*line.width); k < line.width; k++)
+					API_IO_SetPixel(line.x1+k*rx+(j*rx),line.y1+i*ry+(j*ry),line.colint);
 			}
 		}
 		return error;
@@ -459,8 +456,8 @@ int API_Draw_Line(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t w
   ----------------------------------
   Draws an ellipse on the screen
 
-  xc:
-  yc:
+  xp:
+  yp:
   width:
   height:
   fill:
@@ -469,28 +466,28 @@ int API_Draw_Line(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t w
   returns: error code (1. succesfull 2. out of bounds)
  */
 
-int API_Draw_Ellipse(uint16_t xc, uint16_t yc, uint16_t width, uint16_t height, uint8_t fill, uint8_t color)
+int API_Draw_Ellipse(ELLIPSE ellip)
 {
 	int error = 0;
 
-	if(xc+width > 320 || yc+height > 240)
+	if(ellip.xp+ellip.width > 320 || ellip.yp+ellip.height > 240)
 	{
 		error = 2;
 		return error;
 	}
 	else
 	{
-		for(int y=-height; y<=height; y++)
+		for(int y=-ellip.height; y<=ellip.height; y++)
 		{
-			for(int x=-width; x<=width; x++)
+			for(int x=-ellip.width; x<=ellip.width; x++)
 			{
-				int r= x*x*height*height+y*y*width*width;
-				int fillcalc = height*width*(height*width-height*2-width*2);
+				int r= x*x*ellip.height*ellip.height+y*y*ellip.width*ellip.width;
+				int fillcalc = ellip.height*ellip.width*(ellip.height*ellip.width-ellip.height*2-ellip.width*2);
 
-				if(r <= height*height*width*width && r >= fillcalc && fill > 0)
-					API_IO_SetPixel(xc+x, yc+y,color);
-				else if(r <= height*height*width*width && fill == 0)
-					API_IO_SetPixel(xc+x, yc+y,color);
+				if(r <= ellip.height*ellip.height*ellip.width*ellip.width && r >= fillcalc && ellip.fill > 0)
+					API_IO_SetPixel(ellip.xp+x, ellip.yp+y,ellip.colint);
+				else if(r <= ellip.height*ellip.height*ellip.width*ellip.width && ellip.fill == 0)
+					API_IO_SetPixel(ellip.xp+x, ellip.yp+y,ellip.colint);
 			}
 		}
 		return error;
@@ -512,7 +509,7 @@ int API_Draw_Ellipse(uint16_t xc, uint16_t yc, uint16_t width, uint16_t height, 
 
   returns: error code (1. succesfull 2. out of bounds)
  */
-int API_Draw_Rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t fill_empty, uint16_t weight, uint8_t color)
+int API_Draw_Rectangle(SQUARE square)
 {
 	int i;
 	int j;
@@ -520,7 +517,7 @@ int API_Draw_Rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint1
 	int ry = 1;
 	int error = 0;
 
-	if(x1 > 320 || x2 > 320 || y1 > 240 || y2 > 240)
+	if(square.x1 > 320 || square.x2 > 320 || square.y1 > 240 || square.y2 > 240)
 	{
 		error = 2;
 		return error;
@@ -528,26 +525,38 @@ int API_Draw_Rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint1
 
 	else
 	{
-		int lrd = abs(x2 - x1);
-		int tbd = abs(y2 - y1);
+		int lrd = abs(square.x2 - square.x1);
+		int tbd = abs(square.y2 - square.y1);
 
-		if(x2 < x1)
+		if(square.x2 < square.x1)
 			rx = -1;
 
-		if(y2 < y1)
+		if(square.y2 < square.y1)
 			ry = -1;
+		LINE line;
+		line.x1 = square.x1;
+		line.y1 = square.y1;
+		line.x2 = square.x2;
+		line.y2 = square.y1;
+		line.width = 1;
+		line.colint = square.colint;
+		API_Draw_Line(line);
+		line.x2 = square.x1;
+		line.y2 = square.y2;
+		API_Draw_Line(line);
+		line.x2 = square.x2;
+		line.x1 = square.x2;
+		API_Draw_Line(line);
+		line.x1 = square.x1;
+		line.y1 = square.y2;
+		API_Draw_Line(line);
 
-		API_Draw_Line(x1,y1,x2,y1, weight, color);
-		API_Draw_Line(x1,y1,x1,y2, weight, color);
-		API_Draw_Line(x2,y1,x2,y2, weight, color);
-		API_Draw_Line(x1,y2,x2+1,y2, weight, color);
-
-		if (fill_empty == 1)
+		if (square.fill == 1)
 		{
 			for(i = 0; i < lrd; i++)
 			{
 				for(j = 0; j < tbd; j++)
-					API_IO_SetPixel(x1 + (i*rx), y1 + (j*ry), color);
+					API_IO_SetPixel(square.x1 + (i*rx), square.y1 + (j*ry), square.colint);
 			}
 		}
 		return error;
@@ -572,11 +581,11 @@ int API_Draw_Rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint1
   returns: error code (1. succesfull 2. out of bounds)
  */
 
-int API_Draw_Triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t x3, uint16_t y3,uint8_t fill_empty, uint8_t color)
+int API_Draw_Triangle(TRIANGLE triangle)
 {
 	int error = 0;
 
-	if(x1 > 320 || x2 > 320 || x3 > 320 || y1 > 240 || y2 > 240 || y3 > 240)
+	if(triangle.x1 > 320 || triangle.x2 > 320 || triangle.x3 > 320 || triangle.y1 > 240 || triangle.y2 > 240 || triangle.y3 > 240)
 	{
 		error = 2;
 		return error;
@@ -584,16 +593,31 @@ int API_Draw_Triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16
 
 	else
 	{
-		API_Draw_Line(x1,y1,x2,y2, 1, color);
-		API_Draw_Line(x2,y2,x3,y3, 1, color);
-		API_Draw_Line(x3,y3,x1,y1, 1, color);
+		LINE line;
+		line.x1 = triangle.x1;
+		line.y1 = triangle.y1;
+		line.x2 = triangle.x2;
+		line.y2 = triangle.y2;
+		line.width = 1;
+		line.colint = triangle.colint;
+		API_Draw_Line(line);
+		line.x1 = triangle.x2;
+		line.y1 = triangle.y2;
+		line.x2 = triangle.x3;
+		line.y2 = triangle.y3;
+		API_Draw_Line(line);
+		line.x1 = triangle.x3;
+		line.y1 = triangle.y3;
+		line.x2 = triangle.x1;
+		line.y2 = triangle.y1;
+		API_Draw_Line(line);
 
-		if(fill_empty == 1)
+		if(triangle.fill == 1)
 		{
-			float xd1 = abs(x3-x1);
-			float yd1 = abs(y3-y1);
-			float xd2 = abs(x3-x2);
-			float yd2 = abs(y3-y2);
+			float xd1 = abs(triangle.x3-triangle.x1);
+			float yd1 = abs(triangle.y3-triangle.y1);
+			float xd2 = abs(triangle.x3-triangle.x2);
+			float yd2 = abs(triangle.y3-triangle.y2);
 			float rx1  = xd1/yd1;
 			float rx2  = xd2/yd2;
 			float ry1 = yd1/xd1;
@@ -624,13 +648,13 @@ int API_Draw_Triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16
 				rx2 = 1;
 			}
 
-			if(x3 < x1)
+			if(triangle.x3 < triangle.x1)
 				rx1 = -1*rx1;
-			if(y3 < y1)
+			if(triangle.y3 < triangle.y1)
 				ry1 = -1*ry1;
-			if(x3 < x2)
+			if(triangle.x3 < triangle.x2)
 				rx2 = -1*rx2;
-			if(y3 < y2)
+			if(triangle.y3 < triangle.y2)
 				ry2 = -1*ry2;
 
 			d = d2;
@@ -638,7 +662,11 @@ int API_Draw_Triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16
 			{
 				d = d1;
 				for(j = 0; j < d; j++)
-					API_Draw_Line(x1+(j*rx1),y1+(j*ry1),x2+(j*rx2),y2+(j*ry2),1,color);
+					line.x1=triangle.x1+(j*rx1);
+					line.y1=triangle.y1+(j*ry1);
+					line.x2=triangle.x2+(j*rx2);
+					line.y2=triangle.y2+(j*ry2);
+					API_Draw_Line(line);
 			}
 		}
 		return error;
@@ -657,13 +685,13 @@ int API_Draw_Triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16
   returns: error code (1. succesfull 2. out of bounds)
  */
 
-int API_Draw_Bitmap(uint16_t x_lo, uint16_t y_lo, uint16_t bitmap_id)
+int API_Draw_Bitmap(BITMAP bitmap)
 {
 	int i;
 	int j;
 	int error = 0;
 
-	if(x_lo > 288 || y_lo > 208)
+	if(bitmap.x > 288 || bitmap.y > 208)
 	{
 		error=2;
 		return error;
@@ -674,35 +702,35 @@ int API_Draw_Bitmap(uint16_t x_lo, uint16_t y_lo, uint16_t bitmap_id)
 		{
 			for(j = 0; j < ARRAY_Y; j++)
 			{
-				switch(bitmap_id)
+				switch(bitmap.bitmap)
 				{
 					case 0:
 						if(Angry_Emoticon[i][j] != 0x49 && Angry_Emoticon[i][j] != 0x00)
-							API_IO_SetPixel(y_lo + j, x_lo + i, Angry_Emoticon[i][j]);
+							API_IO_SetPixel(bitmap.y + j, bitmap.x + i, Angry_Emoticon[i][j]);
 						break;
 					case 1:
 						if(Happy_Emoticon[i][j] != 0x49 && Happy_Emoticon[i][j] != 0x00)
-							API_IO_SetPixel(y_lo + j, x_lo + i, Happy_Emoticon[i][j]);
+							API_IO_SetPixel(bitmap.y + j, bitmap.x + i, Happy_Emoticon[i][j]);
 						break;
 					case 2:
 						if(Arrow_Down[i][j] != 0x49 && Arrow_Down[i][j] != 0x00)
-							API_IO_SetPixel(y_lo + j, x_lo + i, Arrow_Down[i][j]);
+							API_IO_SetPixel(bitmap.y + j, bitmap.x + i, Arrow_Down[i][j]);
 						break;
 					case 3:
 						if(Arrow_Left[i][j] != 0x49 && Arrow_Left[i][j] != 0x00)
-							API_IO_SetPixel(y_lo + j, x_lo + i, Arrow_Left[i][j]);
+							API_IO_SetPixel(bitmap.y + j, bitmap.x + i, Arrow_Left[i][j]);
 						break;
 					case 4:
 						if(Arrow_Right[i][j] != 0x49 && Arrow_Right[i][j] != 0x00)
-							API_IO_SetPixel(y_lo + j, x_lo + i, Arrow_Right[i][j]);
+							API_IO_SetPixel(bitmap.y + j, bitmap.x + i, Arrow_Right[i][j]);
 						break;
 					case 5:
 						if(Arrow_Up[i][j] != 0x49 && Arrow_Up[i][j] != 0x00)
-							API_IO_SetPixel(y_lo + j, x_lo + i, Arrow_Up[i][j]);
+							API_IO_SetPixel(bitmap.y + j, bitmap.x + i, Arrow_Up[i][j]);
 						break;
 					default:
 						if(Angry_Emoticon[i][j] != 0x49 && Angry_Emoticon[i][j] != 0x00)
-							API_IO_SetPixel(y_lo + j, x_lo + i, Angry_Emoticon[i][j]);
+							API_IO_SetPixel(bitmap.y + j, bitmap.x + i, Angry_Emoticon[i][j]);
 						break;
 				}
 			}
@@ -726,21 +754,21 @@ int API_Draw_Bitmap(uint16_t x_lo, uint16_t y_lo, uint16_t bitmap_id)
   returns: error code (1. succesfull 2. out of bounds)
  */
 
-void API_Draw_Font( uint16_t x, uint16_t y, char *text, char *font_id, uint8_t color, char *style)
+void API_Draw_Font(TEXT txt)
 {
 	int bytearray[8];
-	int arraylength = strlen(text);
+	int arraylength = strlen(txt.text);
 	int l=0;
 	int m=0;
 
 	for(int k = 0; k < arraylength ; k++)
 	{
-		int letter = text[k] - 32; // A = 0, B = 1, C = 2, D = 3;
+		int letter = txt.text[k] - 32; // A = 0, B = 1, C = 2, D = 3;
 		for(int j = 0 ; j < 12; j++)
 		{
 			for(int i = 0 ; i < 8 ; i++)
 			{
-				if(x+i+l*8 > 320)
+				if(txt.x+i+l*8 > 320)
 				{
 					l=0;
 					m++;
@@ -749,7 +777,7 @@ void API_Draw_Font( uint16_t x, uint16_t y, char *text, char *font_id, uint8_t c
 				bytearray[i] = (font555[letter][j] & (int)pow(2,7-i));
 				bytearray[i] /= bytearray[i];
 				if(bytearray[i] >= 1)
-					API_IO_SetPixel(x+i+l*8,y+j+m*12,color);
+					API_IO_SetPixel(txt.x+i+l*8,txt.y+j+m*12,txt.colint);
 			}
 		}
 		l++;

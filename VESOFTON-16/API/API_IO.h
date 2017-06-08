@@ -62,9 +62,20 @@
 #define VGA_DISPLAY_X   320
 #define VGA_DISPLAY_Y   240
 
+#define STR_LENGTH 120
+
+#define TYPE_LENGTH 20
+
+#define COLOR_LENGTH 20
 
 #define CRCHAR 13 // carriage return char
 #define LFCHAR 10 // linefeed char
+
+typedef struct {
+	char buff[STR_LENGTH];
+	char type[TYPE_LENGTH];
+	uint8_t error;
+}COMMAND_t;
 
 
 //--------------------------------------------------------------

@@ -18,7 +18,73 @@
 // Includes
 //--------------------------------------------------------------
 #include "main.h"
+#include "API_IO.h"
 
+
+
+
+
+
+typedef struct
+{
+	uint16_t x1;
+	uint16_t y1;
+	uint16_t x2;
+	uint16_t y2;
+	uint8_t width;
+	uint8_t colint;
+
+}LINE;
+
+typedef struct
+{
+	uint16_t xp;
+	uint16_t yp;
+	uint16_t width;
+	uint16_t height;
+	uint8_t fill;
+	uint8_t	colint;
+}ELLIPSE;
+
+typedef struct
+{
+	uint16_t x1;
+	uint16_t y1;
+	uint16_t x2;
+	uint16_t y2;
+	uint16_t x3;
+	uint16_t y3;
+	uint8_t fill;
+	uint8_t colint;
+}TRIANGLE;
+
+typedef struct
+{
+	uint16_t x1;
+	uint16_t y1;
+	uint16_t x2;
+	uint16_t y2;
+	uint16_t fill;
+	uint8_t colint;
+}SQUARE;
+
+typedef struct
+{
+	char buff[200];
+	uint16_t x;
+	uint16_t y;
+	char text[200];
+	char font[20];
+	char style[20];
+	uint8_t colint;
+}TEXT;
+
+typedef struct
+{
+	uint16_t x;
+	uint16_t y;
+	uint16_t bitmap;
+}BITMAP;
 //--------------------------------------------------------------
 // Defines
 //--------------------------------------------------------------
@@ -32,6 +98,20 @@
  */
 #define ARRAY_Y		32
 
+
+#define TEXT_BUFFER 100
+#define FONT_BUFFER 20
+#define STYLE_BUFFER 20
+
+#define STR_LENGTH 120
+
+#define TYPE_LENGTH 20
+
+#define COLOR_LENGTH 20
+
+
+char buff[TYPE_LENGTH];
+char color[COLOR_LENGTH];
 /**
  * @brief Converts incoming string into a integer
  * @param[in]	s			color given in string format
@@ -49,7 +129,7 @@ int API_Draw_Color_To_Int(char *s);
  * @param[in]	color		color of the line
  * @retval		error
  */
-int API_Draw_Line(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t weight, uint8_t color);
+int API_Draw_Line(LINE line);
 
 /**
  * @brief Draws an Ellipse on the screen
@@ -61,7 +141,7 @@ int API_Draw_Line(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t w
  * @param[in]	color		color given in string format
  * @retval		error
  */
-int API_Draw_Ellipse(uint16_t xc, uint16_t yc, uint16_t width, uint16_t height, uint8_t fill, uint8_t color);
+int API_Draw_Ellipse(ELLIPSE ellip);
 
 /**
  * @brief Draws a rectangle on the screen
@@ -74,7 +154,7 @@ int API_Draw_Ellipse(uint16_t xc, uint16_t yc, uint16_t width, uint16_t height, 
  * @param[in]	color		color given in string format
  * @retval		error
  */
-int API_Draw_Rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t fill_empty, uint16_t weight, uint8_t color);
+int API_Draw_Rectangle(SQUARE square);
 
 /**
  * @brief Draws a triangle on the screen
@@ -88,7 +168,7 @@ int API_Draw_Rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint1
  * @param[in]	color		color given in string format
  * @retval		error
  */
-int API_Draw_Triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t x3, uint16_t y3, uint8_t fill_empty, uint8_t color);
+int API_Draw_Triangle(TRIANGLE triangle);
 
 /**
  * @brief Draws a bitmap on the screen
@@ -97,7 +177,7 @@ int API_Draw_Triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16
  * @param[in]	bitmap_id	id of the bitmap (1. angry_emoticon 2. happy_emoticon 3. arrow_down 4. arrow_left 5. arrow_up 6. arrow_right) (table toevoegen van welke id welke bitmap is)
  * @retval		error
  */
-int API_Draw_Bitmap(uint16_t x_lo, uint16_t y_lo, uint16_t bitmap_id);
+int API_Draw_Bitmap(BITMAP bitmap);
 
 /**
  * @brief Draws a Font on the screen
@@ -110,7 +190,7 @@ int API_Draw_Bitmap(uint16_t x_lo, uint16_t y_lo, uint16_t bitmap_id);
  * @retval		error
  */
 
-void API_Draw_Font( uint16_t x, uint16_t y, char *text, char* font_id, uint8_t color, char* style);
+void API_Draw_Font( TEXT txt);
 
 /**
  * @brief Clears the screen with any given color
