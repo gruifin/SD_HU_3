@@ -10,6 +10,22 @@
 // Function : VGA_core DMA LIB 320x240, 8bit color
 //--------------------------------------------------------------
 
+/*******************************************************************************
+ * Begin of file Logic_Layer.c
+ * Author: Wilmar van Dijk, Ludo Teirlinck en Jasper de Zoete
+ * Created on May 24, 2016, 04:27 PM
+ *
+ *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+ *
+ * CPU: STM32F407
+ * IDE: CooCox CoIDE 1.7.8
+ *
+ *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~**/
+/** @file
+ * @brief Common definition used by all files and public API.
+ *
+ ******************************************************************************/
+
 #include "API_Draw.h"
 int counter = 0;
 int error = 0;

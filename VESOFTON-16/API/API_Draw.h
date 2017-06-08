@@ -24,22 +24,44 @@
 
 typedef struct
 {
+	/** @brief	horizontal begin position of the line  */
 	uint16_t x1;
+
+	/** @brief	vertical begin position of the line  */
 	uint16_t y1;
+
+	/** @brief	horizontal end position of the line  */
 	uint16_t x2;
+
+	/** @brief	vertical end position of the line  */
 	uint16_t y2;
+
+	/** @brief	weight of the line  */
 	uint8_t width;
+
+	/** @brief	color of the line  */
 	uint8_t colint;
 
 }LINE;
 
 typedef struct
 {
+	/** @brief	horizontal begin position of the line  */
 	uint16_t xp;
+
+	/** @brief	horizontal begin position of the line  */
 	uint16_t yp;
+
+	/** @brief	horizontal begin position of the line  */
 	uint16_t width;
+
+	/** @brief	horizontal begin position of the line  */
 	uint16_t height;
+
+	/** @brief	horizontal begin position of the line  */
 	uint8_t fill;
+
+	/** @brief	horizontal begin position of the line  */
 	uint8_t	colint;
 }ELLIPSE;
 
@@ -82,6 +104,7 @@ typedef struct
 	uint16_t y;
 	uint16_t bitmap;
 }BITMAP;
+
 //--------------------------------------------------------------
 // Defines
 //--------------------------------------------------------------

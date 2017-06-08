@@ -1196,20 +1196,20 @@ LOAD c:/program files (x86)/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm
 END GROUP
 OUTPUT(VESOFTON-16.elf elf32-littlearm)
 
-.debug_info     0x00000000     0x6e6a
+.debug_info     0x00000000     0x6e6c
  .debug_info    0x00000000      0x130 ..\obj\User_Interface.o
- .debug_info    0x00000130      0x5e3 ..\obj\Logic_Layer.o
- .debug_info    0x00000713      0x24d ..\obj\Input_Output.o
- .debug_info    0x00000960      0x9ca ..\obj\stm32f4xx_usart.o
- .debug_info    0x0000132a      0x96a ..\obj\API_Draw.o
- .debug_info    0x00001c94       0xf2 ..\obj\startup_stm32f4xx.o
- .debug_info    0x00001d86      0xc63 ..\obj\stm32f4xx_rcc.o
- .debug_info    0x000029e9      0x61a ..\obj\stm32f4xx_gpio.o
- .debug_info    0x00003003      0x5c5 ..\obj\system_stm32f4xx.o
- .debug_info    0x000035c8      0x741 ..\obj\stm32f4xx_dma.o
- .debug_info    0x00003d09      0xfa2 ..\obj\API_IO.o
- .debug_info    0x00004cab      0x556 ..\obj\misc.o
- .debug_info    0x00005201     0x1c69 ..\obj\stm32f4xx_tim.o
+ .debug_info    0x00000130      0x5e5 ..\obj\Logic_Layer.o
+ .debug_info    0x00000715      0x24d ..\obj\Input_Output.o
+ .debug_info    0x00000962      0x9ca ..\obj\stm32f4xx_usart.o
+ .debug_info    0x0000132c      0x96a ..\obj\API_Draw.o
+ .debug_info    0x00001c96       0xf2 ..\obj\startup_stm32f4xx.o
+ .debug_info    0x00001d88      0xc63 ..\obj\stm32f4xx_rcc.o
+ .debug_info    0x000029eb      0x61a ..\obj\stm32f4xx_gpio.o
+ .debug_info    0x00003005      0x5c5 ..\obj\system_stm32f4xx.o
+ .debug_info    0x000035ca      0x741 ..\obj\stm32f4xx_dma.o
+ .debug_info    0x00003d0b      0xfa2 ..\obj\API_IO.o
+ .debug_info    0x00004cad      0x556 ..\obj\misc.o
+ .debug_info    0x00005203     0x1c69 ..\obj\stm32f4xx_tim.o
 
 .debug_abbrev   0x00000000     0x1198
  .debug_abbrev  0x00000000       0xa6 ..\obj\User_Interface.o
@@ -1269,47 +1269,47 @@ OUTPUT(VESOFTON-16.elf elf32-littlearm)
  .debug_ranges  0x000004e8       0x30 ..\obj\misc.o
  .debug_ranges  0x00000518      0x2e8 ..\obj\stm32f4xx_tim.o
 
-.debug_line     0x00000000     0x34e1
- .debug_line    0x00000000      0x195 ..\obj\User_Interface.o
- .debug_line    0x00000195      0x367 ..\obj\Logic_Layer.o
- .debug_line    0x000004fc      0x214 ..\obj\Input_Output.o
- .debug_line    0x00000710      0x509 ..\obj\stm32f4xx_usart.o
- .debug_line    0x00000c19      0x4a3 ..\obj\API_Draw.o
- .debug_line    0x000010bc       0xad ..\obj\startup_stm32f4xx.o
- .debug_line    0x00001169      0x5f5 ..\obj\stm32f4xx_rcc.o
- .debug_line    0x0000175e      0x3b0 ..\obj\stm32f4xx_gpio.o
- .debug_line    0x00001b0e      0x21a ..\obj\system_stm32f4xx.o
- .debug_line    0x00001d28      0x47a ..\obj\stm32f4xx_dma.o
- .debug_line    0x000021a2      0x5a0 ..\obj\API_IO.o
- .debug_line    0x00002742      0x28e ..\obj\misc.o
- .debug_line    0x000029d0      0xb11 ..\obj\stm32f4xx_tim.o
+.debug_line     0x00000000     0x359c
+ .debug_line    0x00000000      0x1d4 ..\obj\User_Interface.o
+ .debug_line    0x000001d4      0x3a4 ..\obj\Logic_Layer.o
+ .debug_line    0x00000578      0x253 ..\obj\Input_Output.o
+ .debug_line    0x000007cb      0x509 ..\obj\stm32f4xx_usart.o
+ .debug_line    0x00000cd4      0x4a3 ..\obj\API_Draw.o
+ .debug_line    0x00001177       0xad ..\obj\startup_stm32f4xx.o
+ .debug_line    0x00001224      0x5f5 ..\obj\stm32f4xx_rcc.o
+ .debug_line    0x00001819      0x3b0 ..\obj\stm32f4xx_gpio.o
+ .debug_line    0x00001bc9      0x21a ..\obj\system_stm32f4xx.o
+ .debug_line    0x00001de3      0x47a ..\obj\stm32f4xx_dma.o
+ .debug_line    0x0000225d      0x5a0 ..\obj\API_IO.o
+ .debug_line    0x000027fd      0x28e ..\obj\misc.o
+ .debug_line    0x00002a8b      0xb11 ..\obj\stm32f4xx_tim.o
 
-.debug_str      0x00000000     0x2cda
- .debug_str     0x00000000      0x163 ..\obj\User_Interface.o
-                                0x1b0 (size before relaxing)
- .debug_str     0x00000163      0x10f ..\obj\Logic_Layer.o
-                                0x297 (size before relaxing)
- .debug_str     0x00000272       0x60 ..\obj\Input_Output.o
-                                0x237 (size before relaxing)
- .debug_str     0x000002d2      0x514 ..\obj\stm32f4xx_usart.o
+.debug_str      0x00000000     0x2cf5
+ .debug_str     0x00000000      0x16c ..\obj\User_Interface.o
+                                0x1b9 (size before relaxing)
+ .debug_str     0x0000016c      0x118 ..\obj\Logic_Layer.o
+                                0x2a0 (size before relaxing)
+ .debug_str     0x00000284       0x69 ..\obj\Input_Output.o
+                                0x240 (size before relaxing)
+ .debug_str     0x000002ed      0x514 ..\obj\stm32f4xx_usart.o
                                 0x69b (size before relaxing)
- .debug_str     0x000007e6      0x175 ..\obj\API_Draw.o
+ .debug_str     0x00000801      0x175 ..\obj\API_Draw.o
                                 0x3a3 (size before relaxing)
- .debug_str     0x0000095b       0xbc ..\obj\startup_stm32f4xx.o
+ .debug_str     0x00000976       0xbc ..\obj\startup_stm32f4xx.o
                                 0x153 (size before relaxing)
- .debug_str     0x00000a17      0x5e9 ..\obj\stm32f4xx_rcc.o
+ .debug_str     0x00000a32      0x5e9 ..\obj\stm32f4xx_rcc.o
                                 0x85c (size before relaxing)
- .debug_str     0x00001000      0x334 ..\obj\stm32f4xx_gpio.o
+ .debug_str     0x0000101b      0x334 ..\obj\stm32f4xx_gpio.o
                                 0x4af (size before relaxing)
- .debug_str     0x00001334      0x124 ..\obj\system_stm32f4xx.o
+ .debug_str     0x0000134f      0x124 ..\obj\system_stm32f4xx.o
                                 0x3b6 (size before relaxing)
- .debug_str     0x00001458      0x3a3 ..\obj\stm32f4xx_dma.o
+ .debug_str     0x00001473      0x3a3 ..\obj\stm32f4xx_dma.o
                                 0x54e (size before relaxing)
- .debug_str     0x000017fb      0x968 ..\obj\API_IO.o
+ .debug_str     0x00001816      0x968 ..\obj\API_IO.o
                                 0xf3f (size before relaxing)
- .debug_str     0x00002163      0x16d ..\obj\misc.o
+ .debug_str     0x0000217e      0x16d ..\obj\misc.o
                                 0x3da (size before relaxing)
- .debug_str     0x000022d0      0xa0a ..\obj\stm32f4xx_tim.o
+ .debug_str     0x000022eb      0xa0a ..\obj\stm32f4xx_tim.o
                                 0xddc (size before relaxing)
 
 .comment        0x00000000       0x6e

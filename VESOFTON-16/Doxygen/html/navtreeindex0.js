@@ -83,6 +83,8 @@ var NAVTREEINDEX0 =
 "classes.html":[0,1],
 "dir_19ea4dbfe8f0e4681f60b9b97f7b5d11.html":[1,0,0],
 "files.html":[1,0],
+"functions.html":[0,2,0],
+"functions_vars.html":[0,2,1],
 "globals.html":[1,1,0],
 "globals_defs.html":[1,1,2],
 "globals_func.html":[1,1,1],
