@@ -18,7 +18,14 @@ This API allows the user to post the following items on a VGA display:
 ### Demo
 The API comes with a demo code. The code will execute all the function of the API through commands over the UART. Command of the UART are build by the following way:
 
-<commands??>
+* Line ```[x1, y1, x2, y2, weight, color```
+* Ellipse ```[x-mp, y-mp, radius-x, radius-y, color]```
+* Rechthoek  ```[x-lo, y-lo, x-rb, y-rb, color]```
+* Tekst  ```[x, y, text, font name, color, style <italic/bold/normal>]```
+* Bitmap ```[<arrow<left/right/up/down>>, smiley<happy/angry>]```
+* Clearscherm ```[color]```
+
+__!Commands are in Dutch__
 
 ### More Info
 For more information see the [doxygen](https://gruifin.github.io/SD_HU_3/) documentation.
