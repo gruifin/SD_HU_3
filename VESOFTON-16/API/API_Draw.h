@@ -22,9 +22,6 @@
 
 
 
-
-
-
 typedef struct
 {
 	uint16_t x1;

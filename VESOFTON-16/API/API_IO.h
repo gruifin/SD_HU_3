@@ -1,19 +1,18 @@
-//--------------------------------------------------------------
-// File     : stm32_ub_vga_320x240.c
-// CPU      : STM32F4
-// IDE      : CooCox CoIDE 1.7.0
-// Module   : GPIO, TIM, MISC, DMA
-// Function : VGA out by GPIO (320x240 Pixel, 8bit color)
-//
-// signals  : PB11      = HSync-Signal
-//            PB12      = VSync-Signal
-//            PE8+PE9   = color Blue
-//            PE10-PE12 = color Green
-//            PE13-PE15 = color red
-//
-// uses     : TIM1, TIM2
-//            DMA2, Channel6, Stream5
-//--------------------------------------------------------------
+/*******************************************************************************
+ * Begin of file API_IO.h
+ * Author: Wilmar van Dijk, Ludo Teirlinck en Jasper de Zoete
+ * Created on May 24, 2016, 04:27 PM
+ *
+ *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+ *
+ * CPU: STM32F407
+ * IDE: CooCox CoIDE 1.7.8
+ *
+ *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~**/
+/** @file
+ * @brief Common definition used by all files and public API.
+ *
+ ******************************************************************************/
 
 //--------------------------------------------------------------
 #ifndef __STM32F4_UB_VGA_SCREEN_H
