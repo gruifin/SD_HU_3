@@ -348,14 +348,13 @@ uint8_t Arrow_Up[32][32] =
 };
 
 /**
- * Function:	API_Draw_Color_To_Int
- * ----------------------------------
- * Converts incoming string into a integer
- *
- * s: color given in string format
- *
- * returns: color in integer format
- *
+  Function:	API_Draw_Color_To_Int
+  ----------------------------------
+  Converts incoming string into a integer
+
+  s: color given in string format
+
+  returns: color in integer format
  */
 
 int API_Draw_Color_To_Int(char *s)
@@ -395,21 +394,20 @@ int API_Draw_Color_To_Int(char *s)
 	return color;
 }
 
-/**
- * Function:	API_Draw_Line
- * ----------------------------------
- * Draws an line on the screen
- *
- * x1:
- * y1:
- * x2:
- * y2:
- * weight:
- * color:
- *
- * returns: error code (1. succesfull 2. out of bounds)
- *
- */
+/*
+  Function:	API_Draw_Line
+  ----------------------------------
+  Draws a line on the screen
+
+  x1: horizontal begin position of the line
+  y1: vertical begin position of the line
+  x2: horizontal end position of the line
+  y2: vertical end position of the line
+  weight: set the weight of the line
+  color: sets the color of the line
+
+  returns: error code (1. succesfull 2. out of bounds)
+  */
 
 int API_Draw_Line(uint16_t x1, uint16_t y1,uint16_t x2,uint16_t y2,uint16_t width, uint8_t color)
 {
@@ -457,19 +455,18 @@ int API_Draw_Line(uint16_t x1, uint16_t y1,uint16_t x2,uint16_t y2,uint16_t widt
 }
 
 /**
- * Function:	API_Draw_Ellipse
- * ----------------------------------
- * Draws an ellipse on the screen
- *
- * xc:
- * yc:
- * width:
- * height:
- * fill:
- * color:
- *
- * returns: error code (1. succesfull 2. out of bounds)
- *
+  Function:	API_Draw_Ellipse
+  ----------------------------------
+  Draws an ellipse on the screen
+
+  xc:
+  yc:
+  width:
+  height:
+  fill:
+  color:
+
+  returns: error code (1. succesfull 2. out of bounds)
  */
 
 int API_Draw_Ellipse(uint16_t xc, uint16_t yc, uint16_t width, uint16_t height, uint8_t fill, uint8_t color)
@@ -501,20 +498,19 @@ int API_Draw_Ellipse(uint16_t xc, uint16_t yc, uint16_t width, uint16_t height, 
 }
 
 /**
- * Function:	API_Draw_Rectangle
- * ----------------------------------
- * Draws an rectangle on the screen
- *
- * x1:
- * y1:
- * x2:
- * y2:
- * width:
- * fill:
- * color:
- *
- * returns: error code (1. succesfull 2. out of bounds)
- *
+  Function:	API_Draw_Rectangle
+  ----------------------------------
+  Draws an rectangle on the screen
+
+  x1:
+  y1:
+  x2:
+  y2:
+  width:
+  fill:
+  color:
+
+  returns: error code (1. succesfull 2. out of bounds)
  */
 
 int API_Draw_Rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t fill_empty, uint16_t width, uint8_t color)
@@ -560,25 +556,24 @@ int API_Draw_Rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint1
 }
 
 /**
- * Function:	API_Draw_Triangle
- * ----------------------------------
- * Draws an triangle on the screen
- *
- * x1:
- * y1:
- * x2:
- * y2:
- * x3:
- * y3:
- * weight:
- * fill:
- * color:
- *
- * returns: error code (1. succesfull 2. out of bounds)
- *
+  Function:	API_Draw_Triangle
+  ----------------------------------
+  Draws an triangle on the screen
+
+  x1:
+  y1:
+  x2:
+  y2:
+  x3:
+  y3:
+  weight:
+  fill_empty:
+  color:
+
+  returns: error code (1. succesfull 2. out of bounds)
  */
 
-int API_Draw_Triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t x3, uint16_t y3,uint8_t fill, uint8_t color)
+int API_Draw_Triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t x3, uint16_t y3,uint8_t fill_empty, uint8_t color)
 {
 	int error = 0;
 
@@ -594,7 +589,7 @@ int API_Draw_Triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16
 		API_Draw_Line(x2,y2,x3,y3, 1, color);
 		API_Draw_Line(x3,y3,x1,y1, 1, color);
 
-		if(fill == 1)
+		if(fill_empty == 1)
 		{
 			float xd1 = abs(x3-x1);
 			float yd1 = abs(y3-y1);
@@ -652,16 +647,15 @@ int API_Draw_Triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16
 }
 
 /**
- * Function:	API_Draw_Bitmap
- * ----------------------------------
- * Draws an triangle on the screen
- *
- * x_lo:
- * y_lo:
- * bitmap_id:
- *
- * returns: error code (1. succesfull 2. out of bounds)
- *
+  Function:	API_Draw_Bitmap
+  ----------------------------------
+  Draws an triangle on the screen
+
+  x_lo:
+  y_lo:
+  bitmap_id:
+
+  returns: error code (1. succesfull 2. out of bounds)
  */
 
 int API_Draw_Bitmap(uint16_t x_lo, uint16_t y_lo, uint16_t bitmap_id)
@@ -719,19 +713,18 @@ int API_Draw_Bitmap(uint16_t x_lo, uint16_t y_lo, uint16_t bitmap_id)
 }
 
 /**
- * Function:	API_Draw_Font
- * ----------------------------------
- * Draws an triangle on the screen
- *
- * x:
- * y:
- * text:
- * font_id:
- * style:
- * color:
- *
- * returns: error code (1. succesfull 2. out of bounds)
- *
+  Function:	API_Draw_Font
+  ----------------------------------
+  Draws an triangle on the screen
+
+  x:
+  y:
+  text:
+  font_id:
+  style:
+  color:
+
+  returns: error code (1. succesfull 2. out of bounds)
  */
 
 void API_Draw_Font( uint16_t x, uint16_t y, char *text, char *font_id, uint8_t color, char *style)
@@ -764,15 +757,14 @@ void API_Draw_Font( uint16_t x, uint16_t y, char *text, char *font_id, uint8_t c
 	}
 }
 
-/**
- * Function:	API_Draw_Clearscreen
- * ----------------------------------
- * Clears the screen with any chosen color
- *
- * color:
- *
- * returns: color of the screen
- *
+/*
+  Function:	API_Draw_Clearscreen
+  ----------------------------------
+  Clears the screen with any chosen color
+
+  color:
+
+  returns: color of the screen
  */
 
 int API_Draw_Clearscreen(uint8_t color)
@@ -781,15 +773,14 @@ int API_Draw_Clearscreen(uint8_t color)
 	return color;
 }
 
-/**
- * Function:	API_Draw_Wait
- * ----------------------------------
- * Waits for a certain time defined by the user
- *
- * time: The amount of time that the function has to wait
- *
- * returns: color of the screen
- *
+/*
+  Function:	API_Draw_Wait
+  ----------------------------------
+  Waits for a certain time defined by the user
+
+  time: The amount of time that the function has to wait
+
+  returns: color of the screen
  */
 
 int API_Draw_Wait(int time)

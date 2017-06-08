@@ -1,0 +1,322 @@
+\hypertarget{_a_p_i___draw_8h}{}\section{A\+P\+I\+\_\+\+Draw.\+h File Reference}
+\label{_a_p_i___draw_8h}\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+
+
+Common definition used by all files and public A\+PI.  
+
+
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_a_p_i___draw_8h_a4d28f433aea364a3ad46e595fdcf0d5c}\label{_a_p_i___draw_8h_a4d28f433aea364a3ad46e595fdcf0d5c}} 
+\#define {\bfseries A\+R\+R\+A\+Y\+\_\+X}~32
+\item 
+\mbox{\Hypertarget{_a_p_i___draw_8h_a269b7afbb0895a1f631c8381d0eb8f0a}\label{_a_p_i___draw_8h_a269b7afbb0895a1f631c8381d0eb8f0a}} 
+\#define {\bfseries A\+R\+R\+A\+Y\+\_\+Y}~32
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_a_p_i___draw_8h_aff90fdb61bb824c8fd2688b4def62409}{A\+P\+I\+\_\+\+Draw\+\_\+\+Color\+\_\+\+To\+\_\+\+Int} (char $\ast$s)
+\begin{DoxyCompactList}\small\item\em Converts incoming string into a integer. \end{DoxyCompactList}\item 
+int \hyperlink{_a_p_i___draw_8h_ac887aa1ea415d052ea0710b832483e6b}{A\+P\+I\+\_\+\+Draw\+\_\+\+Line} (uint16\+\_\+t x1, uint16\+\_\+t y1, uint16\+\_\+t x2, uint16\+\_\+t y2, uint16\+\_\+t width, uint8\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draws a line on the screen. \end{DoxyCompactList}\item 
+int \hyperlink{_a_p_i___draw_8h_a383a975e6876f439ff6a712b73706016}{A\+P\+I\+\_\+\+Draw\+\_\+\+Ellipse} (uint16\+\_\+t xc, uint16\+\_\+t yc, uint16\+\_\+t width, uint16\+\_\+t height, uint8\+\_\+t fill, uint8\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draws an Ellipse on the screen. \end{DoxyCompactList}\item 
+int \hyperlink{_a_p_i___draw_8h_acd3df799ad6ea0821f1e02e98846652b}{A\+P\+I\+\_\+\+Draw\+\_\+\+Rectangle} (uint16\+\_\+t x1, uint16\+\_\+t y1, uint16\+\_\+t x2, uint16\+\_\+t y2, uint16\+\_\+t fill\+\_\+empty, uint16\+\_\+t width, uint8\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draws a rectangle on the screen. \end{DoxyCompactList}\item 
+int \hyperlink{_a_p_i___draw_8h_abafb097ff2c3ec26627cb76c3785a076}{A\+P\+I\+\_\+\+Draw\+\_\+\+Triangle} (uint16\+\_\+t x1, uint16\+\_\+t y1, uint16\+\_\+t x2, uint16\+\_\+t y2, uint16\+\_\+t x3, uint16\+\_\+t y3, uint8\+\_\+t fill\+\_\+empty, uint8\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draws a triangle on the screen. \end{DoxyCompactList}\item 
+int \hyperlink{_a_p_i___draw_8h_a66642bd98661d82e80ed1bd7df965eaf}{A\+P\+I\+\_\+\+Draw\+\_\+\+Bitmap} (uint16\+\_\+t x\+\_\+lo, uint16\+\_\+t y\+\_\+lo, uint16\+\_\+t bitmap\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Draws a bitmap on the screen. \end{DoxyCompactList}\item 
+void \hyperlink{_a_p_i___draw_8h_aa68e112ac425f2de48c23772b2567fe4}{A\+P\+I\+\_\+\+Draw\+\_\+\+Font} (uint16\+\_\+t x, uint16\+\_\+t y, char $\ast$text, char $\ast$font\+\_\+id, uint8\+\_\+t color, char $\ast$style)
+\begin{DoxyCompactList}\small\item\em Draws a Font on the screen. \end{DoxyCompactList}\item 
+int \hyperlink{_a_p_i___draw_8h_a0f30b1520ac3fbef9c559a8f2ed8ec8d}{A\+P\+I\+\_\+\+Draw\+\_\+\+Clearscreen} (uint8\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Clears the screen with any given color. \end{DoxyCompactList}\item 
+int \hyperlink{_a_p_i___draw_8h_a4686d3964c99ff26a50ca86b502089ad}{A\+P\+I\+\_\+\+Draw\+\_\+\+Wait} (int time)
+\begin{DoxyCompactList}\small\item\em Draws an line on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Common definition used by all files and public A\+PI. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_a_p_i___draw_8h_a66642bd98661d82e80ed1bd7df965eaf}\label{_a_p_i___draw_8h_a66642bd98661d82e80ed1bd7df965eaf}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!A\+P\+I\+\_\+\+Draw\+\_\+\+Bitmap@{A\+P\+I\+\_\+\+Draw\+\_\+\+Bitmap}}
+\index{A\+P\+I\+\_\+\+Draw\+\_\+\+Bitmap@{A\+P\+I\+\_\+\+Draw\+\_\+\+Bitmap}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+Draw\+\_\+\+Bitmap()}{API\_Draw\_Bitmap()}}
+{\footnotesize\ttfamily int A\+P\+I\+\_\+\+Draw\+\_\+\+Bitmap (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x\+\_\+lo,  }\item[{uint16\+\_\+t}]{y\+\_\+lo,  }\item[{uint16\+\_\+t}]{bitmap\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Draws a bitmap on the screen. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x\+\_\+lo} & color given in string format \\
+\hline
+\mbox{\tt in}  & {\em y\+\_\+lo} & color given in string format \\
+\hline
+\mbox{\tt in}  & {\em bitmap\+\_\+id} & color given in string format (table toevoegen van welke id welke bitmap is) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em error} & \subsubsection*{Function\+: A\+P\+I\+\_\+\+Draw\+\_\+\+Bitmap }\\
+\hline
+\end{DoxyRetVals}
+Draws an triangle on the screen
+
+x\+\_\+lo\+: y\+\_\+lo\+: bitmap\+\_\+id\+:
+
+returns\+: error code (1. succesfull 2. out of bounds) \mbox{\Hypertarget{_a_p_i___draw_8h_a0f30b1520ac3fbef9c559a8f2ed8ec8d}\label{_a_p_i___draw_8h_a0f30b1520ac3fbef9c559a8f2ed8ec8d}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!A\+P\+I\+\_\+\+Draw\+\_\+\+Clearscreen@{A\+P\+I\+\_\+\+Draw\+\_\+\+Clearscreen}}
+\index{A\+P\+I\+\_\+\+Draw\+\_\+\+Clearscreen@{A\+P\+I\+\_\+\+Draw\+\_\+\+Clearscreen}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+Draw\+\_\+\+Clearscreen()}{API\_Draw\_Clearscreen()}}
+{\footnotesize\ttfamily int A\+P\+I\+\_\+\+Draw\+\_\+\+Clearscreen (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Clears the screen with any given color. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em color} & color given in string format \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em error} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_a_p_i___draw_8h_aff90fdb61bb824c8fd2688b4def62409}\label{_a_p_i___draw_8h_aff90fdb61bb824c8fd2688b4def62409}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!A\+P\+I\+\_\+\+Draw\+\_\+\+Color\+\_\+\+To\+\_\+\+Int@{A\+P\+I\+\_\+\+Draw\+\_\+\+Color\+\_\+\+To\+\_\+\+Int}}
+\index{A\+P\+I\+\_\+\+Draw\+\_\+\+Color\+\_\+\+To\+\_\+\+Int@{A\+P\+I\+\_\+\+Draw\+\_\+\+Color\+\_\+\+To\+\_\+\+Int}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+Draw\+\_\+\+Color\+\_\+\+To\+\_\+\+Int()}{API\_Draw\_Color\_To\_Int()}}
+{\footnotesize\ttfamily int A\+P\+I\+\_\+\+Draw\+\_\+\+Color\+\_\+\+To\+\_\+\+Int (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Converts incoming string into a integer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em s} & color given in string format \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em color} & color in integer format\\
+\hline
+\end{DoxyRetVals}
+\subsubsection*{Function\+: A\+P\+I\+\_\+\+Draw\+\_\+\+Color\+\_\+\+To\+\_\+\+Int }
+
+Converts incoming string into a integer
+
+s\+: color given in string format
+
+returns\+: color in integer format \mbox{\Hypertarget{_a_p_i___draw_8h_a383a975e6876f439ff6a712b73706016}\label{_a_p_i___draw_8h_a383a975e6876f439ff6a712b73706016}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!A\+P\+I\+\_\+\+Draw\+\_\+\+Ellipse@{A\+P\+I\+\_\+\+Draw\+\_\+\+Ellipse}}
+\index{A\+P\+I\+\_\+\+Draw\+\_\+\+Ellipse@{A\+P\+I\+\_\+\+Draw\+\_\+\+Ellipse}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+Draw\+\_\+\+Ellipse()}{API\_Draw\_Ellipse()}}
+{\footnotesize\ttfamily int A\+P\+I\+\_\+\+Draw\+\_\+\+Ellipse (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{xc,  }\item[{uint16\+\_\+t}]{yc,  }\item[{uint16\+\_\+t}]{width,  }\item[{uint16\+\_\+t}]{height,  }\item[{uint8\+\_\+t}]{fill,  }\item[{uint8\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draws an Ellipse on the screen. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em xc} & horizontal center position of the ellipse \\
+\hline
+\mbox{\tt in}  & {\em yc} & vertical center position of the ellipse \\
+\hline
+\mbox{\tt in}  & {\em width} & the width of the ellipse \\
+\hline
+\mbox{\tt in}  & {\em height} & the height of the ellipse \\
+\hline
+\mbox{\tt in}  & {\em fill} & fill ellipse if argument is true \\
+\hline
+\mbox{\tt in}  & {\em color} & color given in string format \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em error} & \subsubsection*{Function\+: A\+P\+I\+\_\+\+Draw\+\_\+\+Ellipse }\\
+\hline
+\end{DoxyRetVals}
+Draws an ellipse on the screen
+
+xc\+: yc\+: width\+: height\+: fill\+: color\+:
+
+returns\+: error code (1. succesfull 2. out of bounds) \mbox{\Hypertarget{_a_p_i___draw_8h_aa68e112ac425f2de48c23772b2567fe4}\label{_a_p_i___draw_8h_aa68e112ac425f2de48c23772b2567fe4}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!A\+P\+I\+\_\+\+Draw\+\_\+\+Font@{A\+P\+I\+\_\+\+Draw\+\_\+\+Font}}
+\index{A\+P\+I\+\_\+\+Draw\+\_\+\+Font@{A\+P\+I\+\_\+\+Draw\+\_\+\+Font}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+Draw\+\_\+\+Font()}{API\_Draw\_Font()}}
+{\footnotesize\ttfamily void A\+P\+I\+\_\+\+Draw\+\_\+\+Font (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{char $\ast$}]{text,  }\item[{char $\ast$}]{font\+\_\+id,  }\item[{uint8\+\_\+t}]{color,  }\item[{char $\ast$}]{style }\end{DoxyParamCaption})}
+
+
+
+Draws a Font on the screen. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & color given in string format \\
+\hline
+\mbox{\tt in}  & {\em y} & color given in string format \\
+\hline
+\mbox{\tt in}  & {\em text} & color given in string format \\
+\hline
+\mbox{\tt in}  & {\em font\+\_\+id} & color given in string format \\
+\hline
+\mbox{\tt in}  & {\em style} & color given in string format \\
+\hline
+\mbox{\tt in}  & {\em color} & color given in string format \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em error} & \subsubsection*{Function\+: A\+P\+I\+\_\+\+Draw\+\_\+\+Font }\\
+\hline
+\end{DoxyRetVals}
+Draws an triangle on the screen
+
+x\+: y\+: text\+: font\+\_\+id\+: style\+: color\+:
+
+returns\+: error code (1. succesfull 2. out of bounds) \mbox{\Hypertarget{_a_p_i___draw_8h_ac887aa1ea415d052ea0710b832483e6b}\label{_a_p_i___draw_8h_ac887aa1ea415d052ea0710b832483e6b}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!A\+P\+I\+\_\+\+Draw\+\_\+\+Line@{A\+P\+I\+\_\+\+Draw\+\_\+\+Line}}
+\index{A\+P\+I\+\_\+\+Draw\+\_\+\+Line@{A\+P\+I\+\_\+\+Draw\+\_\+\+Line}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+Draw\+\_\+\+Line()}{API\_Draw\_Line()}}
+{\footnotesize\ttfamily int A\+P\+I\+\_\+\+Draw\+\_\+\+Line (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x1,  }\item[{uint16\+\_\+t}]{y1,  }\item[{uint16\+\_\+t}]{x2,  }\item[{uint16\+\_\+t}]{y2,  }\item[{uint16\+\_\+t}]{width,  }\item[{uint8\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draws a line on the screen. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x1} & horizontal begin position of the line \\
+\hline
+\mbox{\tt in}  & {\em y1} & vertical begin position of the line \\
+\hline
+\mbox{\tt in}  & {\em x2} & horizontal end position of the line \\
+\hline
+\mbox{\tt in}  & {\em y2} & vertical end position of the line \\
+\hline
+\mbox{\tt in}  & {\em weight} & weight of the line \\
+\hline
+\mbox{\tt in}  & {\em color} & color of the line \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em error} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_a_p_i___draw_8h_acd3df799ad6ea0821f1e02e98846652b}\label{_a_p_i___draw_8h_acd3df799ad6ea0821f1e02e98846652b}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!A\+P\+I\+\_\+\+Draw\+\_\+\+Rectangle@{A\+P\+I\+\_\+\+Draw\+\_\+\+Rectangle}}
+\index{A\+P\+I\+\_\+\+Draw\+\_\+\+Rectangle@{A\+P\+I\+\_\+\+Draw\+\_\+\+Rectangle}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+Draw\+\_\+\+Rectangle()}{API\_Draw\_Rectangle()}}
+{\footnotesize\ttfamily int A\+P\+I\+\_\+\+Draw\+\_\+\+Rectangle (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x1,  }\item[{uint16\+\_\+t}]{y1,  }\item[{uint16\+\_\+t}]{x2,  }\item[{uint16\+\_\+t}]{y2,  }\item[{uint16\+\_\+t}]{fill\+\_\+empty,  }\item[{uint16\+\_\+t}]{width,  }\item[{uint8\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draws a rectangle on the screen. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x1} & horizontal begin position of the rectangle \\
+\hline
+\mbox{\tt in}  & {\em y1} & vertical begin position of the rectangle \\
+\hline
+\mbox{\tt in}  & {\em x2} & horizontal end position of the rectangle \\
+\hline
+\mbox{\tt in}  & {\em y2} & vertical end position of the rectangle \\
+\hline
+\mbox{\tt in}  & {\em fill\+\_\+empty} & fill rectangle if argument is true \\
+\hline
+\mbox{\tt in}  & {\em weight} & weight of the rectangle \\
+\hline
+\mbox{\tt in}  & {\em color} & color given in string format \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em error} & \subsubsection*{Function\+: A\+P\+I\+\_\+\+Draw\+\_\+\+Rectangle }\\
+\hline
+\end{DoxyRetVals}
+Draws an rectangle on the screen
+
+x1\+: y1\+: x2\+: y2\+: width\+: fill\+: color\+:
+
+returns\+: error code (1. succesfull 2. out of bounds) \mbox{\Hypertarget{_a_p_i___draw_8h_abafb097ff2c3ec26627cb76c3785a076}\label{_a_p_i___draw_8h_abafb097ff2c3ec26627cb76c3785a076}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!A\+P\+I\+\_\+\+Draw\+\_\+\+Triangle@{A\+P\+I\+\_\+\+Draw\+\_\+\+Triangle}}
+\index{A\+P\+I\+\_\+\+Draw\+\_\+\+Triangle@{A\+P\+I\+\_\+\+Draw\+\_\+\+Triangle}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+Draw\+\_\+\+Triangle()}{API\_Draw\_Triangle()}}
+{\footnotesize\ttfamily int A\+P\+I\+\_\+\+Draw\+\_\+\+Triangle (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x1,  }\item[{uint16\+\_\+t}]{y1,  }\item[{uint16\+\_\+t}]{x2,  }\item[{uint16\+\_\+t}]{y2,  }\item[{uint16\+\_\+t}]{x3,  }\item[{uint16\+\_\+t}]{y3,  }\item[{uint8\+\_\+t}]{fill\+\_\+empty,  }\item[{uint8\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draws a triangle on the screen. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x1} & color given in string format \\
+\hline
+\mbox{\tt in}  & {\em y1} & color given in string format \\
+\hline
+\mbox{\tt in}  & {\em x2} & color given in string format \\
+\hline
+\mbox{\tt in}  & {\em y2} & color given in string format \\
+\hline
+\mbox{\tt in}  & {\em x3} & color given in string format \\
+\hline
+\mbox{\tt in}  & {\em y3} & color given in string format \\
+\hline
+\mbox{\tt in}  & {\em fill\+\_\+empty} & color given in string format \\
+\hline
+\mbox{\tt in}  & {\em color} & color given in string format \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em error} & \subsubsection*{Function\+: A\+P\+I\+\_\+\+Draw\+\_\+\+Triangle }\\
+\hline
+\end{DoxyRetVals}
+Draws an triangle on the screen
+
+x1\+: y1\+: x2\+: y2\+: x3\+: y3\+: weight\+: fill\+\_\+empty\+: color\+:
+
+returns\+: error code (1. succesfull 2. out of bounds) \mbox{\Hypertarget{_a_p_i___draw_8h_a4686d3964c99ff26a50ca86b502089ad}\label{_a_p_i___draw_8h_a4686d3964c99ff26a50ca86b502089ad}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!A\+P\+I\+\_\+\+Draw\+\_\+\+Wait@{A\+P\+I\+\_\+\+Draw\+\_\+\+Wait}}
+\index{A\+P\+I\+\_\+\+Draw\+\_\+\+Wait@{A\+P\+I\+\_\+\+Draw\+\_\+\+Wait}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+Draw\+\_\+\+Wait()}{API\_Draw\_Wait()}}
+{\footnotesize\ttfamily int A\+P\+I\+\_\+\+Draw\+\_\+\+Wait (\begin{DoxyParamCaption}\item[{int}]{time }\end{DoxyParamCaption})}
+
+
+
+Draws an line on the screen. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x1} & color given in string format \\
+\hline
+\mbox{\tt in}  & {\em y1} & color given in string format \\
+\hline
+\mbox{\tt in}  & {\em x2} & color given in string format \\
+\hline
+\mbox{\tt in}  & {\em y2} & color given in string format \\
+\hline
+\mbox{\tt in}  & {\em weight} & color given in string format \\
+\hline
+\mbox{\tt in}  & {\em color} & color given in string format \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em error} & \\
+\hline
+\end{DoxyRetVals}

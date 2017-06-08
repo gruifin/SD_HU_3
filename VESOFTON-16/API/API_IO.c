@@ -506,7 +506,7 @@ void DMA2_Stream5_IRQHandler(void)
   }
 }
 
-void UART_init(void)
+void API_IO_UART_init(void)
 {
 
   /* --------------------------- System Clocks Configuration -----------------*/
@@ -556,26 +556,26 @@ USART_Cmd(USART2, ENABLE);
 
 }
 
-void UART_putchar(char c)
+void API_IO_UART_putchar(char c)
 {
 		while(USART_GetFlagStatus(USART2, USART_FLAG_TXE) == RESET); // Wait for Empty
 		USART_SendData(USART2, c);
 
 }
 
-void UART_puts(char *s)
+void API_IO_UART_puts(char *s)
 {
 	volatile unsigned int i;
 	for (i=0; s[i]; i++)
 	{
-		UART_putchar(s[i]);
+		API_IO_UART_putchar(s[i]);
 		//while(USART_GetFlagStatus(USART2, USART_FLAG_TXE) == RESET); // Wait for Empty
 		//USART_SendData(USART2, s[i]);
 	}
 }
 
 
-void UART_INT_init(void)
+void API_IO_UART_INT_init(void)
 {
 	NVIC_InitTypeDef   NVIC_InitStructure;
 
@@ -623,13 +623,13 @@ void USART2_IRQHandler(void)
 }
 
 
-void UART_putint(unsigned int num)
+void API_IO_UART_putint(unsigned int num)
 {
-    UART_putnum(num, 10);
+	API_IO_UART_putnum(num, 10);
 }
 
 // Stuurt meegegeven getal uit op de UART in het aangegeven getallenstelsel
-void UART_putnum(unsigned int num, unsigned char deel)
+void API_IO_UART_putnum(unsigned int num, unsigned char deel)
 {
     static unsigned char chars[16] = "0123456789ABCDEF";
     unsigned int rest;
@@ -671,7 +671,7 @@ void UART_putnum(unsigned int num, unsigned char deel)
 // Ontvang een karakter via de UART
 // niet echt nodig als routine maar als wrapper voor compatabiliteit. Let op geen -1 als er geen char is ontvangen!
 
-char UART_get(void)
+char API_IO_UART_get(void)
 {
     char uart_char = -1;
     if (USART_GetFlagStatus(USART2, USART_FLAG_RXNE)== SET)  // check for data available
@@ -685,11 +685,11 @@ char UART_get(void)
 //       int   echo, when TRUE, send read-char to UART
 // remark: ARM sends -1 if buffer is empty
 //         LF is cleared if set in terminal-program
-void UART_gets(char *s, int echo)
+void API_IO_UART_gets(char *s, int echo)
 {
 	while (1)
 	{
-	 	*s = UART_get();
+	 	*s = API_IO_UART_get();
 
 	 	if (*s==-1)             // check for data available
 	 		continue;
@@ -698,7 +698,7 @@ void UART_gets(char *s, int echo)
 			continue;
 
 		if (echo)              // if output-flag set
-			UART_putchar(*s);  // to read what u entered
+			API_IO_UART_putchar(*s);  // to read what u entered
 
 		if (*s==CRCHAR)            // if enter pressed
 		{

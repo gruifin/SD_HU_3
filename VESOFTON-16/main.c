@@ -6,7 +6,7 @@ int main(void){
 	API_IO_Screen_Init();
 	API_IO_FillScreen(VGA_COL_GREEN);
 	API_IO_Delay_Init();
-	UART_init();
+	API_IO_UART_init();
 	//API_Draw_Font(50,50,"LUDO IS EEN HOMO","font",VGA_COL_BLACK,"NI");
 	//uint8_t inputint = 200;
 	//API_Draw_Triangle(10,10,130,120,250,200,1,VGA_COL_BLUE);
@@ -18,7 +18,7 @@ int main(void){
 
 		 char string[100];
 		 int error = 0;
-		 UART_gets(string,1);
+		 API_IO_UART_gets(string,1);
 		 char command[20];
 		 int i = 0;
 		 for (i = 0; i < 100; ++i){
@@ -422,12 +422,12 @@ int main(void){
 		 }
 		 switch (error) {
 			case 1:
-				UART_puts("Wrong Command Received");
-				UART_puts("\r\n");
+				API_IO_UART_puts("Wrong Command Received");
+				API_IO_UART_puts("\r\n");
 				break;
 			case 2:
-				UART_puts("Out Of Bounds");
-				UART_puts("\r\n");
+				API_IO_UART_puts("Out Of Bounds");
+				API_IO_UART_puts("\r\n");
 				break;
 			default:
 			break;

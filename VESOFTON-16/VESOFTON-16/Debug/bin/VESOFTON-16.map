@@ -302,11 +302,11 @@ Discarded input sections
  .data          0x00000000       0x10 ..\obj\API_IO.o
  .text.API_IO_DelayMicros
                 0x00000000       0x30 ..\obj\API_IO.o
- .text.UART_INT_init
+ .text.API_IO_UART_INT_init
                 0x00000000       0x28 ..\obj\API_IO.o
- .text.UART_putint
+ .text.API_IO_UART_putint
                 0x00000000       0x18 ..\obj\API_IO.o
- .text.UART_putnum
+ .text.API_IO_UART_putnum
                 0x00000000       0xb4 ..\obj\API_IO.o
  .text          0x00000000        0x0 ..\obj\misc.o
  .data          0x00000000        0x0 ..\obj\misc.o
@@ -834,24 +834,24 @@ Linker script and memory map
  .text.DMA2_Stream5_IRQHandler
                 0x08002be4       0x4c ..\obj\API_IO.o
                 0x08002be4                DMA2_Stream5_IRQHandler
- .text.UART_init
+ .text.API_IO_UART_init
                 0x08002c30       0x94 ..\obj\API_IO.o
-                0x08002c30                UART_init
- .text.UART_putchar
+                0x08002c30                API_IO_UART_init
+ .text.API_IO_UART_putchar
                 0x08002cc4       0x34 ..\obj\API_IO.o
-                0x08002cc4                UART_putchar
- .text.UART_puts
+                0x08002cc4                API_IO_UART_putchar
+ .text.API_IO_UART_puts
                 0x08002cf8       0x38 ..\obj\API_IO.o
-                0x08002cf8                UART_puts
+                0x08002cf8                API_IO_UART_puts
  .text.USART2_IRQHandler
                 0x08002d30       0xb4 ..\obj\API_IO.o
                 0x08002d30                USART2_IRQHandler
- .text.UART_get
+ .text.API_IO_UART_get
                 0x08002de4       0x30 ..\obj\API_IO.o
-                0x08002de4                UART_get
- .text.UART_gets
+                0x08002de4                API_IO_UART_get
+ .text.API_IO_UART_gets
                 0x08002e14       0x58 ..\obj\API_IO.o
-                0x08002e14                UART_gets
+                0x08002e14                API_IO_UART_gets
  .text.NVIC_Init
                 0x08002e6c       0xc0 ..\obj\misc.o
                 0x08002e6c                NVIC_Init
@@ -1266,7 +1266,7 @@ OUTPUT(VESOFTON-16.elf elf32-littlearm)
  .debug_line    0x000024d8      0x28e ..\obj\misc.o
  .debug_line    0x00002766      0xb11 ..\obj\stm32f4xx_tim.o
 
-.debug_str      0x00000000     0x2c0d
+.debug_str      0x00000000     0x2c45
  .debug_str     0x00000000      0x19b ..\obj\Logic_Layer.o
                                 0x1fd (size before relaxing)
  .debug_str     0x0000019b      0x514 ..\obj\stm32f4xx_usart.o
@@ -1285,11 +1285,11 @@ OUTPUT(VESOFTON-16.elf elf32-littlearm)
                                 0x3b6 (size before relaxing)
  .debug_str     0x000013c3      0x3a3 ..\obj\stm32f4xx_dma.o
                                 0x54e (size before relaxing)
- .debug_str     0x00001766      0x930 ..\obj\API_IO.o
-                                0xee7 (size before relaxing)
- .debug_str     0x00002096      0x16d ..\obj\misc.o
+ .debug_str     0x00001766      0x968 ..\obj\API_IO.o
+                                0xf1f (size before relaxing)
+ .debug_str     0x000020ce      0x16d ..\obj\misc.o
                                 0x3da (size before relaxing)
- .debug_str     0x00002203      0xa0a ..\obj\stm32f4xx_tim.o
+ .debug_str     0x0000223b      0xa0a ..\obj\stm32f4xx_tim.o
                                 0xddc (size before relaxing)
 
 .comment        0x00000000       0x6e

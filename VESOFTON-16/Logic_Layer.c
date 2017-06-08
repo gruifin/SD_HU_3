@@ -16,7 +16,7 @@ int Logic_Layer(void)
 {
 
 	SystemInit(); // System speed to 168MHz
-	UART_init();
+	API_IO_UART_init();
   while(1)
   {
   }

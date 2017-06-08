@@ -155,14 +155,14 @@ void API_IO_SetPixel(uint16_t xp, uint16_t yp, uint8_t color);
 void API_IO_Delay_Init(void);
 void API_IO_DelayMicros(uint32_t micros);
 void API_IO_DelayMillis(uint32_t millis);
-void UART_init(void);
-void UART_INT_init(void);
-void UART_putchar(char c);
-void UART_puts(char *s);
-void UART_putnum(unsigned int num, unsigned char deel);
-void UART_putint(unsigned int num);
-char UART_get(void);
-void UART_gets(char *s, int echo);
+void API_IO_UART_init(void);
+void API_IO_UART_INT_init(void);
+void API_IO_UART_putchar(char c);
+void API_IO_UART_puts(char *s);
+void API_IO_UART_putnum(unsigned int num, unsigned char deel);
+void API_IO_UART_putint(unsigned int num);
+char API_IO_UART_get(void);
+void API_IO_UART_gets(char *s, int echo);
 
 //--------------------------------------------------------------
 #endif // __STM32F4_UB_VGA_SCREEN_H
