@@ -1,0 +1,28 @@
+var _a_p_i___draw_8h =
+[
+    [ "LINE", "struct_l_i_n_e.html", "struct_l_i_n_e" ],
+    [ "ELLIPSE", "struct_e_l_l_i_p_s_e.html", "struct_e_l_l_i_p_s_e" ],
+    [ "TRIANGLE", "struct_t_r_i_a_n_g_l_e.html", "struct_t_r_i_a_n_g_l_e" ],
+    [ "SQUARE", "struct_s_q_u_a_r_e.html", "struct_s_q_u_a_r_e" ],
+    [ "TEXT", "struct_t_e_x_t.html", "struct_t_e_x_t" ],
+    [ "BITMAP", "struct_b_i_t_m_a_p.html", "struct_b_i_t_m_a_p" ],
+    [ "ARRAY_X", "_a_p_i___draw_8h.html#a4d28f433aea364a3ad46e595fdcf0d5c", null ],
+    [ "ARRAY_Y", "_a_p_i___draw_8h.html#a269b7afbb0895a1f631c8381d0eb8f0a", null ],
+    [ "COLOR_LENGTH", "_a_p_i___draw_8h.html#af84c4272cc109cfaf6ed2f2000cb2904", null ],
+    [ "FONT_BUFFER", "_a_p_i___draw_8h.html#afb61c7feb92bf59b184971fb95a61516", null ],
+    [ "STR_LENGTH", "_a_p_i___draw_8h.html#a9e8aaf9c28f704136d8fc1ba043b6bf5", null ],
+    [ "STYLE_BUFFER", "_a_p_i___draw_8h.html#a5323a0a28559d89c6da52569584817c0", null ],
+    [ "TEXT_BUFFER", "_a_p_i___draw_8h.html#a9b0daec6583146e03e5606c54d0c892b", null ],
+    [ "TYPE_LENGTH", "_a_p_i___draw_8h.html#a7be6924e0d85f3f82149ea31cca36887", null ],
+    [ "API_Draw_Bitmap", "_a_p_i___draw_8h.html#a02d821deac0268c981a4103e9c1a2101", null ],
+    [ "API_Draw_Clearscreen", "_a_p_i___draw_8h.html#a0f30b1520ac3fbef9c559a8f2ed8ec8d", null ],
+    [ "API_Draw_Color_To_Int", "_a_p_i___draw_8h.html#aff90fdb61bb824c8fd2688b4def62409", null ],
+    [ "API_Draw_Ellipse", "_a_p_i___draw_8h.html#a744b9859c4e33729fb2bfac2adfeb55f", null ],
+    [ "API_Draw_Font", "_a_p_i___draw_8h.html#aa6d3cea0d6c7188c87e05ce1d17e4210", null ],
+    [ "API_Draw_Line", "_a_p_i___draw_8h.html#a0774f9b755b067510be69b927e43ddca", null ],
+    [ "API_Draw_Rectangle", "_a_p_i___draw_8h.html#ade0966c8c2a939f5d234a3ebb5c660fd", null ],
+    [ "API_Draw_Triangle", "_a_p_i___draw_8h.html#a894d4f2c6df82cd4cfcab161d45f9629", null ],
+    [ "API_Draw_Wait", "_a_p_i___draw_8h.html#a4686d3964c99ff26a50ca86b502089ad", null ],
+    [ "buff", "_a_p_i___draw_8h.html#a1600a1b1aac50707f7b472f2d6443bfe", null ],
+    [ "color", "_a_p_i___draw_8h.html#a51687f7d32d951a01365cab386f8c566", null ]
+];
