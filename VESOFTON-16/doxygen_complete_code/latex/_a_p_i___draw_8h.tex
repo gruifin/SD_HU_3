@@ -1,0 +1,371 @@
+\hypertarget{_a_p_i___draw_8h}{}\section{Demo/\+A\+P\+I/\+A\+P\+I\+\_\+\+Draw.h File Reference}
+\label{_a_p_i___draw_8h}\index{Demo/\+A\+P\+I/\+A\+P\+I\+\_\+\+Draw.\+h@{Demo/\+A\+P\+I/\+A\+P\+I\+\_\+\+Draw.\+h}}
+
+
+Common definition used by all files and public A\+PI.  
+
+
+{\ttfamily \#include \char`\"{}User\+\_\+\+Interface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+P\+I\+\_\+\+I\+O.\+h\char`\"{}}\newline
+Include dependency graph for A\+P\+I\+\_\+\+Draw.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_a_p_i___draw_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{_a_p_i___draw_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_l_i_n_e}{L\+I\+NE}
+\begin{DoxyCompactList}\small\item\em Structure for line parameters. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_e_l_l_i_p_s_e}{E\+L\+L\+I\+P\+SE}
+\begin{DoxyCompactList}\small\item\em Structure for ellipse parameters. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_t_r_i_a_n_g_l_e}{T\+R\+I\+A\+N\+G\+LE}
+\begin{DoxyCompactList}\small\item\em Structure for triangle parameters. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_s_q_u_a_r_e}{S\+Q\+U\+A\+RE}
+\begin{DoxyCompactList}\small\item\em Structure for rectangle parameters. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_t_e_x_t}{T\+E\+XT}
+\begin{DoxyCompactList}\small\item\em Structure for text parameters. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_b_i_t_m_a_p}{B\+I\+T\+M\+AP}
+\begin{DoxyCompactList}\small\item\em Structure for bitmap parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_a_p_i___draw_8h_a4d28f433aea364a3ad46e595fdcf0d5c}{A\+R\+R\+A\+Y\+\_\+X}~32
+\item 
+\#define \hyperlink{_a_p_i___draw_8h_a269b7afbb0895a1f631c8381d0eb8f0a}{A\+R\+R\+A\+Y\+\_\+Y}~32
+\item 
+\#define \hyperlink{_a_p_i___draw_8h_a9b0daec6583146e03e5606c54d0c892b}{T\+E\+X\+T\+\_\+\+B\+U\+F\+F\+ER}~100
+\item 
+\#define \hyperlink{_a_p_i___draw_8h_afb61c7feb92bf59b184971fb95a61516}{F\+O\+N\+T\+\_\+\+B\+U\+F\+F\+ER}~20
+\item 
+\#define \hyperlink{_a_p_i___draw_8h_a5323a0a28559d89c6da52569584817c0}{S\+T\+Y\+L\+E\+\_\+\+B\+U\+F\+F\+ER}~20
+\item 
+\#define \hyperlink{_a_p_i___draw_8h_a9e8aaf9c28f704136d8fc1ba043b6bf5}{S\+T\+R\+\_\+\+L\+E\+N\+G\+TH}~120
+\item 
+\#define \hyperlink{_a_p_i___draw_8h_a7be6924e0d85f3f82149ea31cca36887}{T\+Y\+P\+E\+\_\+\+L\+E\+N\+G\+TH}~20
+\item 
+\#define \hyperlink{_a_p_i___draw_8h_af84c4272cc109cfaf6ed2f2000cb2904}{C\+O\+L\+O\+R\+\_\+\+L\+E\+N\+G\+TH}~20
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_a_p_i___draw_8h_aff90fdb61bb824c8fd2688b4def62409}{A\+P\+I\+\_\+\+Draw\+\_\+\+Color\+\_\+\+To\+\_\+\+Int} (char $\ast$s)
+\begin{DoxyCompactList}\small\item\em Converts incoming string into a integer. \end{DoxyCompactList}\item 
+int \hyperlink{_a_p_i___draw_8h_a0774f9b755b067510be69b927e43ddca}{A\+P\+I\+\_\+\+Draw\+\_\+\+Line} (\hyperlink{struct_l_i_n_e}{L\+I\+NE} line)
+\begin{DoxyCompactList}\small\item\em Draws a line on the screen. \end{DoxyCompactList}\item 
+int \hyperlink{_a_p_i___draw_8h_a744b9859c4e33729fb2bfac2adfeb55f}{A\+P\+I\+\_\+\+Draw\+\_\+\+Ellipse} (\hyperlink{struct_e_l_l_i_p_s_e}{E\+L\+L\+I\+P\+SE} ellip)
+\begin{DoxyCompactList}\small\item\em Draws an Ellipse on the screen. \end{DoxyCompactList}\item 
+int \hyperlink{_a_p_i___draw_8h_ade0966c8c2a939f5d234a3ebb5c660fd}{A\+P\+I\+\_\+\+Draw\+\_\+\+Rectangle} (\hyperlink{struct_s_q_u_a_r_e}{S\+Q\+U\+A\+RE} square)
+\begin{DoxyCompactList}\small\item\em Draws a rectangle on the screen. \end{DoxyCompactList}\item 
+int \hyperlink{_a_p_i___draw_8h_a894d4f2c6df82cd4cfcab161d45f9629}{A\+P\+I\+\_\+\+Draw\+\_\+\+Triangle} (\hyperlink{struct_t_r_i_a_n_g_l_e}{T\+R\+I\+A\+N\+G\+LE} triangle)
+\begin{DoxyCompactList}\small\item\em Draws a triangle on the screen. \end{DoxyCompactList}\item 
+int \hyperlink{_a_p_i___draw_8h_a02d821deac0268c981a4103e9c1a2101}{A\+P\+I\+\_\+\+Draw\+\_\+\+Bitmap} (\hyperlink{struct_b_i_t_m_a_p}{B\+I\+T\+M\+AP} bitmap)
+\begin{DoxyCompactList}\small\item\em Draws a bitmap on the screen. \end{DoxyCompactList}\item 
+void \hyperlink{_a_p_i___draw_8h_aa6d3cea0d6c7188c87e05ce1d17e4210}{A\+P\+I\+\_\+\+Draw\+\_\+\+Font} (\hyperlink{struct_t_e_x_t}{T\+E\+XT} txt)
+\begin{DoxyCompactList}\small\item\em Draws a Font on the screen. \end{DoxyCompactList}\item 
+int \hyperlink{_a_p_i___draw_8h_a0f30b1520ac3fbef9c559a8f2ed8ec8d}{A\+P\+I\+\_\+\+Draw\+\_\+\+Clearscreen} (uint8\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Clears the screen with any given color. \end{DoxyCompactList}\item 
+int \hyperlink{_a_p_i___draw_8h_a4686d3964c99ff26a50ca86b502089ad}{A\+P\+I\+\_\+\+Draw\+\_\+\+Wait} (int time)
+\begin{DoxyCompactList}\small\item\em Waits for a certain time defined by the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_a_p_i___draw_8h_a1600a1b1aac50707f7b472f2d6443bfe}\label{_a_p_i___draw_8h_a1600a1b1aac50707f7b472f2d6443bfe}} 
+char {\bfseries buff} \mbox{[}\hyperlink{_a_p_i___i_o_8h_a7be6924e0d85f3f82149ea31cca36887}{T\+Y\+P\+E\+\_\+\+L\+E\+N\+G\+TH}\mbox{]}
+\item 
+\mbox{\Hypertarget{_a_p_i___draw_8h_a51687f7d32d951a01365cab386f8c566}\label{_a_p_i___draw_8h_a51687f7d32d951a01365cab386f8c566}} 
+char {\bfseries color} \mbox{[}\hyperlink{_a_p_i___i_o_8h_af84c4272cc109cfaf6ed2f2000cb2904}{C\+O\+L\+O\+R\+\_\+\+L\+E\+N\+G\+TH}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Common definition used by all files and public A\+PI. 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_a_p_i___draw_8h_a4d28f433aea364a3ad46e595fdcf0d5c}\label{_a_p_i___draw_8h_a4d28f433aea364a3ad46e595fdcf0d5c}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!A\+R\+R\+A\+Y\+\_\+X@{A\+R\+R\+A\+Y\+\_\+X}}
+\index{A\+R\+R\+A\+Y\+\_\+X@{A\+R\+R\+A\+Y\+\_\+X}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{A\+R\+R\+A\+Y\+\_\+X}{ARRAY\_X}}
+{\footnotesize\ttfamily \#define A\+R\+R\+A\+Y\+\_\+X~32}
+
+X size of the bitmap array 
+
+Definition at line 186 of file A\+P\+I\+\_\+\+Draw.\+h.
+
+\mbox{\Hypertarget{_a_p_i___draw_8h_a269b7afbb0895a1f631c8381d0eb8f0a}\label{_a_p_i___draw_8h_a269b7afbb0895a1f631c8381d0eb8f0a}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!A\+R\+R\+A\+Y\+\_\+Y@{A\+R\+R\+A\+Y\+\_\+Y}}
+\index{A\+R\+R\+A\+Y\+\_\+Y@{A\+R\+R\+A\+Y\+\_\+Y}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{A\+R\+R\+A\+Y\+\_\+Y}{ARRAY\_Y}}
+{\footnotesize\ttfamily \#define A\+R\+R\+A\+Y\+\_\+Y~32}
+
+Y size of the bitmap array 
+
+Definition at line 191 of file A\+P\+I\+\_\+\+Draw.\+h.
+
+\mbox{\Hypertarget{_a_p_i___draw_8h_af84c4272cc109cfaf6ed2f2000cb2904}\label{_a_p_i___draw_8h_af84c4272cc109cfaf6ed2f2000cb2904}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!C\+O\+L\+O\+R\+\_\+\+L\+E\+N\+G\+TH@{C\+O\+L\+O\+R\+\_\+\+L\+E\+N\+G\+TH}}
+\index{C\+O\+L\+O\+R\+\_\+\+L\+E\+N\+G\+TH@{C\+O\+L\+O\+R\+\_\+\+L\+E\+N\+G\+TH}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+L\+O\+R\+\_\+\+L\+E\+N\+G\+TH}{COLOR\_LENGTH}}
+{\footnotesize\ttfamily \#define C\+O\+L\+O\+R\+\_\+\+L\+E\+N\+G\+TH~20}
+
+Size of the color buffer 
+
+Definition at line 221 of file A\+P\+I\+\_\+\+Draw.\+h.
+
+\mbox{\Hypertarget{_a_p_i___draw_8h_afb61c7feb92bf59b184971fb95a61516}\label{_a_p_i___draw_8h_afb61c7feb92bf59b184971fb95a61516}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!F\+O\+N\+T\+\_\+\+B\+U\+F\+F\+ER@{F\+O\+N\+T\+\_\+\+B\+U\+F\+F\+ER}}
+\index{F\+O\+N\+T\+\_\+\+B\+U\+F\+F\+ER@{F\+O\+N\+T\+\_\+\+B\+U\+F\+F\+ER}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{F\+O\+N\+T\+\_\+\+B\+U\+F\+F\+ER}{FONT\_BUFFER}}
+{\footnotesize\ttfamily \#define F\+O\+N\+T\+\_\+\+B\+U\+F\+F\+ER~20}
+
+Size of the font buffer 
+
+Definition at line 201 of file A\+P\+I\+\_\+\+Draw.\+h.
+
+\mbox{\Hypertarget{_a_p_i___draw_8h_a9e8aaf9c28f704136d8fc1ba043b6bf5}\label{_a_p_i___draw_8h_a9e8aaf9c28f704136d8fc1ba043b6bf5}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!S\+T\+R\+\_\+\+L\+E\+N\+G\+TH@{S\+T\+R\+\_\+\+L\+E\+N\+G\+TH}}
+\index{S\+T\+R\+\_\+\+L\+E\+N\+G\+TH@{S\+T\+R\+\_\+\+L\+E\+N\+G\+TH}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+R\+\_\+\+L\+E\+N\+G\+TH}{STR\_LENGTH}}
+{\footnotesize\ttfamily \#define S\+T\+R\+\_\+\+L\+E\+N\+G\+TH~120}
+
+Size (string length) of the fill buffer 
+
+Definition at line 211 of file A\+P\+I\+\_\+\+Draw.\+h.
+
+\mbox{\Hypertarget{_a_p_i___draw_8h_a5323a0a28559d89c6da52569584817c0}\label{_a_p_i___draw_8h_a5323a0a28559d89c6da52569584817c0}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!S\+T\+Y\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{S\+T\+Y\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\index{S\+T\+Y\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{S\+T\+Y\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+Y\+L\+E\+\_\+\+B\+U\+F\+F\+ER}{STYLE\_BUFFER}}
+{\footnotesize\ttfamily \#define S\+T\+Y\+L\+E\+\_\+\+B\+U\+F\+F\+ER~20}
+
+Size of the style buffer 
+
+Definition at line 206 of file A\+P\+I\+\_\+\+Draw.\+h.
+
+\mbox{\Hypertarget{_a_p_i___draw_8h_a9b0daec6583146e03e5606c54d0c892b}\label{_a_p_i___draw_8h_a9b0daec6583146e03e5606c54d0c892b}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!T\+E\+X\+T\+\_\+\+B\+U\+F\+F\+ER@{T\+E\+X\+T\+\_\+\+B\+U\+F\+F\+ER}}
+\index{T\+E\+X\+T\+\_\+\+B\+U\+F\+F\+ER@{T\+E\+X\+T\+\_\+\+B\+U\+F\+F\+ER}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{T\+E\+X\+T\+\_\+\+B\+U\+F\+F\+ER}{TEXT\_BUFFER}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+\_\+\+B\+U\+F\+F\+ER~100}
+
+Size of the text buffer 
+
+Definition at line 196 of file A\+P\+I\+\_\+\+Draw.\+h.
+
+\mbox{\Hypertarget{_a_p_i___draw_8h_a7be6924e0d85f3f82149ea31cca36887}\label{_a_p_i___draw_8h_a7be6924e0d85f3f82149ea31cca36887}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!T\+Y\+P\+E\+\_\+\+L\+E\+N\+G\+TH@{T\+Y\+P\+E\+\_\+\+L\+E\+N\+G\+TH}}
+\index{T\+Y\+P\+E\+\_\+\+L\+E\+N\+G\+TH@{T\+Y\+P\+E\+\_\+\+L\+E\+N\+G\+TH}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{T\+Y\+P\+E\+\_\+\+L\+E\+N\+G\+TH}{TYPE\_LENGTH}}
+{\footnotesize\ttfamily \#define T\+Y\+P\+E\+\_\+\+L\+E\+N\+G\+TH~20}
+
+Size of the type buffer 
+
+Definition at line 216 of file A\+P\+I\+\_\+\+Draw.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_a_p_i___draw_8h_a02d821deac0268c981a4103e9c1a2101}\label{_a_p_i___draw_8h_a02d821deac0268c981a4103e9c1a2101}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!A\+P\+I\+\_\+\+Draw\+\_\+\+Bitmap@{A\+P\+I\+\_\+\+Draw\+\_\+\+Bitmap}}
+\index{A\+P\+I\+\_\+\+Draw\+\_\+\+Bitmap@{A\+P\+I\+\_\+\+Draw\+\_\+\+Bitmap}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+Draw\+\_\+\+Bitmap()}{API\_Draw\_Bitmap()}}
+{\footnotesize\ttfamily int A\+P\+I\+\_\+\+Draw\+\_\+\+Bitmap (\begin{DoxyParamCaption}\item[{\hyperlink{struct_b_i_t_m_a_p}{B\+I\+T\+M\+AP}}]{bitmap }\end{DoxyParamCaption})}
+
+
+
+Draws a bitmap on the screen. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em error} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 648 of file A\+P\+I\+\_\+\+Draw.\+c.
+
+\mbox{\Hypertarget{_a_p_i___draw_8h_a0f30b1520ac3fbef9c559a8f2ed8ec8d}\label{_a_p_i___draw_8h_a0f30b1520ac3fbef9c559a8f2ed8ec8d}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!A\+P\+I\+\_\+\+Draw\+\_\+\+Clearscreen@{A\+P\+I\+\_\+\+Draw\+\_\+\+Clearscreen}}
+\index{A\+P\+I\+\_\+\+Draw\+\_\+\+Clearscreen@{A\+P\+I\+\_\+\+Draw\+\_\+\+Clearscreen}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+Draw\+\_\+\+Clearscreen()}{API\_Draw\_Clearscreen()}}
+{\footnotesize\ttfamily int A\+P\+I\+\_\+\+Draw\+\_\+\+Clearscreen (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Clears the screen with any given color. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em color} & color of the screen \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em color} & color of the screen \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 749 of file A\+P\+I\+\_\+\+Draw.\+c.
+
+\mbox{\Hypertarget{_a_p_i___draw_8h_aff90fdb61bb824c8fd2688b4def62409}\label{_a_p_i___draw_8h_aff90fdb61bb824c8fd2688b4def62409}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!A\+P\+I\+\_\+\+Draw\+\_\+\+Color\+\_\+\+To\+\_\+\+Int@{A\+P\+I\+\_\+\+Draw\+\_\+\+Color\+\_\+\+To\+\_\+\+Int}}
+\index{A\+P\+I\+\_\+\+Draw\+\_\+\+Color\+\_\+\+To\+\_\+\+Int@{A\+P\+I\+\_\+\+Draw\+\_\+\+Color\+\_\+\+To\+\_\+\+Int}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+Draw\+\_\+\+Color\+\_\+\+To\+\_\+\+Int()}{API\_Draw\_Color\_To\_Int()}}
+{\footnotesize\ttfamily int A\+P\+I\+\_\+\+Draw\+\_\+\+Color\+\_\+\+To\+\_\+\+Int (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Converts incoming string into a integer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em s} & color given in string format \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em color} & color in integer format \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 358 of file A\+P\+I\+\_\+\+Draw.\+c.
+
+\mbox{\Hypertarget{_a_p_i___draw_8h_a744b9859c4e33729fb2bfac2adfeb55f}\label{_a_p_i___draw_8h_a744b9859c4e33729fb2bfac2adfeb55f}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!A\+P\+I\+\_\+\+Draw\+\_\+\+Ellipse@{A\+P\+I\+\_\+\+Draw\+\_\+\+Ellipse}}
+\index{A\+P\+I\+\_\+\+Draw\+\_\+\+Ellipse@{A\+P\+I\+\_\+\+Draw\+\_\+\+Ellipse}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+Draw\+\_\+\+Ellipse()}{API\_Draw\_Ellipse()}}
+{\footnotesize\ttfamily int A\+P\+I\+\_\+\+Draw\+\_\+\+Ellipse (\begin{DoxyParamCaption}\item[{\hyperlink{struct_e_l_l_i_p_s_e}{E\+L\+L\+I\+P\+SE}}]{ellip }\end{DoxyParamCaption})}
+
+
+
+Draws an Ellipse on the screen. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em error} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 452 of file A\+P\+I\+\_\+\+Draw.\+c.
+
+\mbox{\Hypertarget{_a_p_i___draw_8h_aa6d3cea0d6c7188c87e05ce1d17e4210}\label{_a_p_i___draw_8h_aa6d3cea0d6c7188c87e05ce1d17e4210}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!A\+P\+I\+\_\+\+Draw\+\_\+\+Font@{A\+P\+I\+\_\+\+Draw\+\_\+\+Font}}
+\index{A\+P\+I\+\_\+\+Draw\+\_\+\+Font@{A\+P\+I\+\_\+\+Draw\+\_\+\+Font}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+Draw\+\_\+\+Font()}{API\_Draw\_Font()}}
+{\footnotesize\ttfamily void A\+P\+I\+\_\+\+Draw\+\_\+\+Font (\begin{DoxyParamCaption}\item[{\hyperlink{struct_t_e_x_t}{T\+E\+XT}}]{txt }\end{DoxyParamCaption})}
+
+
+
+Draws a Font on the screen. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em error} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 709 of file A\+P\+I\+\_\+\+Draw.\+c.
+
+\mbox{\Hypertarget{_a_p_i___draw_8h_a0774f9b755b067510be69b927e43ddca}\label{_a_p_i___draw_8h_a0774f9b755b067510be69b927e43ddca}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!A\+P\+I\+\_\+\+Draw\+\_\+\+Line@{A\+P\+I\+\_\+\+Draw\+\_\+\+Line}}
+\index{A\+P\+I\+\_\+\+Draw\+\_\+\+Line@{A\+P\+I\+\_\+\+Draw\+\_\+\+Line}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+Draw\+\_\+\+Line()}{API\_Draw\_Line()}}
+{\footnotesize\ttfamily int A\+P\+I\+\_\+\+Draw\+\_\+\+Line (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_i_n_e}{L\+I\+NE}}]{line }\end{DoxyParamCaption})}
+
+
+
+Draws a line on the screen. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em error} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 402 of file A\+P\+I\+\_\+\+Draw.\+c.
+
+\mbox{\Hypertarget{_a_p_i___draw_8h_ade0966c8c2a939f5d234a3ebb5c660fd}\label{_a_p_i___draw_8h_ade0966c8c2a939f5d234a3ebb5c660fd}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!A\+P\+I\+\_\+\+Draw\+\_\+\+Rectangle@{A\+P\+I\+\_\+\+Draw\+\_\+\+Rectangle}}
+\index{A\+P\+I\+\_\+\+Draw\+\_\+\+Rectangle@{A\+P\+I\+\_\+\+Draw\+\_\+\+Rectangle}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+Draw\+\_\+\+Rectangle()}{API\_Draw\_Rectangle()}}
+{\footnotesize\ttfamily int A\+P\+I\+\_\+\+Draw\+\_\+\+Rectangle (\begin{DoxyParamCaption}\item[{\hyperlink{struct_s_q_u_a_r_e}{S\+Q\+U\+A\+RE}}]{square }\end{DoxyParamCaption})}
+
+
+
+Draws a rectangle on the screen. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em error} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 487 of file A\+P\+I\+\_\+\+Draw.\+c.
+
+\mbox{\Hypertarget{_a_p_i___draw_8h_a894d4f2c6df82cd4cfcab161d45f9629}\label{_a_p_i___draw_8h_a894d4f2c6df82cd4cfcab161d45f9629}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!A\+P\+I\+\_\+\+Draw\+\_\+\+Triangle@{A\+P\+I\+\_\+\+Draw\+\_\+\+Triangle}}
+\index{A\+P\+I\+\_\+\+Draw\+\_\+\+Triangle@{A\+P\+I\+\_\+\+Draw\+\_\+\+Triangle}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+Draw\+\_\+\+Triangle()}{API\_Draw\_Triangle()}}
+{\footnotesize\ttfamily int A\+P\+I\+\_\+\+Draw\+\_\+\+Triangle (\begin{DoxyParamCaption}\item[{\hyperlink{struct_t_r_i_a_n_g_l_e}{T\+R\+I\+A\+N\+G\+LE}}]{triangle }\end{DoxyParamCaption})}
+
+
+
+Draws a triangle on the screen. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em error} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 549 of file A\+P\+I\+\_\+\+Draw.\+c.
+
+\mbox{\Hypertarget{_a_p_i___draw_8h_a4686d3964c99ff26a50ca86b502089ad}\label{_a_p_i___draw_8h_a4686d3964c99ff26a50ca86b502089ad}} 
+\index{A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}!A\+P\+I\+\_\+\+Draw\+\_\+\+Wait@{A\+P\+I\+\_\+\+Draw\+\_\+\+Wait}}
+\index{A\+P\+I\+\_\+\+Draw\+\_\+\+Wait@{A\+P\+I\+\_\+\+Draw\+\_\+\+Wait}!A\+P\+I\+\_\+\+Draw.\+h@{A\+P\+I\+\_\+\+Draw.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+Draw\+\_\+\+Wait()}{API\_Draw\_Wait()}}
+{\footnotesize\ttfamily int A\+P\+I\+\_\+\+Draw\+\_\+\+Wait (\begin{DoxyParamCaption}\item[{int}]{time }\end{DoxyParamCaption})}
+
+
+
+Waits for a certain time defined by the user. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em time} & the amount of time that the function has to wait \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em time} & the amount of time that the function has to wait \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 764 of file A\+P\+I\+\_\+\+Draw.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{_a_p_i___draw_8h_a4686d3964c99ff26a50ca86b502089ad_cgraph}
+\end{center}
+\end{figure}

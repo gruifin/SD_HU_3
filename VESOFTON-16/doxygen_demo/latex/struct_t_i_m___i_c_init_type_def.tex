@@ -1,0 +1,89 @@
+\hypertarget{struct_t_i_m___i_c_init_type_def}{}\section{T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def Struct Reference}
+\label{struct_t_i_m___i_c_init_type_def}\index{T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def@{T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def}}
+
+
+T\+IM Input Capture Init structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32f4xx\+\_\+tim.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \hyperlink{struct_t_i_m___i_c_init_type_def_ac736e711f51054bef8b486b8521ef611}{T\+I\+M\+\_\+\+Channel}
+\item 
+uint16\+\_\+t \hyperlink{struct_t_i_m___i_c_init_type_def_a71dc0cc2f4eb59451ea323719b0741bb}{T\+I\+M\+\_\+\+I\+C\+Polarity}
+\item 
+uint16\+\_\+t \hyperlink{struct_t_i_m___i_c_init_type_def_a052908740c8c618054ef82b3ec89e9b3}{T\+I\+M\+\_\+\+I\+C\+Selection}
+\item 
+uint16\+\_\+t \hyperlink{struct_t_i_m___i_c_init_type_def_abdff50beb0809a640ccf2cebde439a00}{T\+I\+M\+\_\+\+I\+C\+Prescaler}
+\item 
+uint16\+\_\+t \hyperlink{struct_t_i_m___i_c_init_type_def_a751574b5d1f66bea6c3405d2975e420a}{T\+I\+M\+\_\+\+I\+C\+Filter}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\+IM Input Capture Init structure definition. 
+
+Definition at line 113 of file stm32f4xx\+\_\+tim.\+h.
+
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct_t_i_m___i_c_init_type_def_ac736e711f51054bef8b486b8521ef611}\label{struct_t_i_m___i_c_init_type_def_ac736e711f51054bef8b486b8521ef611}} 
+\index{T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def@{T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def}!T\+I\+M\+\_\+\+Channel@{T\+I\+M\+\_\+\+Channel}}
+\index{T\+I\+M\+\_\+\+Channel@{T\+I\+M\+\_\+\+Channel}!T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def@{T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{T\+I\+M\+\_\+\+Channel}{TIM\_Channel}}
+{\footnotesize\ttfamily uint16\+\_\+t T\+I\+M\+\_\+\+Channel}
+
+Specifies the T\+IM channel. This parameter can be a value of \hyperlink{group___t_i_m___channel}{T\+I\+M\+\_\+\+Channel} 
+
+Definition at line 116 of file stm32f4xx\+\_\+tim.\+h.
+
+\mbox{\Hypertarget{struct_t_i_m___i_c_init_type_def_a751574b5d1f66bea6c3405d2975e420a}\label{struct_t_i_m___i_c_init_type_def_a751574b5d1f66bea6c3405d2975e420a}} 
+\index{T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def@{T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def}!T\+I\+M\+\_\+\+I\+C\+Filter@{T\+I\+M\+\_\+\+I\+C\+Filter}}
+\index{T\+I\+M\+\_\+\+I\+C\+Filter@{T\+I\+M\+\_\+\+I\+C\+Filter}!T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def@{T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{T\+I\+M\+\_\+\+I\+C\+Filter}{TIM\_ICFilter}}
+{\footnotesize\ttfamily uint16\+\_\+t T\+I\+M\+\_\+\+I\+C\+Filter}
+
+Specifies the input capture filter. This parameter can be a number between 0x0 and 0xF 
+
+Definition at line 128 of file stm32f4xx\+\_\+tim.\+h.
+
+\mbox{\Hypertarget{struct_t_i_m___i_c_init_type_def_a71dc0cc2f4eb59451ea323719b0741bb}\label{struct_t_i_m___i_c_init_type_def_a71dc0cc2f4eb59451ea323719b0741bb}} 
+\index{T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def@{T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def}!T\+I\+M\+\_\+\+I\+C\+Polarity@{T\+I\+M\+\_\+\+I\+C\+Polarity}}
+\index{T\+I\+M\+\_\+\+I\+C\+Polarity@{T\+I\+M\+\_\+\+I\+C\+Polarity}!T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def@{T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{T\+I\+M\+\_\+\+I\+C\+Polarity}{TIM\_ICPolarity}}
+{\footnotesize\ttfamily uint16\+\_\+t T\+I\+M\+\_\+\+I\+C\+Polarity}
+
+Specifies the active edge of the input signal. This parameter can be a value of \hyperlink{group___t_i_m___input___capture___polarity}{T\+I\+M\+\_\+\+Input\+\_\+\+Capture\+\_\+\+Polarity} 
+
+Definition at line 119 of file stm32f4xx\+\_\+tim.\+h.
+
+\mbox{\Hypertarget{struct_t_i_m___i_c_init_type_def_abdff50beb0809a640ccf2cebde439a00}\label{struct_t_i_m___i_c_init_type_def_abdff50beb0809a640ccf2cebde439a00}} 
+\index{T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def@{T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def}!T\+I\+M\+\_\+\+I\+C\+Prescaler@{T\+I\+M\+\_\+\+I\+C\+Prescaler}}
+\index{T\+I\+M\+\_\+\+I\+C\+Prescaler@{T\+I\+M\+\_\+\+I\+C\+Prescaler}!T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def@{T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{T\+I\+M\+\_\+\+I\+C\+Prescaler}{TIM\_ICPrescaler}}
+{\footnotesize\ttfamily uint16\+\_\+t T\+I\+M\+\_\+\+I\+C\+Prescaler}
+
+Specifies the Input Capture Prescaler. This parameter can be a value of \hyperlink{group___t_i_m___input___capture___prescaler}{T\+I\+M\+\_\+\+Input\+\_\+\+Capture\+\_\+\+Prescaler} 
+
+Definition at line 125 of file stm32f4xx\+\_\+tim.\+h.
+
+\mbox{\Hypertarget{struct_t_i_m___i_c_init_type_def_a052908740c8c618054ef82b3ec89e9b3}\label{struct_t_i_m___i_c_init_type_def_a052908740c8c618054ef82b3ec89e9b3}} 
+\index{T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def@{T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def}!T\+I\+M\+\_\+\+I\+C\+Selection@{T\+I\+M\+\_\+\+I\+C\+Selection}}
+\index{T\+I\+M\+\_\+\+I\+C\+Selection@{T\+I\+M\+\_\+\+I\+C\+Selection}!T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def@{T\+I\+M\+\_\+\+I\+C\+Init\+Type\+Def}}
+\subsubsection{\texorpdfstring{T\+I\+M\+\_\+\+I\+C\+Selection}{TIM\_ICSelection}}
+{\footnotesize\ttfamily uint16\+\_\+t T\+I\+M\+\_\+\+I\+C\+Selection}
+
+Specifies the input. This parameter can be a value of \hyperlink{group___t_i_m___input___capture___selection}{T\+I\+M\+\_\+\+Input\+\_\+\+Capture\+\_\+\+Selection} 
+
+Definition at line 122 of file stm32f4xx\+\_\+tim.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Wilma/\+Documents/\+Git\+Hub/\+S\+D\+\_\+\+H\+U\+\_\+3/\+V\+E\+S\+O\+F\+T\+O\+N-\/16/cmsis\+\_\+lib/include/\hyperlink{stm32f4xx__tim_8h}{stm32f4xx\+\_\+tim.\+h}\end{DoxyCompactItemize}

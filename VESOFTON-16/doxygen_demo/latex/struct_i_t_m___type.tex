@@ -1,0 +1,119 @@
+\hypertarget{struct_i_t_m___type}{}\section{I\+T\+M\+\_\+\+Type Struct Reference}
+\label{struct_i_t_m___type}\index{I\+T\+M\+\_\+\+Type@{I\+T\+M\+\_\+\+Type}}
+
+
+Structure type to access the Instrumentation Trace Macrocell Register (I\+TM).  
+
+
+
+
+{\ttfamily \#include $<$core\+\_\+cm4.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\hyperlink{group___c_m_s_i_s__core__definitions_ga7e25d9380f9ef903923964322e71f2f6}{\_\_O} uint8\_t \hyperlink{struct_i_t_m___type_a0374c0b98ab9de6f71fabff7412df832}{u8}\\
+\>\hyperlink{group___c_m_s_i_s__core__definitions_ga7e25d9380f9ef903923964322e71f2f6}{\_\_O} uint16\_t \hyperlink{struct_i_t_m___type_ae8d499140220fa6d4eab1da7262bf08e}{u16}\\
+\>\hyperlink{group___c_m_s_i_s__core__definitions_ga7e25d9380f9ef903923964322e71f2f6}{\_\_O} uint32\_t \hyperlink{struct_i_t_m___type_acaf6d0e14a3d4b541c624913b4a1931e}{u32}\\
+\} \hyperlink{struct_i_t_m___type_aca2b00738a4a346efcd8325e18fcfa8a}{PORT} \mbox{[}32\mbox{]}\\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{struct_i_t_m___type_a498ca2f25075b26fd57d1f66d976fe8c}\label{struct_i_t_m___type_a498ca2f25075b26fd57d1f66d976fe8c}} 
+uint32\+\_\+t {\bfseries R\+E\+S\+E\+R\+V\+E\+D0} \mbox{[}864\mbox{]}
+\item 
+\hyperlink{group___c_m_s_i_s__core__definitions_gaec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_i_t_m___type_a8ffb3c6b706b03334f6fe37ef5d8b165}{T\+ER}
+\item 
+\mbox{\Hypertarget{struct_i_t_m___type_ae5c625673da1df1777833e51754c525b}\label{struct_i_t_m___type_ae5c625673da1df1777833e51754c525b}} 
+uint32\+\_\+t {\bfseries R\+E\+S\+E\+R\+V\+E\+D1} \mbox{[}15\mbox{]}
+\item 
+\hyperlink{group___c_m_s_i_s__core__definitions_gaec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_i_t_m___type_a72bb9b7d61fe3262cd2a6070a7bd5b69}{T\+PR}
+\item 
+\mbox{\Hypertarget{struct_i_t_m___type_a391748a705084dd61c4a9f56d456a12c}\label{struct_i_t_m___type_a391748a705084dd61c4a9f56d456a12c}} 
+uint32\+\_\+t {\bfseries R\+E\+S\+E\+R\+V\+E\+D2} \mbox{[}15\mbox{]}
+\item 
+\hyperlink{group___c_m_s_i_s__core__definitions_gaec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_i_t_m___type_ae9dd9282fab299d0cd6e119564688e53}{T\+CR}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure type to access the Instrumentation Trace Macrocell Register (I\+TM). 
+
+Definition at line 640 of file core\+\_\+cm4.\+h.
+
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct_i_t_m___type_aca2b00738a4a346efcd8325e18fcfa8a}\label{struct_i_t_m___type_aca2b00738a4a346efcd8325e18fcfa8a}} 
+\index{I\+T\+M\+\_\+\+Type@{I\+T\+M\+\_\+\+Type}!P\+O\+RT@{P\+O\+RT}}
+\index{P\+O\+RT@{P\+O\+RT}!I\+T\+M\+\_\+\+Type@{I\+T\+M\+\_\+\+Type}}
+\subsubsection{\texorpdfstring{P\+O\+RT}{PORT}}
+{\footnotesize\ttfamily \+\_\+\+\_\+O \{ ... \}    P\+O\+RT\mbox{[}32\mbox{]}}
+
+Offset\+: 0x000 ( /W) I\+TM Stimulus Port Registers \mbox{\Hypertarget{struct_i_t_m___type_ae9dd9282fab299d0cd6e119564688e53}\label{struct_i_t_m___type_ae9dd9282fab299d0cd6e119564688e53}} 
+\index{I\+T\+M\+\_\+\+Type@{I\+T\+M\+\_\+\+Type}!T\+CR@{T\+CR}}
+\index{T\+CR@{T\+CR}!I\+T\+M\+\_\+\+Type@{I\+T\+M\+\_\+\+Type}}
+\subsubsection{\texorpdfstring{T\+CR}{TCR}}
+{\footnotesize\ttfamily \hyperlink{group___c_m_s_i_s__core__definitions_gaec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t T\+CR}
+
+Offset\+: 0x\+E80 (R/W) I\+TM Trace Control Register 
+
+Definition at line 653 of file core\+\_\+cm4.\+h.
+
+\mbox{\Hypertarget{struct_i_t_m___type_a8ffb3c6b706b03334f6fe37ef5d8b165}\label{struct_i_t_m___type_a8ffb3c6b706b03334f6fe37ef5d8b165}} 
+\index{I\+T\+M\+\_\+\+Type@{I\+T\+M\+\_\+\+Type}!T\+ER@{T\+ER}}
+\index{T\+ER@{T\+ER}!I\+T\+M\+\_\+\+Type@{I\+T\+M\+\_\+\+Type}}
+\subsubsection{\texorpdfstring{T\+ER}{TER}}
+{\footnotesize\ttfamily \hyperlink{group___c_m_s_i_s__core__definitions_gaec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t T\+ER}
+
+Offset\+: 0x\+E00 (R/W) I\+TM Trace Enable Register 
+
+Definition at line 649 of file core\+\_\+cm4.\+h.
+
+\mbox{\Hypertarget{struct_i_t_m___type_a72bb9b7d61fe3262cd2a6070a7bd5b69}\label{struct_i_t_m___type_a72bb9b7d61fe3262cd2a6070a7bd5b69}} 
+\index{I\+T\+M\+\_\+\+Type@{I\+T\+M\+\_\+\+Type}!T\+PR@{T\+PR}}
+\index{T\+PR@{T\+PR}!I\+T\+M\+\_\+\+Type@{I\+T\+M\+\_\+\+Type}}
+\subsubsection{\texorpdfstring{T\+PR}{TPR}}
+{\footnotesize\ttfamily \hyperlink{group___c_m_s_i_s__core__definitions_gaec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t T\+PR}
+
+Offset\+: 0x\+E40 (R/W) I\+TM Trace Privilege Register 
+
+Definition at line 651 of file core\+\_\+cm4.\+h.
+
+\mbox{\Hypertarget{struct_i_t_m___type_ae8d499140220fa6d4eab1da7262bf08e}\label{struct_i_t_m___type_ae8d499140220fa6d4eab1da7262bf08e}} 
+\index{I\+T\+M\+\_\+\+Type@{I\+T\+M\+\_\+\+Type}!u16@{u16}}
+\index{u16@{u16}!I\+T\+M\+\_\+\+Type@{I\+T\+M\+\_\+\+Type}}
+\subsubsection{\texorpdfstring{u16}{u16}}
+{\footnotesize\ttfamily \hyperlink{group___c_m_s_i_s__core__definitions_ga7e25d9380f9ef903923964322e71f2f6}{\+\_\+\+\_\+O} uint16\+\_\+t u16}
+
+Offset\+: 0x000 ( /W) I\+TM Stimulus Port 16-\/bit 
+
+Definition at line 645 of file core\+\_\+cm4.\+h.
+
+\mbox{\Hypertarget{struct_i_t_m___type_acaf6d0e14a3d4b541c624913b4a1931e}\label{struct_i_t_m___type_acaf6d0e14a3d4b541c624913b4a1931e}} 
+\index{I\+T\+M\+\_\+\+Type@{I\+T\+M\+\_\+\+Type}!u32@{u32}}
+\index{u32@{u32}!I\+T\+M\+\_\+\+Type@{I\+T\+M\+\_\+\+Type}}
+\subsubsection{\texorpdfstring{u32}{u32}}
+{\footnotesize\ttfamily \hyperlink{group___c_m_s_i_s__core__definitions_ga7e25d9380f9ef903923964322e71f2f6}{\+\_\+\+\_\+O} uint32\+\_\+t u32}
+
+Offset\+: 0x000 ( /W) I\+TM Stimulus Port 32-\/bit 
+
+Definition at line 646 of file core\+\_\+cm4.\+h.
+
+\mbox{\Hypertarget{struct_i_t_m___type_a0374c0b98ab9de6f71fabff7412df832}\label{struct_i_t_m___type_a0374c0b98ab9de6f71fabff7412df832}} 
+\index{I\+T\+M\+\_\+\+Type@{I\+T\+M\+\_\+\+Type}!u8@{u8}}
+\index{u8@{u8}!I\+T\+M\+\_\+\+Type@{I\+T\+M\+\_\+\+Type}}
+\subsubsection{\texorpdfstring{u8}{u8}}
+{\footnotesize\ttfamily \hyperlink{group___c_m_s_i_s__core__definitions_ga7e25d9380f9ef903923964322e71f2f6}{\+\_\+\+\_\+O} uint8\+\_\+t u8}
+
+Offset\+: 0x000 ( /W) I\+TM Stimulus Port 8-\/bit 
+
+Definition at line 644 of file core\+\_\+cm4.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Wilma/\+Documents/\+Git\+Hub/\+S\+D\+\_\+\+H\+U\+\_\+3/\+V\+E\+S\+O\+F\+T\+O\+N-\/16/cmsis/\hyperlink{core__cm4_8h}{core\+\_\+cm4.\+h}\end{DoxyCompactItemize}

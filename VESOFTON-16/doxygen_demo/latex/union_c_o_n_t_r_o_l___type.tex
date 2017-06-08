@@ -1,0 +1,97 @@
+\hypertarget{union_c_o_n_t_r_o_l___type}{}\section{C\+O\+N\+T\+R\+O\+L\+\_\+\+Type Union Reference}
+\label{union_c_o_n_t_r_o_l___type}\index{C\+O\+N\+T\+R\+O\+L\+\_\+\+Type@{C\+O\+N\+T\+R\+O\+L\+\_\+\+Type}}
+
+
+Union type to access the Control Registers (C\+O\+N\+T\+R\+OL).  
+
+
+
+
+{\ttfamily \#include $<$core\+\_\+cm4.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint32\_t \hyperlink{union_c_o_n_t_r_o_l___type_a2a6e513e8a6bf4e58db169e312172332}{nPRIV}:1\\
+\>uint32\_t \hyperlink{union_c_o_n_t_r_o_l___type_ae185aac93686ffc78e998a9daf41415b}{SPSEL}:1\\
+\>uint32\_t \hyperlink{union_c_o_n_t_r_o_l___type_a2518558c090f60161ba4e718a54ee468}{FPCA}:1\\
+\>uint32\_t \hyperlink{union_c_o_n_t_r_o_l___type_ac8a6a13838a897c8d0b8bc991bbaf7c1}{\_reserved0}:29\\
+\} \hyperlink{union_c_o_n_t_r_o_l___type_ab2a41711c248a319c2e7d0ab73c3a8b9}{b}\\
+
+\end{tabbing}\item 
+uint32\+\_\+t \hyperlink{union_c_o_n_t_r_o_l___type_ad0fb62e7a08e70fc5e0a76b67809f84b}{w}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Union type to access the Control Registers (C\+O\+N\+T\+R\+OL). 
+
+Definition at line 280 of file core\+\_\+cm4.\+h.
+
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{union_c_o_n_t_r_o_l___type_ac8a6a13838a897c8d0b8bc991bbaf7c1}\label{union_c_o_n_t_r_o_l___type_ac8a6a13838a897c8d0b8bc991bbaf7c1}} 
+\index{C\+O\+N\+T\+R\+O\+L\+\_\+\+Type@{C\+O\+N\+T\+R\+O\+L\+\_\+\+Type}!\+\_\+reserved0@{\+\_\+reserved0}}
+\index{\+\_\+reserved0@{\+\_\+reserved0}!C\+O\+N\+T\+R\+O\+L\+\_\+\+Type@{C\+O\+N\+T\+R\+O\+L\+\_\+\+Type}}
+\subsubsection{\texorpdfstring{\+\_\+reserved0}{\_reserved0}}
+{\footnotesize\ttfamily uint32\+\_\+t \+\_\+reserved0}
+
+bit\+: 3..31 Reserved 
+
+Definition at line 287 of file core\+\_\+cm4.\+h.
+
+\mbox{\Hypertarget{union_c_o_n_t_r_o_l___type_ab2a41711c248a319c2e7d0ab73c3a8b9}\label{union_c_o_n_t_r_o_l___type_ab2a41711c248a319c2e7d0ab73c3a8b9}} 
+\index{C\+O\+N\+T\+R\+O\+L\+\_\+\+Type@{C\+O\+N\+T\+R\+O\+L\+\_\+\+Type}!b@{b}}
+\index{b@{b}!C\+O\+N\+T\+R\+O\+L\+\_\+\+Type@{C\+O\+N\+T\+R\+O\+L\+\_\+\+Type}}
+\subsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily struct \{ ... \}   b}
+
+Structure used for bit access \mbox{\Hypertarget{union_c_o_n_t_r_o_l___type_a2518558c090f60161ba4e718a54ee468}\label{union_c_o_n_t_r_o_l___type_a2518558c090f60161ba4e718a54ee468}} 
+\index{C\+O\+N\+T\+R\+O\+L\+\_\+\+Type@{C\+O\+N\+T\+R\+O\+L\+\_\+\+Type}!F\+P\+CA@{F\+P\+CA}}
+\index{F\+P\+CA@{F\+P\+CA}!C\+O\+N\+T\+R\+O\+L\+\_\+\+Type@{C\+O\+N\+T\+R\+O\+L\+\_\+\+Type}}
+\subsubsection{\texorpdfstring{F\+P\+CA}{FPCA}}
+{\footnotesize\ttfamily uint32\+\_\+t F\+P\+CA}
+
+bit\+: 2 FP extension active flag 
+
+Definition at line 286 of file core\+\_\+cm4.\+h.
+
+\mbox{\Hypertarget{union_c_o_n_t_r_o_l___type_a2a6e513e8a6bf4e58db169e312172332}\label{union_c_o_n_t_r_o_l___type_a2a6e513e8a6bf4e58db169e312172332}} 
+\index{C\+O\+N\+T\+R\+O\+L\+\_\+\+Type@{C\+O\+N\+T\+R\+O\+L\+\_\+\+Type}!n\+P\+R\+IV@{n\+P\+R\+IV}}
+\index{n\+P\+R\+IV@{n\+P\+R\+IV}!C\+O\+N\+T\+R\+O\+L\+\_\+\+Type@{C\+O\+N\+T\+R\+O\+L\+\_\+\+Type}}
+\subsubsection{\texorpdfstring{n\+P\+R\+IV}{nPRIV}}
+{\footnotesize\ttfamily uint32\+\_\+t n\+P\+R\+IV}
+
+bit\+: 0 Execution privilege in Thread mode 
+
+Definition at line 284 of file core\+\_\+cm4.\+h.
+
+\mbox{\Hypertarget{union_c_o_n_t_r_o_l___type_ae185aac93686ffc78e998a9daf41415b}\label{union_c_o_n_t_r_o_l___type_ae185aac93686ffc78e998a9daf41415b}} 
+\index{C\+O\+N\+T\+R\+O\+L\+\_\+\+Type@{C\+O\+N\+T\+R\+O\+L\+\_\+\+Type}!S\+P\+S\+EL@{S\+P\+S\+EL}}
+\index{S\+P\+S\+EL@{S\+P\+S\+EL}!C\+O\+N\+T\+R\+O\+L\+\_\+\+Type@{C\+O\+N\+T\+R\+O\+L\+\_\+\+Type}}
+\subsubsection{\texorpdfstring{S\+P\+S\+EL}{SPSEL}}
+{\footnotesize\ttfamily uint32\+\_\+t S\+P\+S\+EL}
+
+bit\+: 1 Stack to be used 
+
+Definition at line 285 of file core\+\_\+cm4.\+h.
+
+\mbox{\Hypertarget{union_c_o_n_t_r_o_l___type_ad0fb62e7a08e70fc5e0a76b67809f84b}\label{union_c_o_n_t_r_o_l___type_ad0fb62e7a08e70fc5e0a76b67809f84b}} 
+\index{C\+O\+N\+T\+R\+O\+L\+\_\+\+Type@{C\+O\+N\+T\+R\+O\+L\+\_\+\+Type}!w@{w}}
+\index{w@{w}!C\+O\+N\+T\+R\+O\+L\+\_\+\+Type@{C\+O\+N\+T\+R\+O\+L\+\_\+\+Type}}
+\subsubsection{\texorpdfstring{w}{w}}
+{\footnotesize\ttfamily uint32\+\_\+t w}
+
+Type used for word access 
+
+Definition at line 289 of file core\+\_\+cm4.\+h.
+
+
+
+The documentation for this union was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Wilma/\+Documents/\+Git\+Hub/\+S\+D\+\_\+\+H\+U\+\_\+3/\+V\+E\+S\+O\+F\+T\+O\+N-\/16/cmsis/\hyperlink{core__cm4_8h}{core\+\_\+cm4.\+h}\end{DoxyCompactItemize}

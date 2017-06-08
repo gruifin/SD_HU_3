@@ -1,0 +1,132 @@
+\hypertarget{_user___interface_8h}{}\section{User\+\_\+\+Interface.\+h File Reference}
+\label{_user___interface_8h}\index{User\+\_\+\+Interface.\+h@{User\+\_\+\+Interface.\+h}}
+
+
+Common definition used by all files and public A\+PI.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+usart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+rcc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}misc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdlib.\+h\char`\"{}}\newline
+Include dependency graph for User\+\_\+\+Interface.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_user___interface_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_user___interface_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_c_o_m_m_a_n_d}{C\+O\+M\+M\+A\+ND}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_user___interface_8h_a9e8aaf9c28f704136d8fc1ba043b6bf5}\label{_user___interface_8h_a9e8aaf9c28f704136d8fc1ba043b6bf5}} 
+\#define {\bfseries S\+T\+R\+\_\+\+L\+E\+N\+G\+TH}~120
+\item 
+\mbox{\Hypertarget{_user___interface_8h_a7be6924e0d85f3f82149ea31cca36887}\label{_user___interface_8h_a7be6924e0d85f3f82149ea31cca36887}} 
+\#define {\bfseries T\+Y\+P\+E\+\_\+\+L\+E\+N\+G\+TH}~20
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_user___interface_8h_a38c9e095965b0fb06d4b2e72d35fbec1}\label{_user___interface_8h_a38c9e095965b0fb06d4b2e72d35fbec1}} 
+void \hyperlink{_user___interface_8h_a38c9e095965b0fb06d4b2e72d35fbec1}{I\+O\+\_\+\+Init} ()
+\begin{DoxyCompactList}\small\item\em Initialize A\+P\+I\+\_\+\+IO. \end{DoxyCompactList}\item 
+void \hyperlink{_user___interface_8h_a668fae7cabbaf28902e7dd1a31290538}{I\+O\+\_\+read\+String} (char $\ast$buff, char $\ast$command)
+\begin{DoxyCompactList}\small\item\em Reads incoming string. \end{DoxyCompactList}\item 
+int \hyperlink{_user___interface_8h_a03963c7cc0eb0ca0a8714eab03aca8d5}{L\+L\+\_\+\+E\+X\+EC} (char $\ast$string, char $\ast$command)
+\begin{DoxyCompactList}\small\item\em Logic layer execute (chose which command) \end{DoxyCompactList}\item 
+void \hyperlink{_user___interface_8h_ace02de4936b2964e0c7e6a0bdeb4fa0f}{I\+O\+\_\+\+W\+R\+I\+T\+E\+\_\+\+E\+R\+R\+OR} (int error)
+\begin{DoxyCompactList}\small\item\em Function writes error to U\+A\+RT. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_user___interface_8h_a70d431da3740b5dedad495c2843ba89e}\label{_user___interface_8h_a70d431da3740b5dedad495c2843ba89e}} 
+\hyperlink{struct_c_o_m_m_a_n_d}{C\+O\+M\+M\+A\+ND} {\bfseries command}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Common definition used by all files and public A\+PI. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_user___interface_8h_a668fae7cabbaf28902e7dd1a31290538}\label{_user___interface_8h_a668fae7cabbaf28902e7dd1a31290538}} 
+\index{User\+\_\+\+Interface.\+h@{User\+\_\+\+Interface.\+h}!I\+O\+\_\+read\+String@{I\+O\+\_\+read\+String}}
+\index{I\+O\+\_\+read\+String@{I\+O\+\_\+read\+String}!User\+\_\+\+Interface.\+h@{User\+\_\+\+Interface.\+h}}
+\subsubsection{\texorpdfstring{I\+O\+\_\+read\+String()}{IO\_readString()}}
+{\footnotesize\ttfamily void I\+O\+\_\+read\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{buff,  }\item[{char $\ast$}]{command }\end{DoxyParamCaption})}
+
+
+
+Reads incoming string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em buff} & \\
+\hline
+\mbox{\tt in}  & {\em command} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 27 of file Input\+\_\+\+Output.\+c.
+
+\mbox{\Hypertarget{_user___interface_8h_ace02de4936b2964e0c7e6a0bdeb4fa0f}\label{_user___interface_8h_ace02de4936b2964e0c7e6a0bdeb4fa0f}} 
+\index{User\+\_\+\+Interface.\+h@{User\+\_\+\+Interface.\+h}!I\+O\+\_\+\+W\+R\+I\+T\+E\+\_\+\+E\+R\+R\+OR@{I\+O\+\_\+\+W\+R\+I\+T\+E\+\_\+\+E\+R\+R\+OR}}
+\index{I\+O\+\_\+\+W\+R\+I\+T\+E\+\_\+\+E\+R\+R\+OR@{I\+O\+\_\+\+W\+R\+I\+T\+E\+\_\+\+E\+R\+R\+OR}!User\+\_\+\+Interface.\+h@{User\+\_\+\+Interface.\+h}}
+\subsubsection{\texorpdfstring{I\+O\+\_\+\+W\+R\+I\+T\+E\+\_\+\+E\+R\+R\+O\+R()}{IO\_WRITE\_ERROR()}}
+{\footnotesize\ttfamily void I\+O\+\_\+\+W\+R\+I\+T\+E\+\_\+\+E\+R\+R\+OR (\begin{DoxyParamCaption}\item[{int}]{error }\end{DoxyParamCaption})}
+
+
+
+Function writes error to U\+A\+RT. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em error} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 40 of file Input\+\_\+\+Output.\+c.
+
+\mbox{\Hypertarget{_user___interface_8h_a03963c7cc0eb0ca0a8714eab03aca8d5}\label{_user___interface_8h_a03963c7cc0eb0ca0a8714eab03aca8d5}} 
+\index{User\+\_\+\+Interface.\+h@{User\+\_\+\+Interface.\+h}!L\+L\+\_\+\+E\+X\+EC@{L\+L\+\_\+\+E\+X\+EC}}
+\index{L\+L\+\_\+\+E\+X\+EC@{L\+L\+\_\+\+E\+X\+EC}!User\+\_\+\+Interface.\+h@{User\+\_\+\+Interface.\+h}}
+\subsubsection{\texorpdfstring{L\+L\+\_\+\+E\+X\+E\+C()}{LL\_EXEC()}}
+{\footnotesize\ttfamily int L\+L\+\_\+\+E\+X\+EC (\begin{DoxyParamCaption}\item[{char $\ast$}]{string,  }\item[{char $\ast$}]{command }\end{DoxyParamCaption})}
+
+
+
+Logic layer execute (chose which command) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em buff} & \\
+\hline
+\mbox{\tt in}  & {\em command} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file Logic\+\_\+\+Layer.\+c.
+

@@ -1,0 +1,569 @@
+\hypertarget{_a_p_i___i_o_8h}{}\section{A\+P\+I/\+A\+P\+I\+\_\+\+IO.h File Reference}
+\label{_a_p_i___i_o_8h}\index{A\+P\+I/\+A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I/\+A\+P\+I\+\_\+\+I\+O.\+h}}
+
+
+Common definition used by all files and public A\+PI.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+rcc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+tim.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}misc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+dma.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}User\+\_\+\+Interface.\+h\char`\"{}}\newline
+Include dependency graph for A\+P\+I\+\_\+\+I\+O.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_a_p_i___i_o_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_a_p_i___i_o_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_c_o_m_m_a_n_d__t}{C\+O\+M\+M\+A\+N\+D\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Structure for the buffers. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_v_g_a__t}{V\+G\+A\+\_\+t}
+\begin{DoxyCompactList}\small\item\em V\+GA structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_a_p_i___i_o_8h_a9fee0c95dea1cdd3eeb3605ece528a8a}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+A\+CK}~0x00
+\begin{DoxyCompactList}\small\item\em Pixel color black. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_p_i___i_o_8h_a5c55e697abe70bd280e9ce5059ff6370}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+R\+O\+WN}~0x88
+\begin{DoxyCompactList}\small\item\em Pixel color brown. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_p_i___i_o_8h_a9314f832988df57045bf9790f18de6fa}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+UE}~0x03
+\begin{DoxyCompactList}\small\item\em Pixel color blue. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_p_i___i_o_8h_a28ba4fa390cd2588f7eda1cb00d251ce}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+B\+L\+UE}~0x6F
+\begin{DoxyCompactList}\small\item\em Pixel color light blue. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_p_i___i_o_8h_a4d6fe9b05dffe892c693d6cbdb3bdc94}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+G\+R\+AY}~0x92
+\begin{DoxyCompactList}\small\item\em Pixel color gray. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_p_i___i_o_8h_acd643373461ea57a495e8403ba41eab7}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+G\+R\+E\+EN}~0x1C
+\begin{DoxyCompactList}\small\item\em Pixel color green. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_p_i___i_o_8h_adb3602cba63f07477507c54a540d52a9}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+G\+R\+E\+EN}~0x7E
+\begin{DoxyCompactList}\small\item\em Pixel color light green. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_p_i___i_o_8h_a790cc430619a64faf356c303f8bdd3d4}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+R\+ED}~0x\+E0
+\begin{DoxyCompactList}\small\item\em Pixel color red. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_p_i___i_o_8h_ae6a3ce91f16bab22b2c56fd41dccf1ea}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+R\+ED}~0x\+F2
+\begin{DoxyCompactList}\small\item\em Pixel color light red. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_p_i___i_o_8h_a2ad592a88539ed90dd1fe6c33648a13b}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+W\+H\+I\+TE}~0x\+FF
+\begin{DoxyCompactList}\small\item\em Pixel white. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_p_i___i_o_8h_a39a87dbbf6639be1a1312dbe9229c4a8}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+C\+Y\+AN}~0x1F
+\begin{DoxyCompactList}\small\item\em Pixel color cyan. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_p_i___i_o_8h_af1696722e55ba25438cec5c53d2eddb3}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+C\+Y\+AN}~0x9F
+\begin{DoxyCompactList}\small\item\em Pixel light cyan. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_p_i___i_o_8h_a9498759c02ab7d643c9af53a70d15ad5}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+M\+A\+G\+E\+N\+TA}~0x\+E3
+\begin{DoxyCompactList}\small\item\em Pixel magenta. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_p_i___i_o_8h_ae34663271c91b95a34d721a24e0f1c1e}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+M\+A\+G\+E\+N\+TA}~0x\+F3
+\begin{DoxyCompactList}\small\item\em Pixel light magenta. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_p_i___i_o_8h_a76575b7810719497e2b15a6709c1b6f0}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+Y\+E\+L\+L\+OW}~0x\+FC
+\begin{DoxyCompactList}\small\item\em Pixel color yellow. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_p_i___i_o_8h_ace7f348dc91111917772d3e19f8821d3}{V\+G\+A\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+X}~320
+\item 
+\#define \hyperlink{_a_p_i___i_o_8h_a9c3e46882b624fe1887d0ec6171d771b}{V\+G\+A\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+Y}~240
+\item 
+\#define \hyperlink{_a_p_i___i_o_8h_a9e8aaf9c28f704136d8fc1ba043b6bf5}{S\+T\+R\+\_\+\+L\+E\+N\+G\+TH}~120
+\item 
+\#define \hyperlink{_a_p_i___i_o_8h_a7be6924e0d85f3f82149ea31cca36887}{T\+Y\+P\+E\+\_\+\+L\+E\+N\+G\+TH}~20
+\item 
+\#define \hyperlink{_a_p_i___i_o_8h_af84c4272cc109cfaf6ed2f2000cb2904}{C\+O\+L\+O\+R\+\_\+\+L\+E\+N\+G\+TH}~20
+\item 
+\#define \hyperlink{_a_p_i___i_o_8h_ae833776b4ba8fc4f5d81b239fc856553}{C\+R\+C\+H\+AR}~13
+\item 
+\#define \hyperlink{_a_p_i___i_o_8h_a994c6410d36b46eb164dfcb0fcb82d0d}{L\+F\+C\+H\+AR}~10
+\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a9934465d996215f7e3a39f574116cd16}\label{_a_p_i___i_o_8h_a9934465d996215f7e3a39f574116cd16}} 
+\#define {\bfseries V\+G\+A\+\_\+\+T\+I\+M1\+\_\+\+P\+E\+R\+I\+O\+DE}~11
+\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_ab20ff576649ab2c78f0f87b758c2705b}\label{_a_p_i___i_o_8h_ab20ff576649ab2c78f0f87b758c2705b}} 
+\#define {\bfseries V\+G\+A\+\_\+\+T\+I\+M1\+\_\+\+P\+R\+E\+S\+C\+A\+LE}~0
+\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a6781ff356015bb423813eb349582faa3}\label{_a_p_i___i_o_8h_a6781ff356015bb423813eb349582faa3}} 
+\#define {\bfseries V\+G\+A\+\_\+\+T\+I\+M2\+\_\+\+H\+S\+Y\+N\+C\+\_\+\+P\+E\+R\+I\+O\+DE}~2667
+\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_ae0124ad9d53b4c2af5902820421aea02}\label{_a_p_i___i_o_8h_ae0124ad9d53b4c2af5902820421aea02}} 
+\#define {\bfseries V\+G\+A\+\_\+\+T\+I\+M2\+\_\+\+H\+S\+Y\+N\+C\+\_\+\+P\+R\+E\+S\+C\+A\+LE}~0
+\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_ad3ef518a75a4d574f2a36ce343157676}\label{_a_p_i___i_o_8h_ad3ef518a75a4d574f2a36ce343157676}} 
+\#define {\bfseries V\+G\+A\+\_\+\+T\+I\+M2\+\_\+\+H\+S\+Y\+N\+C\+\_\+\+I\+MP}~320
+\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a5dabd74236cb9b42d94ccc7435176d40}\label{_a_p_i___i_o_8h_a5dabd74236cb9b42d94ccc7435176d40}} 
+\#define {\bfseries V\+G\+A\+\_\+\+T\+I\+M2\+\_\+\+H\+T\+R\+I\+G\+G\+E\+R\+\_\+\+S\+T\+A\+RT}~480
+\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_ae0447f6b6430a8c09536288b2b01abb4}\label{_a_p_i___i_o_8h_ae0447f6b6430a8c09536288b2b01abb4}} 
+\#define {\bfseries V\+G\+A\+\_\+\+T\+I\+M2\+\_\+\+D\+M\+A\+\_\+\+D\+E\+L\+AY}~60
+\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a73e729af6a6a2eb20ef3804cf794e4bd}\label{_a_p_i___i_o_8h_a73e729af6a6a2eb20ef3804cf794e4bd}} 
+\#define {\bfseries V\+G\+A\+\_\+\+V\+S\+Y\+N\+C\+\_\+\+P\+E\+R\+I\+O\+DE}~525
+\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_ad3c951f66600690235db2c93e74bc82f}\label{_a_p_i___i_o_8h_ad3c951f66600690235db2c93e74bc82f}} 
+\#define {\bfseries V\+G\+A\+\_\+\+V\+S\+Y\+N\+C\+\_\+\+I\+MP}~2
+\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a1bf220647b6ad6187cc358cbffbb74fc}\label{_a_p_i___i_o_8h_a1bf220647b6ad6187cc358cbffbb74fc}} 
+\#define {\bfseries V\+G\+A\+\_\+\+V\+S\+Y\+N\+C\+\_\+\+B\+I\+L\+D\+\_\+\+S\+T\+A\+RT}~36
+\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_abf14fb3313d4de9367100e2dcddcd39f}\label{_a_p_i___i_o_8h_abf14fb3313d4de9367100e2dcddcd39f}} 
+\#define {\bfseries V\+G\+A\+\_\+\+V\+S\+Y\+N\+C\+\_\+\+B\+I\+L\+D\+\_\+\+S\+T\+OP}~514
+\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a758dadcf25d5a3b26f4791e9a332f1bb}\label{_a_p_i___i_o_8h_a758dadcf25d5a3b26f4791e9a332f1bb}} 
+\#define {\bfseries V\+G\+A\+\_\+\+G\+P\+I\+O\+E\+\_\+\+B\+A\+S\+E\+\_\+\+A\+DR}~((uint32\+\_\+t)0x40021000)
+\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_af70daf7e1e57589c259536efc1187d6c}\label{_a_p_i___i_o_8h_af70daf7e1e57589c259536efc1187d6c}} 
+\#define {\bfseries V\+G\+A\+\_\+\+G\+P\+I\+O\+\_\+\+O\+D\+R\+\_\+\+O\+F\+F\+S\+ET}~((uint32\+\_\+t)0x00000014)
+\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_ac3336e31bfbbd8199e506f39164a19eb}\label{_a_p_i___i_o_8h_ac3336e31bfbbd8199e506f39164a19eb}} 
+\#define {\bfseries V\+G\+A\+\_\+\+G\+P\+I\+O\+\_\+\+B\+Y\+T\+E\+\_\+\+O\+F\+F\+S\+ET}~((uint32\+\_\+t)0x00000001)
+\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a2fb72da69dd330b1ebbff2b8550d1db2}\label{_a_p_i___i_o_8h_a2fb72da69dd330b1ebbff2b8550d1db2}} 
+\#define {\bfseries V\+G\+A\+\_\+\+G\+P\+I\+O\+E\+\_\+\+O\+D\+R\+\_\+\+A\+D\+D\+R\+E\+SS}~(V\+G\+A\+\_\+\+G\+P\+I\+O\+E\+\_\+\+B\+A\+S\+E\+\_\+\+A\+DR $\vert$ V\+G\+A\+\_\+\+G\+P\+I\+O\+\_\+\+O\+D\+R\+\_\+\+O\+F\+F\+S\+ET $\vert$ V\+G\+A\+\_\+\+G\+P\+I\+O\+\_\+\+B\+Y\+T\+E\+\_\+\+O\+F\+F\+S\+ET)
+\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a114dc879235023dc8e6f360a6f487a6b}\label{_a_p_i___i_o_8h_a114dc879235023dc8e6f360a6f487a6b}} 
+\#define {\bfseries V\+G\+A\+\_\+\+G\+P\+I\+O\+\_\+\+H\+I\+N\+I\+B\+B\+LE}~((uint16\+\_\+t)0x\+F\+F00)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a559918a2721e31ee27be6e026e444eca}\label{_a_p_i___i_o_8h_a559918a2721e31ee27be6e026e444eca}} 
+void \hyperlink{_a_p_i___i_o_8h_a559918a2721e31ee27be6e026e444eca}{A\+P\+I\+\_\+\+I\+O\+\_\+\+Screen\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize V\+G\+A-\/\+Module. \end{DoxyCompactList}\item 
+void \hyperlink{_a_p_i___i_o_8h_adac57ec1d2019647d4ef389972d4ad54}{A\+P\+I\+\_\+\+I\+O\+\_\+\+Fill\+Screen} (uint8\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Fill the D\+MA R\+AM buffer with one color. \end{DoxyCompactList}\item 
+void \hyperlink{_a_p_i___i_o_8h_afe5040b81dac0691f4a219d04fcc70f3}{A\+P\+I\+\_\+\+I\+O\+\_\+\+Set\+Pixel} (uint16\+\_\+t xp, uint16\+\_\+t yp, uint8\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Sets pixels on the screen with the chosen color. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_ae4d306e45175f38cb244c89ee5732da8}\label{_a_p_i___i_o_8h_ae4d306e45175f38cb244c89ee5732da8}} 
+void \hyperlink{_a_p_i___i_o_8h_ae4d306e45175f38cb244c89ee5732da8}{A\+P\+I\+\_\+\+I\+O\+\_\+\+Delay\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize Delay. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_ae814d208edb978c2ac0efcdfefb2e15d}\label{_a_p_i___i_o_8h_ae814d208edb978c2ac0efcdfefb2e15d}} 
+void \hyperlink{_a_p_i___i_o_8h_ae814d208edb978c2ac0efcdfefb2e15d}{A\+P\+I\+\_\+\+I\+O\+\_\+\+Delay\+Micros} (uint32\+\_\+t micros)
+\begin{DoxyCompactList}\small\item\em Delays in microseconds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a26b3c2d0a1161d9e1dc1a15355ba5c71}\label{_a_p_i___i_o_8h_a26b3c2d0a1161d9e1dc1a15355ba5c71}} 
+void \hyperlink{_a_p_i___i_o_8h_a26b3c2d0a1161d9e1dc1a15355ba5c71}{A\+P\+I\+\_\+\+I\+O\+\_\+\+Delay\+Millis} (uint32\+\_\+t millis)
+\begin{DoxyCompactList}\small\item\em Delays in milliseconds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a143471ba66072b8c06e360b6e91a4eb8}\label{_a_p_i___i_o_8h_a143471ba66072b8c06e360b6e91a4eb8}} 
+void \hyperlink{_a_p_i___i_o_8h_a143471ba66072b8c06e360b6e91a4eb8}{A\+P\+I\+\_\+\+I\+O\+\_\+\+U\+A\+R\+T\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the U\+A\+RT. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_acb304b4dece8bc84d4d6eeae4961574a}\label{_a_p_i___i_o_8h_acb304b4dece8bc84d4d6eeae4961574a}} 
+void \hyperlink{_a_p_i___i_o_8h_acb304b4dece8bc84d4d6eeae4961574a}{A\+P\+I\+\_\+\+I\+O\+\_\+\+U\+A\+R\+T\+\_\+\+I\+N\+T\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the U\+A\+RT interrupt. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a96affedb9de9e40ef68933433b0e47a4}\label{_a_p_i___i_o_8h_a96affedb9de9e40ef68933433b0e47a4}} 
+void \hyperlink{_a_p_i___i_o_8h_a96affedb9de9e40ef68933433b0e47a4}{A\+P\+I\+\_\+\+I\+O\+\_\+\+U\+A\+R\+T\+\_\+putchar} (char c)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT writes a char \mbox{[}in\mbox{]} c the char that has to be put. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_ac3d5711ccd089f4195b3885195de3926}\label{_a_p_i___i_o_8h_ac3d5711ccd089f4195b3885195de3926}} 
+void \hyperlink{_a_p_i___i_o_8h_ac3d5711ccd089f4195b3885195de3926}{A\+P\+I\+\_\+\+I\+O\+\_\+\+U\+A\+R\+T\+\_\+puts} (char $\ast$s)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT writes a string \mbox{[}in\mbox{]} s the string that has to be put. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a388c5d59e3272951cb0dc0105fbc5c14}\label{_a_p_i___i_o_8h_a388c5d59e3272951cb0dc0105fbc5c14}} 
+void \hyperlink{_a_p_i___i_o_8h_a388c5d59e3272951cb0dc0105fbc5c14}{A\+P\+I\+\_\+\+I\+O\+\_\+\+U\+A\+R\+T\+\_\+putnum} (unsigned int num, unsigned char deel)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT writes an unsigned in given number system \mbox{[}in\mbox{]} num the integer that has to be put \mbox{[}in\mbox{]} deel the number system in which the integer has to put. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a2df6bc692c5795a4942485f9182c0250}\label{_a_p_i___i_o_8h_a2df6bc692c5795a4942485f9182c0250}} 
+void \hyperlink{_a_p_i___i_o_8h_a2df6bc692c5795a4942485f9182c0250}{A\+P\+I\+\_\+\+I\+O\+\_\+\+U\+A\+R\+T\+\_\+putint} (unsigned int num)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT writes an unsigned integer \mbox{[}in\mbox{]} num the integer that has to be put. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a533091814b5b2f1065249b7ddb9c4550}\label{_a_p_i___i_o_8h_a533091814b5b2f1065249b7ddb9c4550}} 
+char \hyperlink{_a_p_i___i_o_8h_a533091814b5b2f1065249b7ddb9c4550}{A\+P\+I\+\_\+\+I\+O\+\_\+\+U\+A\+R\+T\+\_\+get} (void)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT receives incoming char. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a2b3b649f12bf7414f4328c51f5ab11db}\label{_a_p_i___i_o_8h_a2b3b649f12bf7414f4328c51f5ab11db}} 
+void \hyperlink{_a_p_i___i_o_8h_a2b3b649f12bf7414f4328c51f5ab11db}{A\+P\+I\+\_\+\+I\+O\+\_\+\+U\+A\+R\+T\+\_\+gets} (char $\ast$s, int echo)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT receives incoming string \mbox{[}in\mbox{]} s string that is received \mbox{[}in\mbox{]} echo when True, send read-\/char to U\+A\+RT. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a0642526bfd4eb59d888572150ee3032a}\label{_a_p_i___i_o_8h_a0642526bfd4eb59d888572150ee3032a}} 
+\hyperlink{struct_v_g_a__t}{V\+G\+A\+\_\+t} {\bfseries V\+GA}
+\item 
+\mbox{\Hypertarget{_a_p_i___i_o_8h_adad76feab97da661d4015659c7a7f9a8}\label{_a_p_i___i_o_8h_adad76feab97da661d4015659c7a7f9a8}} 
+uint8\+\_\+t {\bfseries V\+G\+A\+\_\+\+R\+A\+M1} \mbox{[}(\hyperlink{_a_p_i___i_o_8h_ace7f348dc91111917772d3e19f8821d3}{V\+G\+A\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+X}+1) $\ast$\hyperlink{_a_p_i___i_o_8h_a9c3e46882b624fe1887d0ec6171d771b}{V\+G\+A\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+Y}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Common definition used by all files and public A\+PI. 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_a_p_i___i_o_8h_af84c4272cc109cfaf6ed2f2000cb2904}\label{_a_p_i___i_o_8h_af84c4272cc109cfaf6ed2f2000cb2904}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!C\+O\+L\+O\+R\+\_\+\+L\+E\+N\+G\+TH@{C\+O\+L\+O\+R\+\_\+\+L\+E\+N\+G\+TH}}
+\index{C\+O\+L\+O\+R\+\_\+\+L\+E\+N\+G\+TH@{C\+O\+L\+O\+R\+\_\+\+L\+E\+N\+G\+TH}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+L\+O\+R\+\_\+\+L\+E\+N\+G\+TH}{COLOR\_LENGTH}}
+{\footnotesize\ttfamily \#define C\+O\+L\+O\+R\+\_\+\+L\+E\+N\+G\+TH~20}
+
+Size of the color buffer 
+
+Definition at line 197 of file A\+P\+I\+\_\+\+I\+O.\+h.
+
+\mbox{\Hypertarget{_a_p_i___i_o_8h_ae833776b4ba8fc4f5d81b239fc856553}\label{_a_p_i___i_o_8h_ae833776b4ba8fc4f5d81b239fc856553}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!C\+R\+C\+H\+AR@{C\+R\+C\+H\+AR}}
+\index{C\+R\+C\+H\+AR@{C\+R\+C\+H\+AR}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{C\+R\+C\+H\+AR}{CRCHAR}}
+{\footnotesize\ttfamily \#define C\+R\+C\+H\+AR~13}
+
+Value of the carriage return char 
+
+Definition at line 202 of file A\+P\+I\+\_\+\+I\+O.\+h.
+
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a994c6410d36b46eb164dfcb0fcb82d0d}\label{_a_p_i___i_o_8h_a994c6410d36b46eb164dfcb0fcb82d0d}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!L\+F\+C\+H\+AR@{L\+F\+C\+H\+AR}}
+\index{L\+F\+C\+H\+AR@{L\+F\+C\+H\+AR}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{L\+F\+C\+H\+AR}{LFCHAR}}
+{\footnotesize\ttfamily \#define L\+F\+C\+H\+AR~10}
+
+Value of the linefeed char 
+
+Definition at line 207 of file A\+P\+I\+\_\+\+I\+O.\+h.
+
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a9e8aaf9c28f704136d8fc1ba043b6bf5}\label{_a_p_i___i_o_8h_a9e8aaf9c28f704136d8fc1ba043b6bf5}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!S\+T\+R\+\_\+\+L\+E\+N\+G\+TH@{S\+T\+R\+\_\+\+L\+E\+N\+G\+TH}}
+\index{S\+T\+R\+\_\+\+L\+E\+N\+G\+TH@{S\+T\+R\+\_\+\+L\+E\+N\+G\+TH}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+R\+\_\+\+L\+E\+N\+G\+TH}{STR\_LENGTH}}
+{\footnotesize\ttfamily \#define S\+T\+R\+\_\+\+L\+E\+N\+G\+TH~120}
+
+Size (string length) of the fill buffer 
+
+Definition at line 187 of file A\+P\+I\+\_\+\+I\+O.\+h.
+
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a7be6924e0d85f3f82149ea31cca36887}\label{_a_p_i___i_o_8h_a7be6924e0d85f3f82149ea31cca36887}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!T\+Y\+P\+E\+\_\+\+L\+E\+N\+G\+TH@{T\+Y\+P\+E\+\_\+\+L\+E\+N\+G\+TH}}
+\index{T\+Y\+P\+E\+\_\+\+L\+E\+N\+G\+TH@{T\+Y\+P\+E\+\_\+\+L\+E\+N\+G\+TH}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{T\+Y\+P\+E\+\_\+\+L\+E\+N\+G\+TH}{TYPE\_LENGTH}}
+{\footnotesize\ttfamily \#define T\+Y\+P\+E\+\_\+\+L\+E\+N\+G\+TH~20}
+
+Size of the type buffer 
+
+Definition at line 192 of file A\+P\+I\+\_\+\+I\+O.\+h.
+
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a9fee0c95dea1cdd3eeb3605ece528a8a}\label{_a_p_i___i_o_8h_a9fee0c95dea1cdd3eeb3605ece528a8a}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+A\+CK@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+A\+CK}}
+\index{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+A\+CK@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+A\+CK}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+A\+CK}{VGA\_COL\_BLACK}}
+{\footnotesize\ttfamily \#define V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+A\+CK~0x00}
+
+
+
+Pixel color black. 
+
+The color value for a single pixel is stored in an 8-\/bit unsigned integer. The \doxytablelink{_a_p_i___i_o_8h_color_designation}{color\+\_\+designation} table specified how the three, red, green, and blue, colors are stored.
+
+\hypertarget{_a_p_i___i_o_8h_color_designation}{}
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{9}{|X[-1]}|}
+\caption{Color Designation}\label{_a_p_i___i_o_8h_color_designation}\\
+\hline
+\textbf{ Bit number }&7 &6 &5 &4 &3 &2 &1 &0  \\\cline{1-9}
+{\bfseries Color} &\multicolumn{3}{p{(\linewidth-\tabcolsep*9-\arrayrulewidth*4)*3/9}|}{\PBS\centering Red }&\multicolumn{3}{p{(\linewidth-\tabcolsep*9-\arrayrulewidth*4)*3/9}|}{\PBS\centering Green }&\multicolumn{2}{p{(\linewidth-\tabcolsep*9-\arrayrulewidth*4)*2/9}|}{\PBS\centering Blue  }\\\cline{1-9}
+\end{longtabu}
+
+
+Definition at line 60 of file A\+P\+I\+\_\+\+I\+O.\+h.
+
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a9314f832988df57045bf9790f18de6fa}\label{_a_p_i___i_o_8h_a9314f832988df57045bf9790f18de6fa}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+UE@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+UE}}
+\index{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+UE@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+UE}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+UE}{VGA\_COL\_BLUE}}
+{\footnotesize\ttfamily \#define V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+UE~0x03}
+
+
+
+Pixel color blue. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_a_p_i___i_o_8h_a9fee0c95dea1cdd3eeb3605ece528a8a}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+A\+CK} for a description on how the color for a single pixel is stored. 
+\end{DoxySeeAlso}
+
+
+Definition at line 76 of file A\+P\+I\+\_\+\+I\+O.\+h.
+
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a5c55e697abe70bd280e9ce5059ff6370}\label{_a_p_i___i_o_8h_a5c55e697abe70bd280e9ce5059ff6370}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+R\+O\+WN@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+R\+O\+WN}}
+\index{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+R\+O\+WN@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+R\+O\+WN}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+R\+O\+WN}{VGA\_COL\_BROWN}}
+{\footnotesize\ttfamily \#define V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+R\+O\+WN~0x88}
+
+
+
+Pixel color brown. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_a_p_i___i_o_8h_a9fee0c95dea1cdd3eeb3605ece528a8a}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+A\+CK} for a description on how the color for a single pixel is stored. 
+\end{DoxySeeAlso}
+
+
+Definition at line 68 of file A\+P\+I\+\_\+\+I\+O.\+h.
+
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a39a87dbbf6639be1a1312dbe9229c4a8}\label{_a_p_i___i_o_8h_a39a87dbbf6639be1a1312dbe9229c4a8}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+C\+Y\+AN@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+C\+Y\+AN}}
+\index{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+C\+Y\+AN@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+C\+Y\+AN}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+C\+Y\+AN}{VGA\_COL\_CYAN}}
+{\footnotesize\ttfamily \#define V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+C\+Y\+AN~0x1F}
+
+
+
+Pixel color cyan. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_a_p_i___i_o_8h_a9fee0c95dea1cdd3eeb3605ece528a8a}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+A\+CK} for a description on how the color for a single pixel is stored. 
+\end{DoxySeeAlso}
+
+
+Definition at line 140 of file A\+P\+I\+\_\+\+I\+O.\+h.
+
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a4d6fe9b05dffe892c693d6cbdb3bdc94}\label{_a_p_i___i_o_8h_a4d6fe9b05dffe892c693d6cbdb3bdc94}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+G\+R\+AY@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+G\+R\+AY}}
+\index{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+G\+R\+AY@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+G\+R\+AY}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+G\+R\+AY}{VGA\_COL\_GRAY}}
+{\footnotesize\ttfamily \#define V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+G\+R\+AY~0x92}
+
+
+
+Pixel color gray. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_a_p_i___i_o_8h_a9fee0c95dea1cdd3eeb3605ece528a8a}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+A\+CK} for a description on how the color for a single pixel is stored. 
+\end{DoxySeeAlso}
+
+
+Definition at line 92 of file A\+P\+I\+\_\+\+I\+O.\+h.
+
+\mbox{\Hypertarget{_a_p_i___i_o_8h_acd643373461ea57a495e8403ba41eab7}\label{_a_p_i___i_o_8h_acd643373461ea57a495e8403ba41eab7}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+G\+R\+E\+EN@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+G\+R\+E\+EN}}
+\index{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+G\+R\+E\+EN@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+G\+R\+E\+EN}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+G\+R\+E\+EN}{VGA\_COL\_GREEN}}
+{\footnotesize\ttfamily \#define V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+G\+R\+E\+EN~0x1C}
+
+
+
+Pixel color green. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_a_p_i___i_o_8h_a9fee0c95dea1cdd3eeb3605ece528a8a}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+A\+CK} for a description on how the color for a single pixel is stored. 
+\end{DoxySeeAlso}
+
+
+Definition at line 100 of file A\+P\+I\+\_\+\+I\+O.\+h.
+
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a28ba4fa390cd2588f7eda1cb00d251ce}\label{_a_p_i___i_o_8h_a28ba4fa390cd2588f7eda1cb00d251ce}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+B\+L\+UE@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+B\+L\+UE}}
+\index{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+B\+L\+UE@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+B\+L\+UE}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+B\+L\+UE}{VGA\_COL\_LIGHT\_BLUE}}
+{\footnotesize\ttfamily \#define V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+B\+L\+UE~0x6F}
+
+
+
+Pixel color light blue. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_a_p_i___i_o_8h_a9fee0c95dea1cdd3eeb3605ece528a8a}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+A\+CK} for a description on how the color for a single pixel is stored. 
+\end{DoxySeeAlso}
+
+
+Definition at line 84 of file A\+P\+I\+\_\+\+I\+O.\+h.
+
+\mbox{\Hypertarget{_a_p_i___i_o_8h_af1696722e55ba25438cec5c53d2eddb3}\label{_a_p_i___i_o_8h_af1696722e55ba25438cec5c53d2eddb3}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+C\+Y\+AN@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+C\+Y\+AN}}
+\index{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+C\+Y\+AN@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+C\+Y\+AN}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+C\+Y\+AN}{VGA\_COL\_LIGHT\_CYAN}}
+{\footnotesize\ttfamily \#define V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+C\+Y\+AN~0x9F}
+
+
+
+Pixel light cyan. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_a_p_i___i_o_8h_a9fee0c95dea1cdd3eeb3605ece528a8a}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+A\+CK} for a description on how the color for a single pixel is stored. 
+\end{DoxySeeAlso}
+
+
+Definition at line 148 of file A\+P\+I\+\_\+\+I\+O.\+h.
+
+\mbox{\Hypertarget{_a_p_i___i_o_8h_adb3602cba63f07477507c54a540d52a9}\label{_a_p_i___i_o_8h_adb3602cba63f07477507c54a540d52a9}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+G\+R\+E\+EN@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+G\+R\+E\+EN}}
+\index{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+G\+R\+E\+EN@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+G\+R\+E\+EN}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+G\+R\+E\+EN}{VGA\_COL\_LIGHT\_GREEN}}
+{\footnotesize\ttfamily \#define V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+G\+R\+E\+EN~0x7E}
+
+
+
+Pixel color light green. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_a_p_i___i_o_8h_a9fee0c95dea1cdd3eeb3605ece528a8a}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+A\+CK} for a description on how the color for a single pixel is stored. 
+\end{DoxySeeAlso}
+
+
+Definition at line 108 of file A\+P\+I\+\_\+\+I\+O.\+h.
+
+\mbox{\Hypertarget{_a_p_i___i_o_8h_ae34663271c91b95a34d721a24e0f1c1e}\label{_a_p_i___i_o_8h_ae34663271c91b95a34d721a24e0f1c1e}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+M\+A\+G\+E\+N\+TA@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+M\+A\+G\+E\+N\+TA}}
+\index{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+M\+A\+G\+E\+N\+TA@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+M\+A\+G\+E\+N\+TA}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+M\+A\+G\+E\+N\+TA}{VGA\_COL\_LIGHT\_MAGENTA}}
+{\footnotesize\ttfamily \#define V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+M\+A\+G\+E\+N\+TA~0x\+F3}
+
+
+
+Pixel light magenta. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_a_p_i___i_o_8h_a9fee0c95dea1cdd3eeb3605ece528a8a}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+A\+CK} for a description on how the color for a single pixel is stored. 
+\end{DoxySeeAlso}
+
+
+Definition at line 164 of file A\+P\+I\+\_\+\+I\+O.\+h.
+
+\mbox{\Hypertarget{_a_p_i___i_o_8h_ae6a3ce91f16bab22b2c56fd41dccf1ea}\label{_a_p_i___i_o_8h_ae6a3ce91f16bab22b2c56fd41dccf1ea}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+R\+ED@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+R\+ED}}
+\index{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+R\+ED@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+R\+ED}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+R\+ED}{VGA\_COL\_LIGHT\_RED}}
+{\footnotesize\ttfamily \#define V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+R\+ED~0x\+F2}
+
+
+
+Pixel color light red. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_a_p_i___i_o_8h_a9fee0c95dea1cdd3eeb3605ece528a8a}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+A\+CK} for a description on how the color for a single pixel is stored. 
+\end{DoxySeeAlso}
+
+
+Definition at line 124 of file A\+P\+I\+\_\+\+I\+O.\+h.
+
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a9498759c02ab7d643c9af53a70d15ad5}\label{_a_p_i___i_o_8h_a9498759c02ab7d643c9af53a70d15ad5}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+M\+A\+G\+E\+N\+TA@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+M\+A\+G\+E\+N\+TA}}
+\index{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+M\+A\+G\+E\+N\+TA@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+M\+A\+G\+E\+N\+TA}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+M\+A\+G\+E\+N\+TA}{VGA\_COL\_MAGENTA}}
+{\footnotesize\ttfamily \#define V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+M\+A\+G\+E\+N\+TA~0x\+E3}
+
+
+
+Pixel magenta. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_a_p_i___i_o_8h_a9fee0c95dea1cdd3eeb3605ece528a8a}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+A\+CK} for a description on how the color for a single pixel is stored. 
+\end{DoxySeeAlso}
+
+
+Definition at line 156 of file A\+P\+I\+\_\+\+I\+O.\+h.
+
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a790cc430619a64faf356c303f8bdd3d4}\label{_a_p_i___i_o_8h_a790cc430619a64faf356c303f8bdd3d4}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+R\+ED@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+R\+ED}}
+\index{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+R\+ED@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+R\+ED}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+R\+ED}{VGA\_COL\_RED}}
+{\footnotesize\ttfamily \#define V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+R\+ED~0x\+E0}
+
+
+
+Pixel color red. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_a_p_i___i_o_8h_a9fee0c95dea1cdd3eeb3605ece528a8a}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+A\+CK} for a description on how the color for a single pixel is stored. 
+\end{DoxySeeAlso}
+
+
+Definition at line 116 of file A\+P\+I\+\_\+\+I\+O.\+h.
+
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a2ad592a88539ed90dd1fe6c33648a13b}\label{_a_p_i___i_o_8h_a2ad592a88539ed90dd1fe6c33648a13b}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+W\+H\+I\+TE@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+W\+H\+I\+TE}}
+\index{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+W\+H\+I\+TE@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+W\+H\+I\+TE}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+W\+H\+I\+TE}{VGA\_COL\_WHITE}}
+{\footnotesize\ttfamily \#define V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+W\+H\+I\+TE~0x\+FF}
+
+
+
+Pixel white. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_a_p_i___i_o_8h_a9fee0c95dea1cdd3eeb3605ece528a8a}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+A\+CK} for a description on how the color for a single pixel is stored. 
+\end{DoxySeeAlso}
+
+
+Definition at line 132 of file A\+P\+I\+\_\+\+I\+O.\+h.
+
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a76575b7810719497e2b15a6709c1b6f0}\label{_a_p_i___i_o_8h_a76575b7810719497e2b15a6709c1b6f0}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+Y\+E\+L\+L\+OW@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+Y\+E\+L\+L\+OW}}
+\index{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+Y\+E\+L\+L\+OW@{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+Y\+E\+L\+L\+OW}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+Y\+E\+L\+L\+OW}{VGA\_COL\_YELLOW}}
+{\footnotesize\ttfamily \#define V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+Y\+E\+L\+L\+OW~0x\+FC}
+
+
+
+Pixel color yellow. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_a_p_i___i_o_8h_a9fee0c95dea1cdd3eeb3605ece528a8a}{V\+G\+A\+\_\+\+C\+O\+L\+\_\+\+B\+L\+A\+CK} for a description on how the color for a single pixel is stored. 
+\end{DoxySeeAlso}
+
+
+Definition at line 172 of file A\+P\+I\+\_\+\+I\+O.\+h.
+
+\mbox{\Hypertarget{_a_p_i___i_o_8h_ace7f348dc91111917772d3e19f8821d3}\label{_a_p_i___i_o_8h_ace7f348dc91111917772d3e19f8821d3}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!V\+G\+A\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+X@{V\+G\+A\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+X}}
+\index{V\+G\+A\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+X@{V\+G\+A\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+X}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{V\+G\+A\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+X}{VGA\_DISPLAY\_X}}
+{\footnotesize\ttfamily \#define V\+G\+A\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+X~320}
+
+Width of the V\+GA display 
+
+Definition at line 177 of file A\+P\+I\+\_\+\+I\+O.\+h.
+
+\mbox{\Hypertarget{_a_p_i___i_o_8h_a9c3e46882b624fe1887d0ec6171d771b}\label{_a_p_i___i_o_8h_a9c3e46882b624fe1887d0ec6171d771b}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!V\+G\+A\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+Y@{V\+G\+A\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+Y}}
+\index{V\+G\+A\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+Y@{V\+G\+A\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+Y}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{V\+G\+A\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+Y}{VGA\_DISPLAY\_Y}}
+{\footnotesize\ttfamily \#define V\+G\+A\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+Y~240}
+
+Height of the V\+GA display 
+
+Definition at line 182 of file A\+P\+I\+\_\+\+I\+O.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_a_p_i___i_o_8h_adac57ec1d2019647d4ef389972d4ad54}\label{_a_p_i___i_o_8h_adac57ec1d2019647d4ef389972d4ad54}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!A\+P\+I\+\_\+\+I\+O\+\_\+\+Fill\+Screen@{A\+P\+I\+\_\+\+I\+O\+\_\+\+Fill\+Screen}}
+\index{A\+P\+I\+\_\+\+I\+O\+\_\+\+Fill\+Screen@{A\+P\+I\+\_\+\+I\+O\+\_\+\+Fill\+Screen}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+I\+O\+\_\+\+Fill\+Screen()}{API\_IO\_FillScreen()}}
+{\footnotesize\ttfamily void A\+P\+I\+\_\+\+I\+O\+\_\+\+Fill\+Screen (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Fill the D\+MA R\+AM buffer with one color. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em color} & color in integer format \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 85 of file A\+P\+I\+\_\+\+I\+O.\+c.
+
+\mbox{\Hypertarget{_a_p_i___i_o_8h_afe5040b81dac0691f4a219d04fcc70f3}\label{_a_p_i___i_o_8h_afe5040b81dac0691f4a219d04fcc70f3}} 
+\index{A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}!A\+P\+I\+\_\+\+I\+O\+\_\+\+Set\+Pixel@{A\+P\+I\+\_\+\+I\+O\+\_\+\+Set\+Pixel}}
+\index{A\+P\+I\+\_\+\+I\+O\+\_\+\+Set\+Pixel@{A\+P\+I\+\_\+\+I\+O\+\_\+\+Set\+Pixel}!A\+P\+I\+\_\+\+I\+O.\+h@{A\+P\+I\+\_\+\+I\+O.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+I\+O\+\_\+\+Set\+Pixel()}{API\_IO\_SetPixel()}}
+{\footnotesize\ttfamily void A\+P\+I\+\_\+\+I\+O\+\_\+\+Set\+Pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{xp,  }\item[{uint16\+\_\+t}]{yp,  }\item[{uint8\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Sets pixels on the screen with the chosen color. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em xp} & horizontal position of the pixel \\
+\hline
+\mbox{\tt in}  & {\em yp} & vertical position of the pixel \\
+\hline
+\mbox{\tt in}  & {\em color} & color in integer format \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 109 of file A\+P\+I\+\_\+\+I\+O.\+c.
+
